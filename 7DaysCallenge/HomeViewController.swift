@@ -8,11 +8,17 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet var container: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        container.layer.cornerRadius = 20
+        container.layer.shadowColor = UIColor.black.cgColor //影の色を決める
+        container.layer.shadowOpacity = 1 //影の色の透明度
+        container.layer.shadowRadius = 0 //影のぼかし
+        container.layer.shadowOffset = CGSize(width: 6, height: 9) //影の方向　width、heightを負の値にすると上の方に影が表示される
     }
     
 
