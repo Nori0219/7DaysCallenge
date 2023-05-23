@@ -19,17 +19,20 @@ class HomeViewController: UIViewController {
         container.layer.shadowOpacity = 1 //影の色の透明度
         container.layer.shadowRadius = 0 //影のぼかし
         container.layer.shadowOffset = CGSize(width: 6, height: 9) //影の方向　width、heightを負の値にすると上の方に影が表示される
+        
+        
+        //NavigationBarの＜Backを非表示にする　参考：https://spinners.work/posts/ios14_blank_back_button/
+        if #available(iOS 14.0, *) {
+          navigationItem.backButtonDisplayMode = .minimal
+        } else {
+          navigationItem.backButtonTitle = " "
+        }
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
+
+
