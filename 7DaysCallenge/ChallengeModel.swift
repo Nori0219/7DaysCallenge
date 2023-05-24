@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import RealmSwift
 
+//@Persistedをつけていないプロパティは保存されない
+
 class Challenge: Object {
     //@Persisted(primaryKey: true) var UID = UUID().uuidString
     @Persisted var title: String = ""
@@ -21,7 +23,7 @@ class Challenge: Object {
 
 class Article: Object {
     @Persisted var context: String = ""
-    //@Persisted var image: UIImage?
+    var image: UIImage?
     @Persisted var date: Date = Date()
     //@Persisted(primaryKey: true) var id = UUID().uuidString
 }

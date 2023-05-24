@@ -325,6 +325,7 @@
 				DEVELOPMENT_TEAM = 3827K2JQS9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 7DaysCallenge/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アプリ内で表示する画像をフォトライブラリから呼び出します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -353,6 +354,7 @@
 				DEVELOPMENT_TEAM = 3827K2JQS9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 7DaysCallenge/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アプリ内で表示する画像をフォトライブラリから呼び出します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -21,6 +21,7 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         table.register(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
     }
     
+    //セルの表示する個数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -35,6 +36,7 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    //セルの高さ　0にすると潰れちゃうイマイチよくわかってない
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 240
     }
@@ -42,7 +44,7 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
 }
 
 
-//カスタムセルの影
+//カスタムセルの影の設定
 class ShadowView: UIView {
     override var bounds: CGRect {
         didSet {
