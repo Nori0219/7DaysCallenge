@@ -26,6 +26,15 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         
         // UIDatePickerの設定
         datePicker.datePickerMode = .date
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        //遷移先画面が閉じる直前のタイミングで、遷移元画面のViewWillAppear()を呼び出すつまり、tableをリロードできる
+        if #available(iOS 13.0, *) {
+            presentingViewController?.beginAppearanceTransition(true, animated: animated)
+        }
     }
     
     @IBAction func onTappedAlbumButton() {

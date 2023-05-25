@@ -14,7 +14,7 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     // Articleオブジェクトのリストを格納するプロパティ
     var articles: Results<Article>!//最初はリストはnilだからエラー出るはずtoDo修正
     
-    @IBOutlet var table: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,23 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         // RealmからArticleオブジェクトのリストを取得
         articles = realm.objects(Article.self)
         
-        table.delegate = self
-        table.dataSource = self
-        table.separatorStyle = .none
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
         //カスタムセルの設定
-        table.register(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
+        tableView.register(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // RealmからArticleオブジェクトのリストを取得
+        updateArticleList()
+        print("ArticleViewが表示されます。Tableをリロードしました")
+    }
+    // 記事一覧を更新するメソッド
+    func updateArticleList() {
+        articles = realm.objects(Article.self)
+        tableView.reloadData()
+        print("ArticleViewTableをリロードしました")
     }
     
     //セルの表示する個数
