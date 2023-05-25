@@ -42,9 +42,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catch2-logo-small.png" id="Mu7-R6-Kwk">
                                 <rect key="frame" x="66" y="55" width="238" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2023/05/17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLZ-pw-AOc">
-                                <rect key="frame" x="66" y="220" width="117" height="12"/>
+                                <rect key="frame" x="66" y="210" width="238" height="22"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -67,12 +70,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="articleImageView" destination="Mu7-R6-Kwk" id="yBs-i7-hmo"/>
                 <outlet property="contextLabel" destination="SC0-9u-umc" id="vKg-l8-blL"/>
                 <outlet property="dateLabal" destination="WLZ-pw-AOc" id="F6v-Kx-jgQ"/>
                 <outlet property="mainBackground" destination="qUY-iU-bcF" id="6Tl-wL-8m5"/>
                 <outlet property="shadowLayer" destination="Cfe-Cw-Ps0" id="3ai-Fa-n5D"/>
                 <outlet property="streakLabel" destination="66t-XP-GBD" id="130-AG-Eqo"/>
-                <outlet property="todayImageView" destination="Mu7-R6-Kwk" id="ujr-0O-dbU"/>
             </connections>
             <point key="canvasLocation" x="129.7709923664122" y="-1.4084507042253522"/>
         </tableViewCell>

@@ -6,34 +6,58 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    
+    let realm = try! Realm()
+    // Articleオブジェクトのリストを格納するプロパティ
+    var articles: Results<Article>!//最初はリストはnilだからエラー出るはずtoDo修正
     
     @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // RealmからArticleオブジェクトのリストを取得
+        articles = realm.objects(Article.self)
+        
         table.delegate = self
         table.dataSource = self
         table.separatorStyle = .none
-        
+        //カスタムセルの設定
         table.register(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
     }
     
     //セルの表示する個数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        //return 10
+        return articles.count
     }
-    
+    //セルの内容を指定するメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleTableViewCell
+        let article = articles[indexPath.row]
+        // セルに表示する内容を設定
+        if let imageData = article.imageData {
+            let image = UIImage(data: imageData)
+            cell.setCell(context: article.context, streak: 1, date: formatDate(article.date), image: image)
+        } else {
+            cell.setCell(context: article.context, streak: 1, date: formatDate(article.date), image: nil)
+        }
         
         cell.mainBackground.layer.cornerRadius = 20
         cell.mainBackground.layer.masksToBounds = true
         cell.backgroundColor = .systemGray6
         
         return cell
+    }
+    // 日付のフォーマットを適用するメソッド
+    func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        //formatter.dateFormat = "yyyy/MM/dd"
+        formatter.dateFormat = "yyyy年MM月dd日(E)"
+        return formatter.string(from: date)
     }
     
     //セルの高さ　0にすると潰れちゃうイマイチよくわかってない

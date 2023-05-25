@@ -12,27 +12,32 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet var contextLabel: UILabel!
     @IBOutlet var streakLabel: UILabel!
     @IBOutlet var dateLabal: UILabel!
-    @IBOutlet var todayImageView: UIImageView?
+    @IBOutlet var articleImageView: UIImageView?
     
     @IBOutlet var mainBackground: UIView!
     @IBOutlet var shadowLayer: UIView!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
-    func setCell(context: String, streak: Int, date: Date,image: UIImage) {
+    func setCell(context: String, streak: Int, date: String,image: UIImage?) {
         contextLabel.text = context
         streakLabel.text = String(streak)
-        //dateLabal.text = String(date)
-        todayImageView?.image = image
+        dateLabal.text = date
+        //articleImageView.image = image
+        
+        if let image = image {
+            articleImageView?.image = image
+        } else {
+            articleImageView?.image = UIImage(named: "placeholder") // プレースホルダー画像などのデフォルトの画像を表示する
+        }
     }
-    
 }

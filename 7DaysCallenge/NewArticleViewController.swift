@@ -10,7 +10,7 @@ import RealmSwift
 
 class NewArticleViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    //let realm = try! Realm()
+    let realm = try! Realm()
     
     @IBOutlet var contextTextView: UITextView!
     @IBOutlet var articleImageView: UIImageView!
@@ -50,13 +50,6 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         articleImageView.image = info[.originalImage] as? UIImage
     }
     
-    //    // DateのフォーマットをStringで設定
-    //    func updateDateLabel(with date: Date) {
-    //        let formatter = DateFormatter()
-    //        formatter.dateFormat = "yyyy/MM/dd"
-    //        let dateString = formatter.string(from: date)
-    //    }
-    
     
     // 保存ボタンがタップされた時の処理
     @IBAction func saveButtonTapped(_ sender: UIButton) {
@@ -64,16 +57,24 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         let newArticle = Article()
         newArticle.date = selectedDate
         newArticle.context = contextTextView.text
-        newArticle.image = articleImageView.image
+        // 画像データをData型に変換して保存
+        if let imageData = articleImageView.image {
+            newArticle.imageData = imageData.pngData() // ここでUIImageからData型に変換して代入
+        }
+        //Realmに保存
+        createArticle(article: newArticle)
         
-        // RealmにArticleオブジェクトを保存
-        //        try! realm.write {
-        //            realm.add(newArticle)
-        //        }
-        
-        // データの保存が完了したら、前の画面に戻るなどの処理を行う
         //前の画面に戻る
         self.dismiss(animated: true)
     }
+    
+    //articleをRealmに追加するメソッド
+    func createArticle(article: Article) {
+        try! realm.write {
+            realm.add(article)
+        }
+        print("RealmにArticleを追加しました")
+    }
+    //toDo Articleのcontextとimageが未入力だとアラートが表示されるようにする
     
 }
