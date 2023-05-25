@@ -58,12 +58,14 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         newArticle.date = selectedDate
         newArticle.context = contextTextView.text
         // 画像データをData型に変換して保存
-        if let imageData = articleImageView.image {
-            newArticle.imageData = imageData.pngData() // ここでUIImageからData型に変換して代入
+        if let image = articleImageView.image {
+            //newArticle.imageData = image.pngData()
+            // 画像の圧縮率を下げる（例: 0.8）
+            let compressedImage = image.jpegData(compressionQuality: 0.2)
+            newArticle.imageData = compressedImage
         }
         //Realmに保存
         createArticle(article: newArticle)
-        
         //前の画面に戻る
         self.dismiss(animated: true)
     }
