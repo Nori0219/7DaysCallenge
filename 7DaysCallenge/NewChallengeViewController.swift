@@ -26,6 +26,12 @@ class NewChallengeViewController: UIViewController {
         super.viewDidLoad()
         
         print("inputDate: \(inputedDate)")
+        //NavigationBarの＜Backを非表示にする　参考：https://spinners.work/posts/ios14_blank_back_button/
+        if #available(iOS 14.0, *) {
+            navigationItem.backButtonDisplayMode = .minimal
+        } else {
+            navigationItem.backButtonTitle = " "
+        }
         
     }
     
