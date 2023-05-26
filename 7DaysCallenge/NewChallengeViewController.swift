@@ -21,7 +21,7 @@ class NewChallengeViewController: UIViewController {
     
     //challengeを入力した日付 == StartDate
     var inputedDate: Date = Date()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +29,8 @@ class NewChallengeViewController: UIViewController {
         
     }
     
-
-    func addButtonTapped() {
+    
+    @IBAction func addButtonTapped() {
         let newChallenge = Challenge()
         newChallenge.title = titleTextField.text!
         newChallenge.toDo = toDoTextField.text!
@@ -38,10 +38,14 @@ class NewChallengeViewController: UIViewController {
         newChallenge.notificationTime = notificarionDatePicker.date
         newChallenge.startDate = inputedDate
         
-        createChallenge(charenge: newChallenge)
-        
-        //前の画面に戻る
-        self.dismiss(animated: true)
+        if titleTextField.text?.isEmpty ?? true || toDoTextField.text?.isEmpty ?? true{
+            displayAlertWhenNotInput()
+        } else{
+            print("newChallengeをRealmへ保存可能です")
+            print("newChallenge: \(newChallenge)")
+            //Realmにデータを保存する
+            createChallenge(charenge: newChallenge)
+        }
         
     }
     
@@ -51,6 +55,23 @@ class NewChallengeViewController: UIViewController {
             realm.add(charenge)
         }
         print("RealmにChellengeを追加しました")
+        //前の画面に戻る
+        self.dismiss(animated: true)
     }
+    
     //toDo ChallengeのTitleとtoDoが未入力だとアラートが表示されるようにする
+    func displayAlertWhenNotInput() {
+        //alertを作成
+        let alert = UIAlertController(
+            title: "未入力の項目があります",
+            message: "全ての項目を入力してください",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: nil
+        ))
+        present(alert, animated: true, completion: nil)
+    }
 }

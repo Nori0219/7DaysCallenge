@@ -57,6 +57,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="チャレンジを始める">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addButtonTapped" destination="Oar-2c-61g" eventType="touchUpInside" id="il4-Ca-83p"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0k8-Mg-28D">
                                 <rect key="frame" x="37" y="480" width="309" height="52"/>
@@ -175,14 +178,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zh-eJ-CBl">
-                                <rect key="frame" x="-4" y="0.0" width="395" height="44"/>
+                                <rect key="frame" x="-5" y="0.0" width="395" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="チャレンジの記録" id="9jT-c8-nrp"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nl7-y1-wem">
-                                <rect key="frame" x="26" y="81" width="335" height="397"/>
+                                <rect key="frame" x="25" y="81" width="335" height="397"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Fp-leC">
@@ -283,7 +286,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zoc-of-hoU">
-                                <rect key="frame" x="36" y="234" width="320" height="182"/>
+                                <rect key="frame" x="35" y="233" width="321" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1週間異国料理生活" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm1-Ea-3Q9">
