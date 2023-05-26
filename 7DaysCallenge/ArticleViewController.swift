@@ -30,9 +30,8 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // RealmからArticleオブジェクトのリストを取得
+        // Tableを更新する
         updateArticleList()
-        print("ArticleViewが表示されます。Tableをリロードしました")
     }
     // 記事一覧を更新するメソッド
     func updateArticleList() {
