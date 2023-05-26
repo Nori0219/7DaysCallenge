@@ -45,6 +45,8 @@ class NewChallengeViewController: UIViewController {
             print("newChallenge: \(newChallenge)")
             //Realmにデータを保存する
             createChallenge(charenge: newChallenge)
+            //前の画面に戻る
+            self.dismiss(animated: true)
         }
         
     }
@@ -55,8 +57,6 @@ class NewChallengeViewController: UIViewController {
             realm.add(charenge)
         }
         print("RealmにChellengeを追加しました")
-        //前の画面に戻る
-        self.dismiss(animated: true)
     }
     
     //toDo ChallengeのTitleとtoDoが未入力だとアラートが表示されるようにする

@@ -73,10 +73,17 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             let compressedImage = image.jpegData(compressionQuality: 0.2)
             newArticle.imageData = compressedImage
         }
-        //Realmに保存
-        createArticle(article: newArticle)
-        //前の画面に戻る
-        self.dismiss(animated: true)
+        
+        if contextTextView.text.isEmpty {
+            displayAlertWhenNotInput()
+        } else {
+            print("newArticleをRealmへ保存可能です")
+            print("newArticle: \(newArticle)")
+            //Realmに保存
+            createArticle(article: newArticle)
+            //前の画面に戻る
+            self.dismiss(animated: true)
+        }
     }
     
     //articleをRealmに追加するメソッド
@@ -86,6 +93,19 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         }
         print("RealmにArticleを追加しました")
     }
-    //toDo Articleのcontextとimageが未入力だとアラートが表示されるようにする
-    
+    //toDo Articleのcontextとimageが未入力だとアラートを表示
+    func displayAlertWhenNotInput() {
+        //alertを作成
+        let alert = UIAlertController(
+            title: "未入力の項目があります",
+            message: "記録を入力してください",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: nil
+        ))
+        present(alert, animated: true, completion: nil)
+    }
 }
