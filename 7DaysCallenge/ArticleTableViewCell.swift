@@ -10,10 +10,9 @@ import UIKit
 class ArticleTableViewCell: UITableViewCell {
     
     @IBOutlet var contextLabel: UILabel!
-    @IBOutlet var streakLabel: UILabel!
+    @IBOutlet var indexLabel: UILabel!
     @IBOutlet var dateLabal: UILabel!
     @IBOutlet var articleImageView: UIImageView?
-    
     @IBOutlet var mainBackground: UIView!
     @IBOutlet var shadowLayer: UIView!
     
@@ -28,9 +27,9 @@ class ArticleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(context: String, streak: Int, date: String,image: UIImage?) {
+    func setCell(context: String, date: String,image: UIImage?) {
         contextLabel.text = context
-        streakLabel.text = String(streak)
+        //indexLabel.text = String(index)
         dateLabal.text = date
         //articleImageView.image = image
         

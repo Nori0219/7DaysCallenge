@@ -73,9 +73,9 @@
                 <outlet property="articleImageView" destination="Mu7-R6-Kwk" id="yBs-i7-hmo"/>
                 <outlet property="contextLabel" destination="SC0-9u-umc" id="vKg-l8-blL"/>
                 <outlet property="dateLabal" destination="WLZ-pw-AOc" id="F6v-Kx-jgQ"/>
+                <outlet property="indexLabel" destination="66t-XP-GBD" id="XGa-jm-8HI"/>
                 <outlet property="mainBackground" destination="qUY-iU-bcF" id="6Tl-wL-8m5"/>
                 <outlet property="shadowLayer" destination="Cfe-Cw-Ps0" id="3ai-Fa-n5D"/>
-                <outlet property="streakLabel" destination="66t-XP-GBD" id="130-AG-Eqo"/>
             </connections>
             <point key="canvasLocation" x="129.7709923664122" y="-1.4084507042253522"/>
         </tableViewCell>

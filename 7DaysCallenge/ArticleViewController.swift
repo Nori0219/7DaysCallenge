@@ -41,9 +41,11 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         updateArticleList()
     }
     
+    //ChallegeのUIDに対応したArticleの配列を読み込む
     func readArticles() ->  [Article] {
-        return Array(realm.objects(Article.self).filter("challengeID == %@", topChallenge.challengeUID))
+        return Array(realm.objects(Article.self).filter("challengeID == %@", topChallenge.challengeUID).sorted(byKeyPath: "date",ascending: false))
     }
+    
     // 記事一覧を更新するメソッド
     func updateArticleList() {
         //articles = realm.objects(Article.self)
@@ -64,10 +66,15 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         // セルに表示する内容を設定
         if let imageData = article.imageData {
             let image = UIImage(data: imageData)
-            cell.setCell(context: article.context, streak: 1, date: formatDate(article.date), image: image)
+            cell.setCell(context: article.context, date: formatDate(article.date), image: image)
         } else {
-            cell.setCell(context: article.context, streak: 1, date: formatDate(article.date), image: nil)
+            cell.setCell(context: article.context, date: formatDate(article.date), image: nil)
         }
+        //セクション内の行数
+        let sectionRowCount = tableView.numberOfRows(inSection: indexPath.section)
+        let rowNumber = sectionRowCount - indexPath.row
+        //セルに番号を降順になるようにセット
+        cell.indexLabel.text = String(rowNumber)
         
         cell.mainBackground.layer.cornerRadius = 20
         cell.mainBackground.layer.masksToBounds = true
