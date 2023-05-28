@@ -87,6 +87,8 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             print("newArticle: \(newArticle)")
             //Realmに保存
             createArticle(article: newArticle)
+            //streakを計算して更新
+            calculateAndSaveStreak(challenge: topChallenge)
             //前の画面に戻る
             self.dismiss(animated: true)
         }
@@ -98,6 +100,60 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             realm.add(article)
         }
         print("RealmにArticleを追加しました")
+        reloadTable()
+    }
+    
+    func reloadTable() {
+        //遷移先画面が閉じる直前のタイミングで、遷移元画面のViewWillAppear()を呼び出すつまり、tableをリロードできる
+        if #available(iOS 13.0, *) {
+            presentingViewController?.beginAppearanceTransition(true, animated: true)
+        }
+        print("アナログでリロード")
+    }
+    
+    func calculateAndSaveStreak(challenge: Challenge) {
+        //ChallegeのUIDに対応したArticle
+        let sortedArticles =  realm.objects(Article.self)
+            .filter(NSPredicate(format: "challengeID == %@", challenge.challengeUID))
+            .sorted(byKeyPath: "date")
+        
+        var streakCount = 0
+        
+        print("sortedArticles: \(sortedArticles)")
+        
+        var startDate = Date()
+        // 最初の記事の日付を取得して、startDateに設定
+        if let firstArticle = sortedArticles.first {
+            startDate = Calendar.current.startOfDay(for: firstArticle.date)
+        } else {
+            // 記事が存在しない場合は、処理を中断して関数を終了
+            return
+        }
+        
+        var currentDate = startDate
+        
+        for article in sortedArticles {
+            let articleDate = Calendar.current.startOfDay(for: article.date)
+            
+            print("articleDate: \(articleDate)")
+            print("currentDate: \(currentDate)")
+            print("---------")
+            if articleDate == currentDate {
+                // 記事の日付が現在の日付と一致している場合
+                streakCount += 1
+                // 現在の日付を1日進める
+                currentDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
+                print("streakCout増加：streakCout: \(streakCount)")
+            } else {
+                // 記事の日付が現在の日付と一致しない場合、ループを終了
+                break
+            }
+        }
+        
+        try! realm.write {
+            challenge.streak = streakCount
+        }
+        print("RealmにChellenge.streakを追加しました")
     }
     //toDo Articleのcontextとimageが未入力だとアラートを表示
     func displayAlertWhenNotInput() {

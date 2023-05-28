@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
         let streakValue = getStreakValue()
         streakLabel.text = "\(streakValue)"
         // ストリークの値に応じて表示色を変更する
-        updateStreakView(streakValue: streakValue)
+        updateStreakView()
         
         
         container.layer.cornerRadius = 20
@@ -69,12 +69,55 @@ class HomeViewController: UIViewController {
         print("現在のstreakValue: \(streakValue)")
         streakLabel.text = "\(streakValue)"
         // ストリークの値に応じて表示色を変更する
-        updateStreakView(streakValue: streakValue)
+        updateStreakView()
         
         // ホーム画面に表示されるChallengeの内容をセットする
         if let challenge = topChallenge {
             setChallengeView(title: challenge.title, toDo: challenge.toDo, startDate: challenge.startDate, streak: streakValue)
         }
+    }
+    
+    func updateStreakView() {
+        guard let challenge = topChallenge else {
+            return
+        }
+
+        let streak = challenge.streak
+        // Uidで紐づいたArticleの日付のみを取得した配列
+        let completedDates = challenge.articles.filter({ $0.challengeID == challenge.challengeUID }).map({ $0.date })
+
+        let streakViews = [streakView1, streakView2, streakView3, streakView4, streakView5, streakView6, streakView7]
+        let startDate = Calendar.current.startOfDay(for: challenge.startDate)//開始日を日本のタイムに変更
+        let endDate = Calendar.current.date(byAdding: .day, value: 6, to: startDate) ?? startDate
+        let datesInRange = generateDates(from: startDate, to: endDate)
+        
+        //viewの色を変更するメソッド
+        for (index, view) in streakViews.enumerated() {
+            if index < streak {
+                //連続日数未達の日付に対応するView
+                view?.backgroundColor = UIColor.green
+            } else {
+                let dateToCheck = Calendar.current.startOfDay(for: datesInRange[index])
+                if completedDates.contains(where: { Calendar.current.startOfDay(for: $0) == dateToCheck }) {
+                    view?.backgroundColor = UIColor.green
+                } else {
+                    view?.backgroundColor = UIColor.red
+                }
+            }
+        }
+    }
+    
+    //チャレンジ開始日からの一週間の配列を返す
+    func generateDates(from startDate: Date, to endDate: Date) -> [Date] {
+        var dates = [Date]()
+        var currentDate = startDate
+        //開始日から終了日までのDateを配列にセット
+        while currentDate <= endDate {
+            dates.append(currentDate)
+            currentDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
+        }
+        
+        return dates
     }
     
     // ストリークの値を取得するメソッド
@@ -84,6 +127,8 @@ class HomeViewController: UIViewController {
         //challenge.updateStreak()
         return challenge.streak
     }
+    
+    
     
     // ストリークの表示色を更新するメソッド
     func updateStreakView(streakValue: Int) {
