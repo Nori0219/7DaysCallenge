@@ -62,6 +62,9 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
     
     // 保存ボタンがタップされた時の処理
     @IBAction func saveButtonTapped(_ sender: UIButton) {
+        //DatePicerで選択した日付を代入
+        selectedDate = datePicker.date
+        print("selectedDate: \(selectedDate)")
         // 新しいArticleオブジェクトを作成し、入力された内容を設定
         let newArticle = Article()
         newArticle.date = selectedDate
