@@ -12,16 +12,23 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     
     let realm = try! Realm()
     // Articleオブジェクトのリストを格納するプロパティ
-    var articles: Results<Article>!//最初はリストはnilだからエラー出るはずtoDo修正
+    //var articles: Results<Article>!
+    var articles: [Article] = []
+    var topChallenge: Challenge!
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var startDateLabel: UILabel!
+    @IBOutlet var toDoLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // RealmからArticleオブジェクトのリストを取得
-        articles = realm.objects(Article.self)
-        
+        //articles = realm.objects(Article.self)
+        articles = readArticles()
+        navigationItem.title = topChallenge.title
+        startDateLabel.text = "開始日：　\(formatDate2(topChallenge.startDate))"
+        toDoLabel.text = topChallenge.toDo
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -33,9 +40,14 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         // Tableを更新する
         updateArticleList()
     }
+    
+    func readArticles() ->  [Article] {
+        return Array(realm.objects(Article.self).filter("challengeID == %@", topChallenge.challengeUID))
+    }
     // 記事一覧を更新するメソッド
     func updateArticleList() {
-        articles = realm.objects(Article.self)
+        //articles = realm.objects(Article.self)
+        articles = readArticles()
         tableView.reloadData()
         print("ArticleViewTableをリロードしました")
     }
@@ -71,9 +83,24 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         return formatter.string(from: date)
     }
     
+    func formatDate2(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        //formatter.dateFormat = "yyyy/MM/dd"
+        formatter.dateFormat = "yyyy/MM/dd"
+        return formatter.string(from: date)
+    }
+    
     //セルの高さ　0にすると潰れちゃうイマイチよくわかってない
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 240
+    }
+    
+    //画面遷移でtopChallengeの値を渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toNewArticleView" {
+            let newArticleViewController = segue.destination as! NewArticleViewController
+            newArticleViewController.topChallenge = self.topChallenge
+        }
     }
     
 }

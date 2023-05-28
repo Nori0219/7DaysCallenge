@@ -52,7 +52,10 @@ class NewChallengeViewController: UIViewController {
             //Realmにデータを保存する
             createChallenge(charenge: newChallenge)
             //前の画面に戻る
-            self.dismiss(animated: true)
+            print("前の画面に戻る！")
+            //self.dismiss(animated: true)
+            self.navigationController?.popViewController(animated: true)
+             
         }
         
     }

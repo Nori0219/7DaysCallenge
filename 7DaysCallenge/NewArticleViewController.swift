@@ -20,6 +20,8 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
     
     // 選択された日付を保持する変数
     var selectedDate: Date = Date()
+    //親チャレンジ
+    var topChallenge: Challenge!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +69,7 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         print("selectedDate: \(selectedDate)")
         // 新しいArticleオブジェクトを作成し、入力された内容を設定
         let newArticle = Article()
+        newArticle.challengeID = topChallenge.challengeUID
         newArticle.date = selectedDate
         newArticle.context = contextTextView.text
         // 画像データをData型に変換して保存
