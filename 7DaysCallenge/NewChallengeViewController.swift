@@ -87,17 +87,30 @@ class NewChallengeViewController: UIViewController {
     
     func scheduleNotification(for challenge: Challenge) {
         let notificationContent = UNMutableNotificationContent()
-        notificationContent.title = "Challenge Reminder"
+        notificationContent.title = "\(challenge.title)"
         
         // ストリークの数に応じてメッセージを変更する
         let streakMessage: String
-        if challenge.streak > 0 {
-            streakMessage = "Keep up the good work! Your streak is \(challenge.streak) days."
-        } else {
-            streakMessage = "Start your challenge today!"
+        switch challenge.streak {
+        case 0:
+            streakMessage = "\(challenge.toDo)\nさあ、新たなチャレンジの幕開けです！今日から頑張りましょう！"
+        case 1:
+            streakMessage = "素晴らしい！連続\(challenge.streak)日目です。まだまだこれからですよ！"
+        case 2:
+            streakMessage = "オオ、見事な連続達成！\(challenge.streak)日間継続です。驚きの才能を感じますね！"
+        case 3:
+            streakMessage = "\(challenge.streak)日連続達成です！まさに挑戦のマスター！もうやめられませんね！"
+        case 4:
+            streakMessage = "すごい！連続\(challenge.streak)日間の偉業です。あなたはチャレンジのプロですね！"
+        case 5:
+            streakMessage = "ワオ！もう止められません！連続\(challenge.streak)日間の快挙です！目指せ、世界新記録！"
+        case 6:
+            streakMessage = "連続\(challenge.streak)日間！今日で最終日ですよ！"
+        default:
+            streakMessage = "順調ですね！連続\(challenge.streak)日目です。続けましょう！"
         }
         //通知の内容
-        notificationContent.body = "\(challenge.title)\n\(challenge.toDo)\n\(streakMessage)"
+        notificationContent.body = "\(streakMessage)"
         notificationContent.sound = UNNotificationSound.default
         
         let calendar = Calendar.current
