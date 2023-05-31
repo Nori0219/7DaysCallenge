@@ -7,9 +7,10 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate{
     
     
     
@@ -18,12 +19,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let config = Realm.Configuration(
             schemaVersion: 2
-//            ,migrationBlock: nil,
-//            deleteRealmIfMigrationNeeded: true
+            //            ,migrationBlock: nil,
+            //            deleteRealmIfMigrationNeeded: true
         )
         Realm.Configuration.defaultConfiguration = config
         
+        // プッシュ通知の許可を依頼する際のコード アラート、バッジ、サウンド」の3つに対しての許可をリクエスト
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            if let error = error {
+                print("通知の許可リクエストエラー: \(error.localizedDescription)")
+            } else {
+                if granted {
+                    print("通知の許可が得られました")
+                } else {
+                    print("通知の許可が拒否されました")
+                }
+            }
+            UNUserNotificationCenter.current().delegate = self
+        }
+        
         return true
+    }
+    // フォアグラウンドの状態でプッシュ通知を受信した際に呼ばれるメソッド
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .badge])
+    }
+    // 通知をタップした時・バックグランドの状態でプッシュ通知を受信した際に呼ばれるメソッド
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // 通知のタップに応じた処理を実装する
+        completionHandler()
     }
     
     // MARK: UISceneSession Lifecycle
