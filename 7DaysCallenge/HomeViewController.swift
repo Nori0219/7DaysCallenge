@@ -91,7 +91,7 @@ class HomeViewController: UIViewController {
         let endDate = Calendar.current.date(byAdding: .day, value: 6, to: startDate) ?? startDate
         let datesInRange = generateDates(from: startDate, to: endDate)
         
-        //viewの色を変更するメソッド
+        // ストリークのviewの表示色を更新するメソッド
         for (index, view) in streakViews.enumerated() {
             if index < streak {
                 //連続日数未達の日付に対応するView
@@ -99,9 +99,9 @@ class HomeViewController: UIViewController {
             } else {
                 let dateToCheck = Calendar.current.startOfDay(for: datesInRange[index])
                 if completedDates.contains(where: { Calendar.current.startOfDay(for: $0) == dateToCheck }) {
-                    view?.backgroundColor = UIColor.green
+                    view?.backgroundColor = UIColor.green // 連続日数の範囲内は緑色に設定
                 } else {
-                    view?.backgroundColor = UIColor.red
+                    view?.backgroundColor =  UIColor.lightGray // 連続日数の範囲外はグレー色に設定
                 }
             }
         }
@@ -127,22 +127,19 @@ class HomeViewController: UIViewController {
         //challenge.updateStreak()
         return challenge.streak
     }
-    
-    
-    
-    // ストリークの表示色を更新するメソッド
-    func updateStreakView(streakValue: Int) {
-        let streakViews = [streakView1, streakView2, streakView3, streakView4, streakView5, streakView6, streakView7]
-        
-        // 連続日数に応じてストリークの表示色を設定
-        for (index, view) in streakViews.enumerated() {
-            if index < streakValue {
-                view?.backgroundColor = UIColor.green // 連続日数の範囲内は緑色に設定
-            } else {
-                view?.backgroundColor = UIColor.lightGray // 連続日数の範囲外はグレー色に設定
-            }
-        }
-    }
+
+//    // ストリークの表示色を更新するメソッド
+//    func updateStreakView(streakValue: Int) {
+//        let streakViews = [streakView1, streakView2, streakView3, streakView4, streakView5, streakView6, streakView7]
+//        // 連続日数に応じてストリークの表示色を設定
+//        for (index, view) in streakViews.enumerated() {
+//            if index < streakValue {
+//                view?.backgroundColor = UIColor.green // 連続日数の範囲内は緑色に設定
+//            } else {
+//                view?.backgroundColor = UIColor.lightGray // 連続日数の範囲外はグレー色に設定
+//            }
+//        }
+//    }
     
     //ホーム画面に表示されるChallengeの内容をセットする
     func setChallengeView(title: String, toDo: String, startDate:Date, streak:Int) {

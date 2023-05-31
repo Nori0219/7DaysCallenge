@@ -38,6 +38,7 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     
     override func viewWillAppear(_ animated: Bool) {
         // Tableを更新する
+        print("ArticleView wii Apper")
         updateArticleList()
     }
     

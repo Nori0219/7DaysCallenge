@@ -32,11 +32,10 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
+        print("viewWillDisappear")
         //遷移先画面が閉じる直前のタイミングで、遷移元画面のViewWillAppear()を呼び出すつまり、tableをリロードできる
-        if #available(iOS 13.0, *) {
-            presentingViewController?.beginAppearanceTransition(true, animated: animated)
-        }
+        presentingViewController?.beginAppearanceTransition(true, animated: animated)
+        print("viewWillDisappear内でviewWillApperを呼び出した")
     }
     
     @IBAction func onTappedAlbumButton() {
@@ -89,6 +88,8 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             createArticle(article: newArticle)
             //streakを計算して更新
             calculateAndSaveStreak(challenge: topChallenge)
+            //streakが7の時は通知設定をオフにする
+            checkStreakAndDisableNotification(for: topChallenge)
             //前の画面に戻る
             self.dismiss(animated: true)
         }
@@ -100,13 +101,14 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             realm.add(article)
         }
         print("RealmにArticleを追加しました")
-        reloadTable()
+        //reloadTable()
     }
     
     func reloadTable() {
         //遷移先画面が閉じる直前のタイミングで、遷移元画面のViewWillAppear()を呼び出すつまり、tableをリロードできる
         if #available(iOS 13.0, *) {
             presentingViewController?.beginAppearanceTransition(true, animated: true)
+            print("遷移元画面のviewWillApperを呼び出す")
         }
         print("アナログでリロード")
     }
@@ -116,11 +118,8 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         let sortedArticles =  realm.objects(Article.self)
             .filter(NSPredicate(format: "challengeID == %@", challenge.challengeUID))
             .sorted(byKeyPath: "date")
-        
         var streakCount = 0
-        
-        print("sortedArticles: \(sortedArticles)")
-        
+        //print("sortedArticles: \(sortedArticles)")
         var startDate = Date()
         // 最初の記事の日付を取得して、startDateに設定
         if let firstArticle = sortedArticles.first {
@@ -129,15 +128,12 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             // 記事が存在しない場合は、処理を中断して関数を終了
             return
         }
-        
         var currentDate = startDate
-        
         for article in sortedArticles {
             let articleDate = Calendar.current.startOfDay(for: article.date)
-            
-            print("articleDate: \(articleDate)")
-            print("currentDate: \(currentDate)")
-            print("---------")
+            //            print("articleDate: \(articleDate)")
+            //            print("currentDate: \(currentDate)")
+            //            print("---------")
             if articleDate == currentDate {
                 // 記事の日付が現在の日付と一致している場合
                 streakCount += 1
@@ -155,6 +151,24 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         }
         print("RealmにChellenge.streakを追加しました")
     }
+    
+    //streakが７になったら通知をオフにする
+    func checkStreakAndDisableNotification(for challenge: Challenge) {
+        if challenge.streak == 7 {
+            print("streakが7に到達しました。通知設定をオフにします。")
+            //challenge.doNotification = false//Realmに保存していないから無意味？
+            cancelNotification(for: challenge)
+        }
+        
+    }
+    //通知設定をオフにする
+    func cancelNotification(for challenge: Challenge) {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [challenge.challengeUID])
+        print("通知スケジュールを消去しました　challengeTitle: \(challenge.title)")
+    }
+    
+    
+    
     //toDo Articleのcontextとimageが未入力だとアラートを表示
     func displayAlertWhenNotInput() {
         //alertを作成
