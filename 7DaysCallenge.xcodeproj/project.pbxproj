@@ -19,6 +19,9 @@
 		F0CE69F22A1DD30800D5A889 /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE69F12A1DD30800D5A889 /* ChallengeModel.swift */; };
 		F0CE69F52A1DD51700D5A889 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = F0CE69F42A1DD51700D5A889 /* Realm */; };
 		F0CE69F72A1DD51700D5A889 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F0CE69F62A1DD51700D5A889 /* RealmSwift */; };
+		F0D3700D2A274D8A0089CD4C /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3700C2A274D8A0089CD4C /* ArchiveViewController.swift */; };
+		F0D370102A274EF10089CD4C /* ChallengeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3700E2A274EF10089CD4C /* ChallengeViewCell.swift */; };
+		F0D370112A274EF10089CD4C /* challengeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D3700F2A274EF10089CD4C /* challengeViewCell.xib */; };
 		F0E7205C2A1C8B770022AA3B /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7205A2A1C8B770022AA3B /* ArticleTableViewCell.swift */; };
 		F0E7205D2A1C8B770022AA3B /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E7205B2A1C8B770022AA3B /* ArticleTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -37,6 +40,9 @@
 		F0C819E62A1A131800942B9F /* NewChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChallengeViewController.swift; sourceTree = "<group>"; };
 		F0CE69EF2A1D343500D5A889 /* NewArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArticleViewController.swift; sourceTree = "<group>"; };
 		F0CE69F12A1DD30800D5A889 /* ChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeModel.swift; sourceTree = "<group>"; };
+		F0D3700C2A274D8A0089CD4C /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
+		F0D3700E2A274EF10089CD4C /* ChallengeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewCell.swift; sourceTree = "<group>"; };
+		F0D3700F2A274EF10089CD4C /* challengeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = challengeViewCell.xib; sourceTree = "<group>"; };
 		F0E7205A2A1C8B770022AA3B /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		F0E7205B2A1C8B770022AA3B /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,12 +87,15 @@
 				F0C819DB2A19F53300942B9F /* Assets.xcassets */,
 				F0C819DD2A19F53300942B9F /* LaunchScreen.storyboard */,
 				F0C819E02A19F53300942B9F /* Info.plist */,
+				F0CE69F12A1DD30800D5A889 /* ChallengeModel.swift */,
 				F0C819E62A1A131800942B9F /* NewChallengeViewController.swift */,
 				F04062D12A1C792E004E5A1F /* ArticleViewController.swift */,
 				F0E7205A2A1C8B770022AA3B /* ArticleTableViewCell.swift */,
 				F0E7205B2A1C8B770022AA3B /* ArticleTableViewCell.xib */,
 				F0CE69EF2A1D343500D5A889 /* NewArticleViewController.swift */,
-				F0CE69F12A1DD30800D5A889 /* ChallengeModel.swift */,
+				F0D3700C2A274D8A0089CD4C /* ArchiveViewController.swift */,
+				F0D3700E2A274EF10089CD4C /* ChallengeViewCell.swift */,
+				F0D3700F2A274EF10089CD4C /* challengeViewCell.xib */,
 			);
 			path = 7DaysCallenge;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E7205D2A1C8B770022AA3B /* ArticleTableViewCell.xib in Resources */,
+				F0D370112A274EF10089CD4C /* challengeViewCell.xib in Resources */,
 				F0C819DF2A19F53300942B9F /* LaunchScreen.storyboard in Resources */,
 				F0C819DC2A19F53300942B9F /* Assets.xcassets in Resources */,
 				F0C819DA2A19F53100942B9F /* Main.storyboard in Resources */,
@@ -171,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CE69F02A1D343500D5A889 /* NewArticleViewController.swift in Sources */,
+				F0D3700D2A274D8A0089CD4C /* ArchiveViewController.swift in Sources */,
 				F0C819D32A19F53100942B9F /* AppDelegate.swift in Sources */,
+				F0D370102A274EF10089CD4C /* ChallengeViewCell.swift in Sources */,
 				F0C819E72A1A131800942B9F /* NewChallengeViewController.swift in Sources */,
 				F04062D22A1C792E004E5A1F /* ArticleViewController.swift in Sources */,
 				F0C819D52A19F53100942B9F /* SceneDelegate.swift in Sources */,
