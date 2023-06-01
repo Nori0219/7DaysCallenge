@@ -228,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zh-eJ-CBl">
-                                <rect key="frame" x="-7" y="0.0" width="392" height="44"/>
+                                <rect key="frame" x="-7" y="0.0" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="チャレンジの記録" id="9jT-c8-nrp"/>
@@ -239,7 +239,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Fp-leC">
-                                        <rect key="frame" x="117" y="317" width="88" height="49"/>
+                                        <rect key="frame" x="115" y="317" width="88" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="tintColor" red="0.90984059340000001" green="0.70160096090000001" blue="0.73584182779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
@@ -263,7 +263,7 @@
                                         <locale key="locale" localeIdentifier="ja_JP"/>
                                     </datePicker>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1QT-jq-NUv">
-                                        <rect key="frame" x="92" y="159" width="142" height="140"/>
+                                        <rect key="frame" x="90" y="159" width="142" height="140"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <gestureRecognizers/>
                                         <userDefinedRuntimeAttributes>
@@ -273,7 +273,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ys-6v-qqy">
-                                        <rect key="frame" x="250" y="321" width="50" height="41"/>
+                                        <rect key="frame" x="248" y="321" width="50" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <gestureRecognizers/>
                                         <color key="tintColor" systemColor="systemTealColor"/>
@@ -283,7 +283,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nj4-Bm-JRz">
-                                        <rect key="frame" x="14" y="77" width="292" height="68"/>
+                                        <rect key="frame" x="12" y="77" width="292" height="68"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -336,7 +336,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zoc-of-hoU">
-                                <rect key="frame" x="33" y="231" width="319" height="182"/>
+                                <rect key="frame" x="31" y="231" width="321" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1週間異国料理生活" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm1-Ea-3Q9">
@@ -463,20 +463,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="Container" destination="zoc-of-hoU" id="KKA-9c-RHD"/>
                         <outlet property="collectionView" destination="RCd-PD-R9Q" id="xqj-aW-lfq"/>
-                        <outlet property="container" destination="zoc-of-hoU" id="GQz-G9-AzI"/>
-                        <outlet property="startDateLabel" destination="mnx-e5-aBf" id="mVb-vY-cMy"/>
-                        <outlet property="streakLabel" destination="1Ej-4a-HfM" id="VWQ-XL-bTg"/>
-                        <outlet property="streakView1" destination="4X9-Eg-U5c" id="XSV-bR-puN"/>
-                        <outlet property="streakView2" destination="n43-li-iIo" id="w7y-Wv-Khi"/>
-                        <outlet property="streakView3" destination="xnz-X9-4JW" id="6f0-M0-0ZU"/>
-                        <outlet property="streakView4" destination="aGQ-ya-p3h" id="fBF-5K-jPW"/>
-                        <outlet property="streakView5" destination="RlW-mE-Fz4" id="8EH-DF-toe"/>
-                        <outlet property="streakView6" destination="wTZ-sX-O72" id="ctF-St-wpe"/>
-                        <outlet property="streakView7" destination="B2L-Jl-3uB" id="KVw-XO-ndb"/>
-                        <outlet property="titleLabel" destination="Pm1-Ea-3Q9" id="Rcg-fe-mhI"/>
-                        <outlet property="toDoLabel" destination="tOd-Ik-5yz" id="d7z-fq-H9s"/>
                         <segue destination="Hgq-xh-rpO" kind="show" identifier="toArticleView" id="6uE-8d-UZG"/>
                     </connections>
                 </viewController>

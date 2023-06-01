@@ -23,11 +23,13 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         
         // RealmからArticleオブジェクトのリストを取得
-        //articles = realm.objects(Article.self)
-        articles = readArticles()
-        navigationItem.title = topChallenge.title
-        startDateLabel.text = "開始日：　\(formatDate2(topChallenge.startDate))"
-        toDoLabel.text = topChallenge.toDo
+        articles = readArticles() ?? []
+        //TopChallegneが存在しない場合に備える
+        if let topChallenge = topChallenge {
+            navigationItem.title = topChallenge.title
+            startDateLabel.text = "開始日：　\(formatDate2(topChallenge.startDate))"
+            toDoLabel.text = topChallenge.toDo
+        }
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -42,14 +44,17 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     }
     
     //ChallegeのUIDに対応したArticleの配列を読み込む
-    func readArticles() ->  [Article] {
-        return Array(realm.objects(Article.self).filter("challengeID == %@", topChallenge.challengeUID).sorted(byKeyPath: "date",ascending: false))
+    func readArticles() -> [Article]? {
+        guard let challengeUID = topChallenge?.challengeUID else {
+            return nil
+        }
+        return Array(realm.objects(Article.self).filter("challengeID == %@", challengeUID).sorted(byKeyPath: "date",ascending: false))
     }
     
     // 記事一覧を更新するメソッド
     func updateArticleList() {
         //articles = realm.objects(Article.self)
-        articles = readArticles()
+        articles = readArticles() ?? []
         tableView.reloadData()
         print("ArticleViewTableをリロードしました")
     }
