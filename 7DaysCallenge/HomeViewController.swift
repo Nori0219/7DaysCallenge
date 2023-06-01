@@ -9,12 +9,14 @@ import UIKit
 import RealmSwift
 
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let realm = try! Realm()
     
     var topChallenge: Challenge?
-    //var selectedChallenge: Challenge? = nil //押されたセルのカテゴリーを保持
+    
+    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     @IBOutlet var container: UIView!
     @IBOutlet var titleLabel: UILabel!
@@ -34,6 +36,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         topChallenge = realm.objects(Challenge.self).last//データベースから取得した最新のChallenge
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        //カスタムセルの設定
+        collectionView.register(UINib(nibName: "challengeViewCell", bundle: nil), forCellWithReuseIdentifier: "ChallengeCell")
         
         // ストリークの値を取得
         let streakValue = getStreakValue()
@@ -61,7 +69,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // 最新のChallengeオブジェクトを取得
-        topChallenge = realm.objects(Challenge.self).last
+        updateTopChallenge()
         
         // ストリークの値を取得
         let streakValue = getStreakValue()
@@ -77,15 +85,74 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // チャレンジを更新するメソッド
+    func updateTopChallenge() {
+        topChallenge = realm.objects(Challenge.self).last
+        collectionView.reloadData()
+    }
+    
+    //セクションの中のセルの数を返す
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    //セルに表示する内容を記載する
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        //storyboard上のセルを生成　storyboardのIdentifierで付けたものをここで設定する
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChallengeCell", for: indexPath)as! ChallengeViewCell
+        
+        cell.delegate = self
+        // セルに表示する内容を設定
+        // 最新のChallengeオブジェクトを使用してセルの内容を設定
+            if let challenge = topChallenge {
+                cell.setChallengeCell(title: challenge.title, toDo: challenge.toDo, startDate: challenge.startDate, streak: challenge.streak)
+                cell.updateStreakView(challenge: challenge)
+            }
+        // ストリークの値に応じて表示色を変更する
+        cell.updateStreakView(challenge: topChallenge!)
+        
+        cell.layer.borderWidth = 0.0
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 6, height: 9)//影の方向　width、heightを負の値にすると上の方に影が表示される
+        cell.layer.shadowOpacity = 0.8 //影の色の透明度
+        cell.layer.shadowRadius = 0 //影のぼかし
+        cell.layer.masksToBounds = false//影が表示されるように
+        
+        return cell
+    }
+    
+    //**************************************************
+    // UICollectionViewDelegateFlowLayout
+    //**************************************************
+    
+    // UICollectionViewの外周余白
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    // Cellのサイズ
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 340, height: 165)
+    }
+    // 行の最小余白
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 40
+    }
+    // 列の最小余白
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
     func updateStreakView() {
         guard let challenge = topChallenge else {
             return
         }
-
+        
         let streak = challenge.streak
         // Uidで紐づいたArticleの日付のみを取得した配列
         let completedDates = challenge.articles.filter({ $0.challengeID == challenge.challengeUID }).map({ $0.date })
-
+        
         let streakViews = [streakView1, streakView2, streakView3, streakView4, streakView5, streakView6, streakView7]
         let startDate = Calendar.current.startOfDay(for: challenge.startDate)//開始日を日本のタイムに変更
         let endDate = Calendar.current.date(byAdding: .day, value: 6, to: startDate) ?? startDate
@@ -152,5 +219,15 @@ class HomeViewController: UIViewController {
         }
     }
 }
+
+extension HomeViewController: ChallengeViewCellDelegate {
+    func challengeCellDidTapButton(cell: ChallengeViewCell) {
+        print("deligateから処理が呼ばれました")
+        print("topChallenge: \(String(describing: topChallenge?.title))")
+        // 画面遷移の処理を実装する
+        performSegue(withIdentifier: "toArticleView", sender: nil)
+    }
+}
+
 
 
