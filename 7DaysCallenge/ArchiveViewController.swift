@@ -29,6 +29,13 @@ class ArchiveViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         //カスタムセルの設定
         collectionView.register(UINib(nibName: "challengeViewCell", bundle: nil), forCellWithReuseIdentifier: "ChallengeCell")
+        
+        //NavigationBarの＜Backを非表示にする
+        if #available(iOS 14.0, *) {
+            navigationItem.backButtonDisplayMode = .minimal
+        } else {
+            navigationItem.backButtonTitle = " "
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +45,6 @@ class ArchiveViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     //Challegeの配列を読み込む
     func readChallenges() -> [Challenge] {
-        return
         Array(realm.objects(Challenge.self).sorted(byKeyPath: "startDate",ascending: false))
     }
     
@@ -99,7 +105,7 @@ class ArchiveViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
-    //画面遷移でtopChallengeの値を渡す
+    //画面遷移でselectChallengeの値を渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toArticleView" {
             let articleViewController = segue.destination as! ArticleViewController
