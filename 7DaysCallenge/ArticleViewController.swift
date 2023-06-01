@@ -12,7 +12,6 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     
     let realm = try! Realm()
     // Articleオブジェクトのリストを格納するプロパティ
-    //var articles: Results<Article>!
     var articles: [Article] = []
     var topChallenge: Challenge!
     
@@ -67,9 +66,9 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         // セルに表示する内容を設定
         if let imageData = article.imageData {
             let image = UIImage(data: imageData)
-            cell.setCell(context: article.context, date: formatDate(article.date), image: image)
+            cell.setArticleCell(context: article.context, date: formatDate(article.date), image: image)
         } else {
-            cell.setCell(context: article.context, date: formatDate(article.date), image: nil)
+            cell.setArticleCell(context: article.context, date: formatDate(article.date), image: nil)
         }
         //セクション内の行数
         let sectionRowCount = tableView.numberOfRows(inSection: indexPath.section)
@@ -87,6 +86,7 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         //formatter.dateFormat = "yyyy/MM/dd"
+        formatter.locale = Locale(identifier: "ja_JP")
         formatter.dateFormat = "yyyy年MM月dd日(E)"
         return formatter.string(from: date)
     }
@@ -94,6 +94,7 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     func formatDate2(_ date: Date) -> String {
         let formatter = DateFormatter()
         //formatter.dateFormat = "yyyy/MM/dd"
+        formatter.locale = Locale(identifier: "ja_JP")
         formatter.dateFormat = "yyyy/MM/dd"
         return formatter.string(from: date)
     }

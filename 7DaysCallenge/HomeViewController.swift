@@ -127,19 +127,6 @@ class HomeViewController: UIViewController {
         //challenge.updateStreak()
         return challenge.streak
     }
-
-//    // ストリークの表示色を更新するメソッド
-//    func updateStreakView(streakValue: Int) {
-//        let streakViews = [streakView1, streakView2, streakView3, streakView4, streakView5, streakView6, streakView7]
-//        // 連続日数に応じてストリークの表示色を設定
-//        for (index, view) in streakViews.enumerated() {
-//            if index < streakValue {
-//                view?.backgroundColor = UIColor.green // 連続日数の範囲内は緑色に設定
-//            } else {
-//                view?.backgroundColor = UIColor.lightGray // 連続日数の範囲外はグレー色に設定
-//            }
-//        }
-//    }
     
     //ホーム画面に表示されるChallengeの内容をセットする
     func setChallengeView(title: String, toDo: String, startDate:Date, streak:Int) {
@@ -152,7 +139,7 @@ class HomeViewController: UIViewController {
     // 日付のフォーマットを適用するメソッド
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
-        //formatter.dateFormat = "yyyy/MM/dd"
+        formatter.locale = Locale(identifier: "ja_JP")
         formatter.dateFormat = "yyyy/MM/dd"
         return formatter.string(from: date)
     }

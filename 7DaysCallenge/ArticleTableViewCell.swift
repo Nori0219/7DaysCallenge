@@ -27,7 +27,7 @@ class ArticleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(context: String, date: String,image: UIImage?) {
+    func setArticleCell(context: String, date: String,image: UIImage?) {
         contextLabel.text = context
         //indexLabel.text = String(index)
         dateLabal.text = date
