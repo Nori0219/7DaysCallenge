@@ -41,6 +41,8 @@ class ArchiveViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewWillAppear(_ animated: Bool) {
         // Collectionを更新する
         updateChallengeList()
+        //TabBarを表示
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     //Challegeの配列を読み込む

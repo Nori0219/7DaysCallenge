@@ -45,6 +45,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         updateTopChallenge()
         print("現在のtopChallenge: \(String(describing: topChallenge?.title))")
         print("現在のtopChallenge.streak: \(String(describing: topChallenge?.streak))")
+        //TabBarを表示
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     // チャレンジを更新するメソッド

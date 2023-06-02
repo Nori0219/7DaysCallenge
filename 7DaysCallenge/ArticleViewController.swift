@@ -22,6 +22,9 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //TabBarを非表示
+        self.tabBarController?.tabBar.isHidden = true
+        
         // RealmからArticleオブジェクトのリストを取得
         articles = readArticles() ?? []
         //TopChallegneが存在しない場合に備える
