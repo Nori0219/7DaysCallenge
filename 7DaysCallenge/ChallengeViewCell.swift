@@ -31,9 +31,30 @@ class ChallengeViewCell:
     @IBOutlet var streakView7: UIView!
     @IBOutlet var articleButton: UIButton!
     
+    private var streakViews: [UIView] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        // streakViewの配列を作成
+        streakViews = [streakView1, streakView2, streakView3, streakView4, streakView5, streakView6, streakView7]
+        // streakViewsの角丸を設定する
+        for streakView in streakViews {
+            streakView.layer.cornerRadius = 6
+            streakView.clipsToBounds = true
+        }
+        
+        self.layer.borderWidth = 0.0
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)//影の方向　width、heightを負の値にすると上の方に影が表示される
+        self.layer.shadowOpacity = 0.4 //影の色の透明度
+        self.layer.shadowRadius = 5 //影のぼかし
+        //        self.layer.shadowOffset = CGSize(width: 6, height: 9)//影の方向　width、heightを負の値にすると上の方に影が表示される
+        //        self.layer.shadowOpacity = 0.8 //影の色の透明度
+        //        self.layer.shadowRadius = 0 //影のぼかし
+        self.layer.masksToBounds = false//影が表示されるように
+        
+        //角丸はStoryBoadで変更する
         
     }
     
@@ -49,7 +70,7 @@ class ChallengeViewCell:
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ja_JP")
-        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.dateFormat = "開始：　yyyy/MM/dd"
         return formatter.string(from: date)
     }
     
@@ -57,7 +78,7 @@ class ChallengeViewCell:
         let streak = challenge.streak
         // Uidで紐づいたArticleの日付のみを取得した配列
         let completedDates = challenge.articles.filter({ $0.challengeID == challenge.challengeUID }).map({ $0.date })
-
+        
         let streakViews = [streakView1, streakView2, streakView3, streakView4, streakView5, streakView6, streakView7]
         let startDate = Calendar.current.startOfDay(for: challenge.startDate)//開始日を日本のタイムに変更
         let endDate = Calendar.current.date(byAdding: .day, value: 6, to: startDate) ?? startDate

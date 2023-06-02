@@ -18,6 +18,14 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.layer.borderWidth = 0.0
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)//影の方向　width、heightを負の値にすると上の方に影が表示される
+        self.layer.shadowOpacity = 0.4 //影の色の透明度
+        self.layer.shadowRadius = 5 //影のぼかし
+        self.layer.masksToBounds = false//影が表示されるように
+        
     }
     
     func setArticleCell(context: String, date: String,image: UIImage?) {

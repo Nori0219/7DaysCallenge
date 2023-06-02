@@ -75,13 +75,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 cell.updateStreakView(challenge: challenge)
             }
         
-        cell.layer.borderWidth = 0.0
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOffset = CGSize(width: 6, height: 9)//影の方向　width、heightを負の値にすると上の方に影が表示される
-        cell.layer.shadowOpacity = 0.8 //影の色の透明度
-        cell.layer.shadowRadius = 0 //影のぼかし
-        cell.layer.masksToBounds = false//影が表示されるように
-        
         return cell
     }
     
@@ -91,7 +84,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     // UICollectionViewの外周余白
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
     }
     
     // Cellのサイズ

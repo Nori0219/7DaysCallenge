@@ -83,12 +83,6 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
         // セルに番号を降順になるようにセット
         cell.indexLabel.text = String(articles.count - indexPath.item)
         
-        cell.layer.borderWidth = 0.0
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 3)//影の方向　width、heightを負の値にすると上の方に影が表示される
-        cell.layer.shadowOpacity = 0.4 //影の色の透明度
-        cell.layer.shadowRadius = 5 //影のぼかし
-        cell.layer.masksToBounds = false//影が表示されるように
         
         return cell
     }
