@@ -8,14 +8,16 @@
 import UIKit
 import RealmSwift
 
-class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+//class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ArticleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let realm = try! Realm()
     // Articleオブジェクトのリストを格納するプロパティ
     var articles: [Article] = []
     var topChallenge: Challenge!
     
-    @IBOutlet var tableView: UITableView!
+
+    @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var startDateLabel: UILabel!
     @IBOutlet var toDoLabel: UILabel!
     
@@ -33,11 +35,10 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
             startDateLabel.text = "開始日：　\(formatDate2(topChallenge.startDate))"
             toDoLabel.text = topChallenge.toDo
         }
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorStyle = .none
+        collectionView.delegate = self
+        collectionView.dataSource = self
         //カスタムセルの設定
-        tableView.register(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
+        collectionView.register(UINib(nibName: "ArticleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArticleCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,19 +59,20 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
     func updateArticleList() {
         //articles = realm.objects(Article.self)
         articles = readArticles() ?? []
-        tableView.reloadData()
+        collectionView.reloadData()
         print("ArticleViewTableをリロードしました")
     }
     
-    //セルの表示する個数
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return 10
+    // セルの表示する個数
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return articles.count
     }
-    //セルの内容を指定するメソッド
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleTableViewCell
-        let article = articles[indexPath.row]
+
+    // セルの内容を指定するメソッド
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCell", for: indexPath) as! ArticleCollectionViewCell
+        
+        let article = articles[indexPath.item]
         // セルに表示する内容を設定
         if let imageData = article.imageData {
             let image = UIImage(data: imageData)
@@ -78,18 +80,24 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         } else {
             cell.setArticleCell(context: article.context, date: formatDate(article.date), image: nil)
         }
-        //セクション内の行数
-        let sectionRowCount = tableView.numberOfRows(inSection: indexPath.section)
-        let rowNumber = sectionRowCount - indexPath.row
-        //セルに番号を降順になるようにセット
-        cell.indexLabel.text = String(rowNumber)
+        // セルに番号を降順になるようにセット
+        cell.indexLabel.text = String(articles.count - indexPath.item)
         
-        cell.mainBackground.layer.cornerRadius = 20
-        cell.mainBackground.layer.masksToBounds = true
-        cell.backgroundColor = .systemGray6
+        cell.layer.borderWidth = 0.0
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 3)//影の方向　width、heightを負の値にすると上の方に影が表示される
+        cell.layer.shadowOpacity = 0.4 //影の色の透明度
+        cell.layer.shadowRadius = 5 //影のぼかし
+        cell.layer.masksToBounds = false//影が表示されるように
         
         return cell
     }
+
+    // セルが選択された時の処理
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // セルが選択された時の処理を記述する
+    }
+
     // 日付のフォーマットを適用するメソッド
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
@@ -107,11 +115,6 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         return formatter.string(from: date)
     }
     
-    //セルの高さ　0にすると潰れちゃうイマイチよくわかってない
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 240
-    }
-    
     //画面遷移でtopChallengeの値を渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toNewArticleView" {
@@ -120,25 +123,26 @@ class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDa
         }
     }
     
-}
-
-
-//カスタムセルの影の設定
-class ShadowView: UIView {
-    override var bounds: CGRect {
-        didSet {
-            setupShadow()
-        }
+    //**************************************************
+    // UICollectionViewDelegateFlowLayout
+    //**************************************************
+    
+    // UICollectionViewの外周余白
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     }
     
-    func setupShadow() {
-        self.layer.cornerRadius = 10
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)//影の方向　width、heightを負の値にすると上の方に影が表示される
-        self.layer.shadowRadius = 4//影のぼかし
-        self.layer.shadowOpacity = 0.3//影の色の透明度
-        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 10, height: 10)).cgPath
-        self.layer.shouldRasterize = true
-        self.layer.rasterizationScale = UIScreen.main.scale
+    // Cellのサイズ
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 340, height: 240)
     }
+    // 行の最小余白
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+    // 列の最小余白
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
 }
-
