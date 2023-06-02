@@ -30,6 +30,7 @@ class ArchiveViewController: UIViewController, UICollectionViewDelegate, UIColle
         //カスタムセルの設定
         collectionView.register(UINib(nibName: "challengeViewCell", bundle: nil), forCellWithReuseIdentifier: "ChallengeCell")
         
+        navigationItem.title = "振り返り"
         //NavigationBarの＜Backを非表示にする
         if #available(iOS 14.0, *) {
             navigationItem.backButtonDisplayMode = .minimal

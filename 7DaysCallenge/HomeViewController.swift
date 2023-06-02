@@ -30,6 +30,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         //カスタムセルの設定
         collectionView.register(UINib(nibName: "challengeViewCell", bundle: nil), forCellWithReuseIdentifier: "ChallengeCell")
         
+        navigationItem.title = "チャレンジ"
         //NavigationBarの＜Backを非表示にする　参考：https://spinners.work/posts/ios14_blank_back_button/
         if #available(iOS 14.0, *) {
             navigationItem.backButtonDisplayMode = .minimal

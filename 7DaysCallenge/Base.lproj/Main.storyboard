@@ -361,7 +361,7 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="Uo3-T8-6pO">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="cOP-SO-9Xh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cOP-SO-9Xh">
                             <connections>
                                 <segue destination="Oar-2c-61g" kind="show" id="6Ee-Vg-uFI"/>
                             </connections>
