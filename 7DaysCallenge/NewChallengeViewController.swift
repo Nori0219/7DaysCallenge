@@ -25,8 +25,8 @@ class NewChallengeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("inputDate: \(inputedDate)")
+        //TabBarを非表示
+        self.tabBarController?.tabBar.isHidden = true
         //NavigationBarの＜Backを非表示にする　参考：https://spinners.work/posts/ios14_blank_back_button/
         if #available(iOS 14.0, *) {
             navigationItem.backButtonDisplayMode = .minimal
@@ -55,11 +55,6 @@ class NewChallengeViewController: UIViewController {
         newChallenge.notificationTime = notificarionDatePicker.date
         newChallenge.startDate = inputedDate
         
-        // 直前のチャレンジの通知をオフにする　NewChallengeをRealmに保存する前に実行する必要がある
-        if let previousChallenge = getPreviousChallenge() {
-            //previousChallenge.doNotification = false//Realmには保存していない
-            cancelNotification(for: previousChallenge)
-        }
         
         // SwitchがONの時は通知の設定
         if newChallenge.doNotification == true {
@@ -74,6 +69,12 @@ class NewChallengeViewController: UIViewController {
             print("newChallenge: \(newChallenge)")
             //Realmにデータを保存する
             createChallenge(charenge: newChallenge)
+            
+            // 直前のチャレンジの通知をオフにする　NewChallengeをRealmに保存する前に実行する必要がある
+            if let previousChallenge = getPreviousChallenge() {
+                //previousChallenge.doNotification = false//Realmには保存していない
+                cancelNotification(for: previousChallenge)
+            }
             //前の画面に戻る
             print("前の画面に戻る！")
             //self.dismiss(animated: true)
