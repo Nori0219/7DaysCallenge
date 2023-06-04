@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 import UserNotifications
 
-class NewChallengeViewController: UIViewController {
+class NewChallengeViewController: UIViewController, UITextFieldDelegate {
     
     let realm = try! Realm()
     
@@ -19,12 +19,16 @@ class NewChallengeViewController: UIViewController {
     @IBOutlet var notificationSwich: UISwitch!
     @IBOutlet var notificarionDatePicker: UIDatePicker!
     @IBOutlet var addChallengeButton: UIButton!
+    @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
     
     //challengeを入力した日付 == StartDate
     var inputedDate: Date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        toDoTextField.delegate = self
+        titleTextField.delegate = self
         //TabBarを非表示
         self.tabBarController?.tabBar.isHidden = true
         //NavigationBarの＜Backを非表示にする　参考：https://spinners.work/posts/ios14_blank_back_button/
@@ -34,6 +38,24 @@ class NewChallengeViewController: UIViewController {
             navigationItem.backButtonTitle = " "
         }
         
+        // 他の場所をタップしたときにキーボードを閉じるためのタップジェスチャーレコグナイザを設定する
+        tapGestureRecognizer.addTarget(self, action: #selector(handleTap))
+        
+    }
+    
+    @objc func handleTap() {
+        // TextFieldからフォーカスを外し、キーボードを閉じる
+        view.endEditing(true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func checkNotification() {
@@ -92,8 +114,7 @@ class NewChallengeViewController: UIViewController {
         let notificationContent = UNMutableNotificationContent()
         
         // 通知をグループ化するためにをthreadIdentifierに設定する
-        notificationContent.threadIdentifier = challenge.title
-
+        notificationContent.threadIdentifier = challenge.title        
         notificationContent.title = "\(challenge.title)"
         
         // ストリークの数に応じてメッセージを変更するこの場合は0

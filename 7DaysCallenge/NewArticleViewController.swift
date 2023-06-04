@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class NewArticleViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class NewArticleViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate{
     
     let realm = try! Realm()
     
@@ -28,7 +28,7 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         
         // UIDatePickerの設定
         datePicker.datePickerMode = .date
-        
+        contextTextView.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -36,6 +36,13 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         //遷移先画面が閉じる直前のタイミングで、遷移元画面のViewWillAppear()を呼び出すつまり、tableをリロードできる
         presentingViewController?.beginAppearanceTransition(true, animated: animated)
         print("viewWillDisappear内でviewWillApperを呼び出した")
+    }
+    
+    //入力画面ないしkeyboardの外を押したら、キーボードを閉じる処理
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (self.contextTextView.isFirstResponder) {
+            self.contextTextView.resignFirstResponder()
+        }
     }
     
     @IBAction func onTappedAlbumButton() {
