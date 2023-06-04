@@ -65,16 +65,18 @@ class NewChallengeViewController: UIViewController {
             //アラートを表示する
             displayAlertWhenNotInput()
         } else{
-            print("newChallengeをRealmへ保存可能です")
-            print("newChallenge: \(newChallenge)")
-            //Realmにデータを保存する
-            createChallenge(charenge: newChallenge)
             
             // 直前のチャレンジの通知をオフにする　NewChallengeをRealmに保存する前に実行する必要がある
             if let previousChallenge = getPreviousChallenge() {
                 //previousChallenge.doNotification = false//Realmには保存していない
                 cancelNotification(for: previousChallenge)
             }
+            
+            print("newChallengeをRealmへ保存可能です")
+            print("newChallenge: \(newChallenge)")
+            //Realmにデータを保存する
+            createChallenge(charenge: newChallenge)
+            
             //前の画面に戻る
             print("前の画面に戻る！")
             //self.dismiss(animated: true)
@@ -88,37 +90,28 @@ class NewChallengeViewController: UIViewController {
     
     func scheduleNotification(for challenge: Challenge) {
         let notificationContent = UNMutableNotificationContent()
+        
+        // 通知をグループ化するためにをthreadIdentifierに設定する
+        notificationContent.threadIdentifier = challenge.title
+
         notificationContent.title = "\(challenge.title)"
         
-        // ストリークの数に応じてメッセージを変更する
-        let streakMessage: String
-        switch challenge.streak {
-        case 0:
-            streakMessage = "\(challenge.toDo)\nさあ、新たなチャレンジの幕開けです！今日から頑張りましょう！"
-        case 1:
-            streakMessage = "素晴らしい！連続\(challenge.streak)日目です。まだまだこれからですよ！"
-        case 2:
-            streakMessage = "オオ、見事な連続達成！\(challenge.streak)日間継続です。驚きの才能を感じますね！"
-        case 3:
-            streakMessage = "\(challenge.streak)日連続達成です！まさに挑戦のマスター！もうやめられませんね！"
-        case 4:
-            streakMessage = "すごい！連続\(challenge.streak)日間の偉業です。あなたはチャレンジのプロですね！"
-        case 5:
-            streakMessage = "ワオ！もう止められません！連続\(challenge.streak)日間の快挙です！目指せ、世界新記録！"
-        case 6:
-            streakMessage = "連続\(challenge.streak)日間！今日で最終日ですよ！"
-        default:
-            streakMessage = "順調ですね！連続\(challenge.streak)日目です。続けましょう！"
-        }
+        // ストリークの数に応じてメッセージを変更するこの場合は0
+        let streakMessage = ChallengeMessage.message(for: 0, challenge: challenge)
         //通知の内容
         notificationContent.body = "\(streakMessage)"
         notificationContent.sound = UNNotificationSound.default
         
         let calendar = Calendar.current
         let components = calendar.dateComponents([.hour, .minute], from: challenge.notificationTime!)
+        
         //componentsで指定した時間に繰り返し通知を送る
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
-        //ChallemgeUIDで通知を識別
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+        
+        // テスト用コード通知を5秒後に設定
+        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
+        
+        // 固定されたidentifierを使用して通知リクエストを作成す
         let request = UNNotificationRequest(identifier: challenge.challengeUID, content: notificationContent, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { error in
@@ -133,7 +126,7 @@ class NewChallengeViewController: UIViewController {
     //通知設定をオフにする
     func cancelNotification(for challenge: Challenge) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [challenge.challengeUID])
-        print("通知スケジュールを消去しました　challengeTitle: \(challenge.title)")
+        print("直前のChallengeの通知スケジュールを消去しました　challengeTitle: \(challenge.title)")
     }
     
     //直前のチャレンジを取得する

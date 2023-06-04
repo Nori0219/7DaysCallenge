@@ -11,6 +11,7 @@
 		F04062D22A1C792E004E5A1F /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04062D12A1C792E004E5A1F /* ArticleViewController.swift */; };
 		F04A947C2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */; };
 		F04A947D2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04A947B2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib */; };
+		F04A947F2A2C89C200B95E96 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04A947E2A2C89C200B95E96 /* Message.swift */; };
 		F0C819D32A19F53100942B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819D22A19F53100942B9F /* AppDelegate.swift */; };
 		F0C819D52A19F53100942B9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819D42A19F53100942B9F /* SceneDelegate.swift */; };
 		F0C819DA2A19F53100942B9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C819D82A19F53100942B9F /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		F04062D12A1C792E004E5A1F /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		F04A947B2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCollectionViewCell.xib; sourceTree = "<group>"; };
+		F04A947E2A2C89C200B95E96 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		F0B7C3612A23A92300F24399 /* 7DaysCallengeRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 7DaysCallengeRelease.entitlements; sourceTree = "<group>"; };
 		F0C819CF2A19F53100942B9F /* 7DaysCallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 7DaysCallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C819D22A19F53100942B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				F0D3700F2A274EF10089CD4C /* challengeViewCell.xib */,
 				F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */,
 				F04A947B2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib */,
+				F04A947E2A2C89C200B95E96 /* Message.swift */,
 			);
 			path = 7DaysCallenge;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				F0C819D52A19F53100942B9F /* SceneDelegate.swift in Sources */,
 				F04A947C2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift in Sources */,
 				F0CE69F22A1DD30800D5A889 /* ChallengeModel.swift in Sources */,
+				F04A947F2A2C89C200B95E96 /* Message.swift in Sources */,
 				F0E7205C2A1C8B770022AA3B /* ArticleTableViewCell.swift in Sources */,
 				F04062D02A1C76B7004E5A1F /* HomeViewController.swift in Sources */,
 			);

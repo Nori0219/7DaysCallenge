@@ -38,6 +38,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             navigationItem.backButtonTitle = " "
         }
         
+        // 通知の許可状態を確認
+            UNUserNotificationCenter.current().getNotificationSettings { settings in
+                if settings.authorizationStatus == .authorized && settings.notificationCenterSetting == .enabled {
+                    print("有効な通知リクエストがあります")
+                } else {
+                    print("有効な通知リクエストはありません")
+                }
+            }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,6 +63,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func updateTopChallenge() {
         topChallenge = realm.objects(Challenge.self).last
         collectionView.reloadData()
+        scheduleNotification(for: topChallenge)
     }
     
     //セクションの中のセルの数を返す
@@ -99,6 +109,52 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
+    
+    
+    // 通知をスケジュールするメソッド
+        func scheduleNotification(for challenge: Challenge?) {
+            guard let challenge = challenge else { return }
+            
+            if challenge.doNotification{
+                print("通知メッセージを変更しますよ！")
+                
+                let notificationContent = UNMutableNotificationContent()
+                // 通知をグループ化するためにをthreadIdentifierに設定する
+                notificationContent.threadIdentifier = challenge.title
+                notificationContent.title = "\(challenge.title)"
+                
+                // ストリークの数に応じてメッセージを変更する
+                let streakMessage = ChallengeMessage.message(for: challenge.streak, challenge: challenge)
+                
+                //通知の内容
+                notificationContent.body = streakMessage
+                notificationContent.sound = UNNotificationSound.default
+                let calendar = Calendar.current
+                
+                let components = calendar.dateComponents([.hour, .minute], from: challenge.notificationTime!)
+                
+                //componentsで指定した時間に繰り返し通知を送る
+                let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+                
+                // テスト用コード通知を5秒後に設定
+                //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                
+                //ChallemgeUIDで通知を識別
+                let request = UNNotificationRequest(identifier: challenge.challengeUID, content: notificationContent, trigger: trigger)
+                
+                
+                
+                UNUserNotificationCenter.current().add(request) { error in
+                    if let error = error {
+                        print("通知のスケジュール設定に失敗しました: \(error.localizedDescription)")
+                    } else {
+                        print("通知がスケジュールされました")
+                    }
+                }
+            } else {
+                print("通知メッセージ！")
+            }
+        }
     
     //画面遷移でtopChallengeの値を渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
