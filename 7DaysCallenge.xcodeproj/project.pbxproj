@@ -7,6 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F011CFF32A2D71BE00A5F629 /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFCD2A2D71BE00A5F629 /* SF-Pro-Rounded-Semibold.otf */; };
+		F011CFF42A2D71BE00A5F629 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFCE2A2D71BE00A5F629 /* SF-Pro-Rounded-Regular.otf */; };
+		F011CFF52A2D71BE00A5F629 /* SF-Pro-Rounded-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFCF2A2D71BE00A5F629 /* SF-Pro-Rounded-Black.otf */; };
+		F011CFF62A2D71BE00A5F629 /* SF-Pro-Rounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFD02A2D71BE00A5F629 /* SF-Pro-Rounded-Light.otf */; };
+		F011CFF72A2D71BE00A5F629 /* SF-Pro-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFD12A2D71BE00A5F629 /* SF-Pro-Rounded-Thin.otf */; };
+		F011CFF82A2D71BE00A5F629 /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFD22A2D71BE00A5F629 /* SF-Pro-Rounded-Medium.otf */; };
+		F011CFF92A2D71BE00A5F629 /* SF-Pro-Rounded-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFD32A2D71BE00A5F629 /* SF-Pro-Rounded-Ultralight.otf */; };
+		F011CFFA2A2D71BE00A5F629 /* SF-Pro-Rounded-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFD42A2D71BE00A5F629 /* SF-Pro-Rounded-Heavy.otf */; };
+		F011CFFB2A2D71BE00A5F629 /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFD52A2D71BE00A5F629 /* SF-Pro-Rounded-Bold.otf */; };
+		F011CFFC2A2D71BE00A5F629 /* README_GenJyuu.txt in Resources */ = {isa = PBXBuildFile; fileRef = F011CFD72A2D71BE00A5F629 /* README_GenJyuu.txt */; };
+		F011CFFD2A2D71BE00A5F629 /* GenJyuuGothic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFD82A2D71BE00A5F629 /* GenJyuuGothic-Light.ttf */; };
+		F011CFFE2A2D71BE00A5F629 /* GenJyuuGothic-P-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFD92A2D71BE00A5F629 /* GenJyuuGothic-P-Bold.ttf */; };
+		F011CFFF2A2D71BE00A5F629 /* GenJyuuGothic-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFDA2A2D71BE00A5F629 /* GenJyuuGothic-Heavy.ttf */; };
+		F011D0002A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFDB2A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Normal.ttf */; };
+		F011D0012A2D71BE00A5F629 /* GenJyuuGothic-P-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFDC2A2D71BE00A5F629 /* GenJyuuGothic-P-Medium.ttf */; };
+		F011D0022A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFDD2A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Bold.ttf */; };
+		F011D0032A2D71BE00A5F629 /* GenJyuuGothic-Monospace-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFDE2A2D71BE00A5F629 /* GenJyuuGothic-Monospace-ExtraLight.ttf */; };
+		F011D0042A2D71BE00A5F629 /* SIL_Open_Font_License_1.1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F011CFDF2A2D71BE00A5F629 /* SIL_Open_Font_License_1.1.txt */; };
+		F011D0052A2D71BE00A5F629 /* GenJyuuGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE02A2D71BE00A5F629 /* GenJyuuGothic-Bold.ttf */; };
+		F011D0062A2D71BE00A5F629 /* GenJyuuGothic-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE12A2D71BE00A5F629 /* GenJyuuGothic-Normal.ttf */; };
+		F011D0072A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE22A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Medium.ttf */; };
+		F011D0082A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE32A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Light.ttf */; };
+		F011D0092A2D71BE00A5F629 /* GenJyuuGothic-P-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE42A2D71BE00A5F629 /* GenJyuuGothic-P-Light.ttf */; };
+		F011D00A2A2D71BE00A5F629 /* GenJyuuGothic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE52A2D71BE00A5F629 /* GenJyuuGothic-Regular.ttf */; };
+		F011D00B2A2D71BE00A5F629 /* GenJyuuGothic-P-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE62A2D71BE00A5F629 /* GenJyuuGothic-P-Normal.ttf */; };
+		F011D00C2A2D71BE00A5F629 /* GenJyuuGothic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE72A2D71BE00A5F629 /* GenJyuuGothic-Medium.ttf */; };
+		F011D00D2A2D71BE00A5F629 /* GenJyuuGothic-P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE82A2D71BE00A5F629 /* GenJyuuGothic-P-Regular.ttf */; };
+		F011D00E2A2D71BE00A5F629 /* GenJyuuGothic-P-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFE92A2D71BE00A5F629 /* GenJyuuGothic-P-ExtraLight.ttf */; };
+		F011D00F2A2D71BE00A5F629 /* GenJyuuGothic-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFEA2A2D71BE00A5F629 /* GenJyuuGothic-ExtraLight.ttf */; };
+		F011D0102A2D71BE00A5F629 /* README_J in Resources */ = {isa = PBXBuildFile; fileRef = F011CFEC2A2D71BE00A5F629 /* README_J */; };
+		F011D0112A2D71BE00A5F629 /* README_E in Resources */ = {isa = PBXBuildFile; fileRef = F011CFED2A2D71BE00A5F629 /* README_E */; };
+		F011D0122A2D71BE00A5F629 /* LICENSE_E in Resources */ = {isa = PBXBuildFile; fileRef = F011CFEE2A2D71BE00A5F629 /* LICENSE_E */; };
+		F011D0132A2D71BE00A5F629 /* LICENSE_J in Resources */ = {isa = PBXBuildFile; fileRef = F011CFEF2A2D71BE00A5F629 /* LICENSE_J */; };
+		F011D0142A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFF02A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Heavy.ttf */; };
+		F011D0152A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFF12A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Regular.ttf */; };
+		F011D0162A2D71BE00A5F629 /* GenJyuuGothic-P-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F011CFF22A2D71BE00A5F629 /* GenJyuuGothic-P-Heavy.ttf */; };
 		F04062D02A1C76B7004E5A1F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04062CF2A1C76B7004E5A1F /* HomeViewController.swift */; };
 		F04062D22A1C792E004E5A1F /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04062D12A1C792E004E5A1F /* ArticleViewController.swift */; };
 		F04A947C2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */; };
@@ -30,6 +66,42 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F011CFCD2A2D71BE00A5F629 /* SF-Pro-Rounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Semibold.otf"; sourceTree = "<group>"; };
+		F011CFCE2A2D71BE00A5F629 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
+		F011CFCF2A2D71BE00A5F629 /* SF-Pro-Rounded-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Black.otf"; sourceTree = "<group>"; };
+		F011CFD02A2D71BE00A5F629 /* SF-Pro-Rounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Light.otf"; sourceTree = "<group>"; };
+		F011CFD12A2D71BE00A5F629 /* SF-Pro-Rounded-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Thin.otf"; sourceTree = "<group>"; };
+		F011CFD22A2D71BE00A5F629 /* SF-Pro-Rounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Medium.otf"; sourceTree = "<group>"; };
+		F011CFD32A2D71BE00A5F629 /* SF-Pro-Rounded-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Ultralight.otf"; sourceTree = "<group>"; };
+		F011CFD42A2D71BE00A5F629 /* SF-Pro-Rounded-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Heavy.otf"; sourceTree = "<group>"; };
+		F011CFD52A2D71BE00A5F629 /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
+		F011CFD72A2D71BE00A5F629 /* README_GenJyuu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_GenJyuu.txt; sourceTree = "<group>"; };
+		F011CFD82A2D71BE00A5F629 /* GenJyuuGothic-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Light.ttf"; sourceTree = "<group>"; };
+		F011CFD92A2D71BE00A5F629 /* GenJyuuGothic-P-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-P-Bold.ttf"; sourceTree = "<group>"; };
+		F011CFDA2A2D71BE00A5F629 /* GenJyuuGothic-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Heavy.ttf"; sourceTree = "<group>"; };
+		F011CFDB2A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Monospace-Normal.ttf"; sourceTree = "<group>"; };
+		F011CFDC2A2D71BE00A5F629 /* GenJyuuGothic-P-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-P-Medium.ttf"; sourceTree = "<group>"; };
+		F011CFDD2A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Monospace-Bold.ttf"; sourceTree = "<group>"; };
+		F011CFDE2A2D71BE00A5F629 /* GenJyuuGothic-Monospace-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Monospace-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F011CFDF2A2D71BE00A5F629 /* SIL_Open_Font_License_1.1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SIL_Open_Font_License_1.1.txt; sourceTree = "<group>"; };
+		F011CFE02A2D71BE00A5F629 /* GenJyuuGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Bold.ttf"; sourceTree = "<group>"; };
+		F011CFE12A2D71BE00A5F629 /* GenJyuuGothic-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Normal.ttf"; sourceTree = "<group>"; };
+		F011CFE22A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Monospace-Medium.ttf"; sourceTree = "<group>"; };
+		F011CFE32A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Monospace-Light.ttf"; sourceTree = "<group>"; };
+		F011CFE42A2D71BE00A5F629 /* GenJyuuGothic-P-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-P-Light.ttf"; sourceTree = "<group>"; };
+		F011CFE52A2D71BE00A5F629 /* GenJyuuGothic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Regular.ttf"; sourceTree = "<group>"; };
+		F011CFE62A2D71BE00A5F629 /* GenJyuuGothic-P-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-P-Normal.ttf"; sourceTree = "<group>"; };
+		F011CFE72A2D71BE00A5F629 /* GenJyuuGothic-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Medium.ttf"; sourceTree = "<group>"; };
+		F011CFE82A2D71BE00A5F629 /* GenJyuuGothic-P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-P-Regular.ttf"; sourceTree = "<group>"; };
+		F011CFE92A2D71BE00A5F629 /* GenJyuuGothic-P-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-P-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F011CFEA2A2D71BE00A5F629 /* GenJyuuGothic-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F011CFEC2A2D71BE00A5F629 /* README_J */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_J; sourceTree = "<group>"; };
+		F011CFED2A2D71BE00A5F629 /* README_E */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_E; sourceTree = "<group>"; };
+		F011CFEE2A2D71BE00A5F629 /* LICENSE_E */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_E; sourceTree = "<group>"; };
+		F011CFEF2A2D71BE00A5F629 /* LICENSE_J */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_J; sourceTree = "<group>"; };
+		F011CFF02A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Monospace-Heavy.ttf"; sourceTree = "<group>"; };
+		F011CFF12A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-Monospace-Regular.ttf"; sourceTree = "<group>"; };
+		F011CFF22A2D71BE00A5F629 /* GenJyuuGothic-P-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenJyuuGothic-P-Heavy.ttf"; sourceTree = "<group>"; };
 		F04062CF2A1C76B7004E5A1F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F04062D12A1C792E004E5A1F /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -66,6 +138,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F011CFCA2A2D71BE00A5F629 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				F011CFCB2A2D71BE00A5F629 /* 7DaysChallengeFonts */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		F011CFCB2A2D71BE00A5F629 /* 7DaysChallengeFonts */ = {
+			isa = PBXGroup;
+			children = (
+				F011CFCC2A2D71BE00A5F629 /* SF Pro Rounded */,
+				F011CFD62A2D71BE00A5F629 /* genjyuugothic-20150607 */,
+			);
+			path = 7DaysChallengeFonts;
+			sourceTree = "<group>";
+		};
+		F011CFCC2A2D71BE00A5F629 /* SF Pro Rounded */ = {
+			isa = PBXGroup;
+			children = (
+				F011CFCD2A2D71BE00A5F629 /* SF-Pro-Rounded-Semibold.otf */,
+				F011CFCE2A2D71BE00A5F629 /* SF-Pro-Rounded-Regular.otf */,
+				F011CFCF2A2D71BE00A5F629 /* SF-Pro-Rounded-Black.otf */,
+				F011CFD02A2D71BE00A5F629 /* SF-Pro-Rounded-Light.otf */,
+				F011CFD12A2D71BE00A5F629 /* SF-Pro-Rounded-Thin.otf */,
+				F011CFD22A2D71BE00A5F629 /* SF-Pro-Rounded-Medium.otf */,
+				F011CFD32A2D71BE00A5F629 /* SF-Pro-Rounded-Ultralight.otf */,
+				F011CFD42A2D71BE00A5F629 /* SF-Pro-Rounded-Heavy.otf */,
+				F011CFD52A2D71BE00A5F629 /* SF-Pro-Rounded-Bold.otf */,
+			);
+			path = "SF Pro Rounded";
+			sourceTree = "<group>";
+		};
+		F011CFD62A2D71BE00A5F629 /* genjyuugothic-20150607 */ = {
+			isa = PBXGroup;
+			children = (
+				F011CFD72A2D71BE00A5F629 /* README_GenJyuu.txt */,
+				F011CFD82A2D71BE00A5F629 /* GenJyuuGothic-Light.ttf */,
+				F011CFD92A2D71BE00A5F629 /* GenJyuuGothic-P-Bold.ttf */,
+				F011CFDA2A2D71BE00A5F629 /* GenJyuuGothic-Heavy.ttf */,
+				F011CFDB2A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Normal.ttf */,
+				F011CFDC2A2D71BE00A5F629 /* GenJyuuGothic-P-Medium.ttf */,
+				F011CFDD2A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Bold.ttf */,
+				F011CFDE2A2D71BE00A5F629 /* GenJyuuGothic-Monospace-ExtraLight.ttf */,
+				F011CFDF2A2D71BE00A5F629 /* SIL_Open_Font_License_1.1.txt */,
+				F011CFE02A2D71BE00A5F629 /* GenJyuuGothic-Bold.ttf */,
+				F011CFE12A2D71BE00A5F629 /* GenJyuuGothic-Normal.ttf */,
+				F011CFE22A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Medium.ttf */,
+				F011CFE32A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Light.ttf */,
+				F011CFE42A2D71BE00A5F629 /* GenJyuuGothic-P-Light.ttf */,
+				F011CFE52A2D71BE00A5F629 /* GenJyuuGothic-Regular.ttf */,
+				F011CFE62A2D71BE00A5F629 /* GenJyuuGothic-P-Normal.ttf */,
+				F011CFE72A2D71BE00A5F629 /* GenJyuuGothic-Medium.ttf */,
+				F011CFE82A2D71BE00A5F629 /* GenJyuuGothic-P-Regular.ttf */,
+				F011CFE92A2D71BE00A5F629 /* GenJyuuGothic-P-ExtraLight.ttf */,
+				F011CFEA2A2D71BE00A5F629 /* GenJyuuGothic-ExtraLight.ttf */,
+				F011CFEB2A2D71BE00A5F629 /* mplus-TESTFLIGHT-059 */,
+				F011CFF02A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Heavy.ttf */,
+				F011CFF12A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Regular.ttf */,
+				F011CFF22A2D71BE00A5F629 /* GenJyuuGothic-P-Heavy.ttf */,
+			);
+			path = "genjyuugothic-20150607";
+			sourceTree = "<group>";
+		};
+		F011CFEB2A2D71BE00A5F629 /* mplus-TESTFLIGHT-059 */ = {
+			isa = PBXGroup;
+			children = (
+				F011CFEC2A2D71BE00A5F629 /* README_J */,
+				F011CFED2A2D71BE00A5F629 /* README_E */,
+				F011CFEE2A2D71BE00A5F629 /* LICENSE_E */,
+				F011CFEF2A2D71BE00A5F629 /* LICENSE_J */,
+			);
+			path = "mplus-TESTFLIGHT-059";
+			sourceTree = "<group>";
+		};
 		F0C819C62A19F53100942B9F = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +238,7 @@
 				F04062CF2A1C76B7004E5A1F /* HomeViewController.swift */,
 				F0C819D82A19F53100942B9F /* Main.storyboard */,
 				F0C819DB2A19F53300942B9F /* Assets.xcassets */,
+				F011CFCA2A2D71BE00A5F629 /* resource */,
 				F0C819DD2A19F53300942B9F /* LaunchScreen.storyboard */,
 				F0C819E02A19F53300942B9F /* Info.plist */,
 				F0CE69F12A1DD30800D5A889 /* ChallengeModel.swift */,
@@ -175,11 +323,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E7205D2A1C8B770022AA3B /* ArticleTableViewCell.xib in Resources */,
+				F011CFF62A2D71BE00A5F629 /* SF-Pro-Rounded-Light.otf in Resources */,
+				F011D0142A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Heavy.ttf in Resources */,
 				F04A947D2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib in Resources */,
+				F011D0042A2D71BE00A5F629 /* SIL_Open_Font_License_1.1.txt in Resources */,
+				F011CFFD2A2D71BE00A5F629 /* GenJyuuGothic-Light.ttf in Resources */,
+				F011CFF82A2D71BE00A5F629 /* SF-Pro-Rounded-Medium.otf in Resources */,
+				F011D0012A2D71BE00A5F629 /* GenJyuuGothic-P-Medium.ttf in Resources */,
+				F011D0102A2D71BE00A5F629 /* README_J in Resources */,
+				F011D0152A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Regular.ttf in Resources */,
+				F011D00C2A2D71BE00A5F629 /* GenJyuuGothic-Medium.ttf in Resources */,
+				F011CFFC2A2D71BE00A5F629 /* README_GenJyuu.txt in Resources */,
+				F011D0122A2D71BE00A5F629 /* LICENSE_E in Resources */,
+				F011CFFF2A2D71BE00A5F629 /* GenJyuuGothic-Heavy.ttf in Resources */,
+				F011D0092A2D71BE00A5F629 /* GenJyuuGothic-P-Light.ttf in Resources */,
+				F011D00D2A2D71BE00A5F629 /* GenJyuuGothic-P-Regular.ttf in Resources */,
+				F011D0022A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Bold.ttf in Resources */,
+				F011CFFE2A2D71BE00A5F629 /* GenJyuuGothic-P-Bold.ttf in Resources */,
 				F0D370112A274EF10089CD4C /* challengeViewCell.xib in Resources */,
+				F011CFF92A2D71BE00A5F629 /* SF-Pro-Rounded-Ultralight.otf in Resources */,
+				F011D00F2A2D71BE00A5F629 /* GenJyuuGothic-ExtraLight.ttf in Resources */,
+				F011D0052A2D71BE00A5F629 /* GenJyuuGothic-Bold.ttf in Resources */,
 				F0C819DF2A19F53300942B9F /* LaunchScreen.storyboard in Resources */,
 				F0C819DC2A19F53300942B9F /* Assets.xcassets in Resources */,
+				F011D0072A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Medium.ttf in Resources */,
+				F011D0112A2D71BE00A5F629 /* README_E in Resources */,
+				F011CFF42A2D71BE00A5F629 /* SF-Pro-Rounded-Regular.otf in Resources */,
+				F011CFFB2A2D71BE00A5F629 /* SF-Pro-Rounded-Bold.otf in Resources */,
+				F011CFF32A2D71BE00A5F629 /* SF-Pro-Rounded-Semibold.otf in Resources */,
+				F011D0002A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Normal.ttf in Resources */,
+				F011D0032A2D71BE00A5F629 /* GenJyuuGothic-Monospace-ExtraLight.ttf in Resources */,
+				F011D0062A2D71BE00A5F629 /* GenJyuuGothic-Normal.ttf in Resources */,
+				F011CFF72A2D71BE00A5F629 /* SF-Pro-Rounded-Thin.otf in Resources */,
+				F011D0162A2D71BE00A5F629 /* GenJyuuGothic-P-Heavy.ttf in Resources */,
+				F011D00A2A2D71BE00A5F629 /* GenJyuuGothic-Regular.ttf in Resources */,
 				F0C819DA2A19F53100942B9F /* Main.storyboard in Resources */,
+				F011D00E2A2D71BE00A5F629 /* GenJyuuGothic-P-ExtraLight.ttf in Resources */,
+				F011CFFA2A2D71BE00A5F629 /* SF-Pro-Rounded-Heavy.otf in Resources */,
+				F011D00B2A2D71BE00A5F629 /* GenJyuuGothic-P-Normal.ttf in Resources */,
+				F011CFF52A2D71BE00A5F629 /* SF-Pro-Rounded-Black.otf in Resources */,
+				F011D0132A2D71BE00A5F629 /* LICENSE_J in Resources */,
+				F011D0082A2D71BE00A5F629 /* GenJyuuGothic-Monospace-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

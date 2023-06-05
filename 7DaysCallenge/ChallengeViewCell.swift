@@ -40,7 +40,7 @@ class ChallengeViewCell:
         streakViews = [streakView1, streakView2, streakView3, streakView4, streakView5, streakView6, streakView7]
         // streakViewsの角丸を設定する
         for streakView in streakViews {
-            streakView.layer.cornerRadius = 6
+            streakView.layer.cornerRadius = 8
             streakView.clipsToBounds = true
         }
         
@@ -49,9 +49,6 @@ class ChallengeViewCell:
         self.layer.shadowOffset = CGSize(width: 0, height: 3)//影の方向　width、heightを負の値にすると上の方に影が表示される
         self.layer.shadowOpacity = 0.4 //影の色の透明度
         self.layer.shadowRadius = 5 //影のぼかし
-        //        self.layer.shadowOffset = CGSize(width: 6, height: 9)//影の方向　width、heightを負の値にすると上の方に影が表示される
-        //        self.layer.shadowOpacity = 0.8 //影の色の透明度
-        //        self.layer.shadowRadius = 0 //影のぼかし
         self.layer.masksToBounds = false//影が表示されるように
         
         //角丸はStoryBoadで変更する
@@ -87,14 +84,14 @@ class ChallengeViewCell:
         // ストリークのviewの表示色を更新するメソッド
         for (index, view) in streakViews.enumerated() {
             if index < streak {
-                //連続日数未達の日付に対応するView
-                view?.backgroundColor = UIColor.green
+                //連続日数の日付に対応するView
+                view?.backgroundColor = UIColor(named: "AccentColor03")
             } else {
                 let dateToCheck = Calendar.current.startOfDay(for: datesInRange[index])
                 if completedDates.contains(where: { Calendar.current.startOfDay(for: $0) == dateToCheck }) {
-                    view?.backgroundColor = UIColor.green // 連続日数の範囲内は緑色に設定
+                    view?.backgroundColor = UIColor(named: "AccentColor03") // 連続日数の範囲内は紫色に設定
                 } else {
-                    view?.backgroundColor =  UIColor.lightGray // 連続日数の範囲外はグレー色に設定
+                    view?.backgroundColor =  UIColor(named: "BackColor") // 連続日数の範囲外はグレー色に設定
                 }
             }
         }
