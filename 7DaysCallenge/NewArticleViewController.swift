@@ -32,10 +32,7 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("viewWillDisappear")
-        //遷移先画面が閉じる直前のタイミングで、遷移元画面のViewWillAppear()を呼び出すつまり、tableをリロードできる
-        presentingViewController?.beginAppearanceTransition(true, animated: animated)
-        print("viewWillDisappear内でviewWillApperを呼び出した")
+       
     }
     
     //入力画面ないしkeyboardの外を押したら、キーボードを閉じる処理
@@ -97,6 +94,12 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             calculateAndSaveStreak(challenge: topChallenge)
             //streakが7の時は通知設定をオフにする
             checkStreakAndDisableNotification(for: topChallenge)
+            
+            //親のpresentationControllerDidDismissメソッドを呼び出す
+            if let presentationController = presentationController{
+                presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
+            }
+            
             //前の画面に戻る
             self.dismiss(animated: true)
         }
@@ -108,16 +111,6 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             realm.add(article)
         }
         print("RealmにArticleを追加しました")
-        //reloadTable()
-    }
-    
-    func reloadTable() {
-        //遷移先画面が閉じる直前のタイミングで、遷移元画面のViewWillAppear()を呼び出すつまり、tableをリロードできる
-        if #available(iOS 13.0, *) {
-            presentingViewController?.beginAppearanceTransition(true, animated: true)
-            print("遷移元画面のviewWillApperを呼び出す")
-        }
-        print("アナログでリロード")
     }
     
     func calculateAndSaveStreak(challenge: Challenge) {
@@ -138,9 +131,6 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         var currentDate = startDate
         for article in sortedArticles {
             let articleDate = Calendar.current.startOfDay(for: article.date)
-            //            print("articleDate: \(articleDate)")
-            //            print("currentDate: \(currentDate)")
-            //            print("---------")
             if articleDate == currentDate {
                 // 記事の日付が現在の日付と一致している場合
                 streakCount += 1
@@ -173,8 +163,6 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [challenge.challengeUID])
         print("通知スケジュールを消去しました　challengeTitle: \(challenge.title)")
     }
-    
-    
     
     //toDo Articleのcontextとimageが未入力だとアラートを表示
     func displayAlertWhenNotInput() {

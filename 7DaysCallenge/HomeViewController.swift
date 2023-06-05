@@ -170,7 +170,6 @@ extension HomeViewController: ChallengeViewCellDelegate {
         print("topChallenge: \(String(describing: topChallenge?.title))")
         // 画面遷移の処理を実装する
         performSegue(withIdentifier: "toArticleView", sender: nil)
-        //アニメーション付きの画面遷移を実装
     }
 }
 

@@ -9,14 +9,14 @@ import UIKit
 import RealmSwift
 
 //class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-class ArticleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ArticleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIAdaptivePresentationControllerDelegate {
     
     let realm = try! Realm()
     // Articleオブジェクトのリストを格納するプロパティ
     var articles: [Article] = []
     var topChallenge: Challenge!
     
-
+    
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var startDateLabel: UILabel!
     @IBOutlet var toDoLabel: UILabel!
@@ -42,9 +42,7 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // Tableを更新する
-        print("ArticleView wii Apper")
-        updateArticleList()
+
     }
     
     //ChallegeのUIDに対応したArticleの配列を読み込む
@@ -63,11 +61,16 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
         print("ArticleViewTableをリロードしました")
     }
     
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        print("モーダルが閉じられたことを検知しました！")
+        updateArticleList()
+    }
+    
     // セルの表示する個数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return articles.count
     }
-
+    
     // セルの内容を指定するメソッド
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCell", for: indexPath) as! ArticleCollectionViewCell
@@ -86,7 +89,7 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         return cell
     }
-
+    
     // セルが選択された時の処理
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // セルが選択された時の処理を記述する
@@ -113,6 +116,7 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toNewArticleView" {
             let newArticleViewController = segue.destination as! NewArticleViewController
+            newArticleViewController.presentationController?.delegate = self
             newArticleViewController.topChallenge = self.topChallenge
         }
     }
