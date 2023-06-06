@@ -9,12 +9,13 @@ import UIKit
 import RealmSwift
 import UserNotifications
 
-class NewChallengeViewController: UIViewController, UITextFieldDelegate {
+class NewChallengeViewController2: UIViewController, UITextFieldDelegate {
     
     let realm = try! Realm()
     
     @IBOutlet var toDoTextField: UITextField!
-    @IBOutlet var titleTextField: UITextField!
+    //IBOutlet var titleTextField: UITextField!
+    @IBOutlet var titleLabel:UILabel!
     @IBOutlet var notificationLabel: UILabel!
     @IBOutlet var notificationSwich: UISwitch!
     @IBOutlet var notificarionDatePicker: UIDatePicker!
@@ -24,11 +25,14 @@ class NewChallengeViewController: UIViewController, UITextFieldDelegate {
     //challengeを入力した日付 == StartDate
     var inputedDate: Date = Date()
     
+    var ChallengeTitle: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         toDoTextField.delegate = self
-        titleTextField.delegate = self
+        //titleTextField.delegate = self
+        titleLabel.text = "「\(ChallengeTitle)」"
         //TabBarを非表示
         self.tabBarController?.tabBar.isHidden = true
         //NavigationBarの＜Backを非表示にする　参考：https://spinners.work/posts/ios14_blank_back_button/
@@ -60,18 +64,18 @@ class NewChallengeViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func checkNotification() {
         if notificationSwich.isOn {
-            notificationLabel.text = "オン"
-            notificationLabel.textColor = UIColor.green
+            notificationLabel.text = "応援通知を受け取る"
         } else {
-            notificationLabel.text = "オフ"
-            notificationLabel.textColor = UIColor.systemGray
+            notificationLabel.text = "受け取らない"
+            //notificationLabel.textColor = UIColor.systemGray
         }
     }
     
     
     @IBAction func addButtonTapped() {
         let newChallenge = Challenge()
-        newChallenge.title = titleTextField.text!
+        //newChallenge.title = titleTextField.text!
+        newChallenge.title = ChallengeTitle
         newChallenge.toDo = toDoTextField.text!
         newChallenge.doNotification = notificationSwich.isOn
         newChallenge.notificationTime = notificarionDatePicker.date
@@ -83,7 +87,7 @@ class NewChallengeViewController: UIViewController, UITextFieldDelegate {
             scheduleNotification(for: newChallenge)
         }
         
-        if titleTextField.text?.isEmpty ?? true || toDoTextField.text?.isEmpty ?? true{
+        if toDoTextField.text?.isEmpty ?? true{
             //アラートを表示する
             displayAlertWhenNotInput()
         } else{
@@ -164,7 +168,7 @@ class NewChallengeViewController: UIViewController, UITextFieldDelegate {
         print("RealmにChellengeを追加しました")
     }
     
-    //toDo ChallengeのTitleとtoDoが未入力だとアラートが表示されるようにする
+    //toDo toDoが未入力だとアラートが表示されるようにする
     func displayAlertWhenNotInput() {
         //alertを作成
         let alert = UIAlertController(
