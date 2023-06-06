@@ -64,6 +64,7 @@
 		F0E7205C2A1C8B770022AA3B /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7205A2A1C8B770022AA3B /* ArticleTableViewCell.swift */; };
 		F0E7205D2A1C8B770022AA3B /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E7205B2A1C8B770022AA3B /* ArticleTableViewCell.xib */; };
 		F0EB61C72A2EFE46003B30D5 /* NewChallengeViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB61C62A2EFE46003B30D5 /* NewChallengeViewController1.swift */; };
+		F0EB61C92A2F10CA003B30D5 /* ExampleChallengeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB61C82A2F10CA003B30D5 /* ExampleChallengeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +126,7 @@
 		F0E7205A2A1C8B770022AA3B /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		F0E7205B2A1C8B770022AA3B /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		F0EB61C62A2EFE46003B30D5 /* NewChallengeViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChallengeViewController1.swift; sourceTree = "<group>"; };
+		F0EB61C82A2F10CA003B30D5 /* ExampleChallengeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleChallengeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 				F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */,
 				F04A947B2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib */,
 				F04A947E2A2C89C200B95E96 /* Message.swift */,
+				F0EB61C82A2F10CA003B30D5 /* ExampleChallengeList.swift */,
 			);
 			path = 7DaysCallenge;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				F04062D22A1C792E004E5A1F /* ArticleViewController.swift in Sources */,
 				F0EB61C72A2EFE46003B30D5 /* NewChallengeViewController1.swift in Sources */,
 				F0C819D52A19F53100942B9F /* SceneDelegate.swift in Sources */,
+				F0EB61C92A2F10CA003B30D5 /* ExampleChallengeList.swift in Sources */,
 				F04A947C2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift in Sources */,
 				F0CE69F22A1DD30800D5A889 /* ChallengeModel.swift in Sources */,
 				F04A947F2A2C89C200B95E96 /* Message.swift in Sources */,

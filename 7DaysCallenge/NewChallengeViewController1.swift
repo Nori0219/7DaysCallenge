@@ -19,7 +19,8 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //ChallemgeExampleをランダム表示
+        setupExampleLabels()
         //TabBarを非表示
         self.tabBarController?.tabBar.isHidden = true
         //NavigationBarの＜Backを非表示にする　参考：https://spinners.work/posts/ios14_blank_back_button/
@@ -48,6 +49,42 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
         performSegue(withIdentifier: "toNewChallengeView2", sender: nil)
     }
     
+    func setupExampleLabels() {
+        displayRandomExample()
+        let exampleLabels = [exampleLabel1, exampleLabel2, exampleLabel3, exampleLabel4]
+        //各 exampleLabel に対して個別のタップジェスチャーレコグナイザーを作成
+        for label in exampleLabels {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(exampleLabelTapped))
+            label?.addGestureRecognizer(tapGesture)
+            label?.isUserInteractionEnabled = true
+            //角丸
+            label?.layer.cornerRadius = 8.0
+            label?.clipsToBounds = true
+        }
+    }
+    
+    @IBAction func shuffleButtonTapped() {
+        displayRandomExample()
+    }
+    
+    func displayRandomExample() {
+        var shuffledList = exampleChallengeList
+        shuffledList.shuffle()
+        
+        exampleLabel1.text = shuffledList[0]
+        exampleLabel2.text = shuffledList[1]
+        exampleLabel3.text = shuffledList[2]
+        exampleLabel4.text = shuffledList[3]
+    }
+    
+    //タップした内容をTextFieldに代入する
+    @objc func exampleLabelTapped(sender: UITapGestureRecognizer) {
+        if let tappedLabel = sender.view as? UILabel, let exampleChallngeTitle = tappedLabel.text {
+            titleTextField.text = exampleChallngeTitle
+            print("ExampleChallengeを代入 Title: \(exampleChallngeTitle)")
+        }
+    }
+    
     //Titleが未入力だとアラートが表示されるようにする
     func displayAlertWhenNotInput() {
         //alertを作成
@@ -72,7 +109,7 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
             newChallengeViewController2.ChallengeTitle = self.titleTextField.text!
         }
     }
-
+    
 }
 
 

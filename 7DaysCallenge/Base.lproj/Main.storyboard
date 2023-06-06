@@ -186,6 +186,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="addButtonTapped" destination="Oar-2c-61g" eventType="touchUpInside" id="dwD-vG-YwQ"/>
+                                    <action selector="shuffleButtonTapped" destination="JSL-gh-Ddl" eventType="touchUpInside" id="nuk-hk-j86"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🐙1週間関西人生活！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-Va-Fwa">
