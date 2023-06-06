@@ -50,7 +50,7 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
     }
     
     func setupExampleLabels() {
-        displayRandomExample()
+        
         let exampleLabels = [exampleLabel1, exampleLabel2, exampleLabel3, exampleLabel4]
         //各 exampleLabel に対して個別のタップジェスチャーレコグナイザーを作成
         for label in exampleLabels {
@@ -61,20 +61,34 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
             label?.layer.cornerRadius = 8.0
             label?.clipsToBounds = true
         }
+        
+        displayRandomExample()
     }
     
     @IBAction func shuffleButtonTapped() {
         displayRandomExample()
     }
-    
+    //ランダムにリスト内のChallemgeを表示する
     func displayRandomExample() {
+        //別ファイルで定義した配列を取得
         var shuffledList = exampleChallengeList
         shuffledList.shuffle()
         
-        exampleLabel1.text = shuffledList[0]
-        exampleLabel2.text = shuffledList[1]
-        exampleLabel3.text = shuffledList[2]
-        exampleLabel4.text = shuffledList[3]
+        let exampleLabels = [exampleLabel1, exampleLabel2, exampleLabel3, exampleLabel4]
+        
+        UIView.animate(withDuration: 0.05, animations: {
+            for (_, label) in exampleLabels.enumerated() {
+                label?.transform = CGAffineTransform(scaleX: 0.99, y: 0.99)
+            }
+        }) { _ in
+            //UILabelにシャッフルした配列を順に入れる
+            for (index, label) in exampleLabels.enumerated() {
+                label?.text = shuffledList[index]
+                UIView.animate(withDuration: 0.05, animations: {
+                    label?.transform = CGAffineTransform.identity
+                })
+            }
+        }
     }
     
     //タップした内容をTextFieldに代入する
@@ -82,6 +96,16 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
         if let tappedLabel = sender.view as? UILabel, let exampleChallngeTitle = tappedLabel.text {
             titleTextField.text = exampleChallngeTitle
             print("ExampleChallengeを代入 Title: \(exampleChallngeTitle)")
+            
+            // タップ時の押し込みアニメーションを実行
+            //0.2秒の間に tappedLabel を0.9倍に縮小し、その後元のサイズに戻す
+            UIView.animate(withDuration: 0.1, animations: {
+                tappedLabel.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.1) {
+                    tappedLabel.transform = CGAffineTransform.identity
+                }
+            })
         }
     }
     
