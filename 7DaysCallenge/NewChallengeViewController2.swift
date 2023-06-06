@@ -99,9 +99,8 @@ class NewChallengeViewController2: UIViewController, UITextFieldDelegate {
             
             //前の画面に戻る
             print("前の画面に戻る！")
-            //self.dismiss(animated: true)
-            self.navigationController?.popViewController(animated: true)
-            
+            //トップに戻る
+            navigationController?.popToRootViewController(animated: true)
         }
         
         
