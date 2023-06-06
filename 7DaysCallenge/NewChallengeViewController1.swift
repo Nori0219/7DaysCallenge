@@ -15,7 +15,7 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
     @IBOutlet var exampleLabel3: UILabel!
     @IBOutlet var exampleLabel4: UILabel!
     @IBOutlet var shuffleButton: UIButton!
-    
+    @IBOutlet var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +40,32 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
     }
     
     @IBAction func tappedNextButton() {
-        if titleTextField.text?.isEmpty ?? true {
-            //アラートを表示する
-            displayAlertWhenNotInput()
+        //        if titleTextField.text?.isEmpty ?? true {
+        //            //アラートを表示する
+        //            displayAlertWhenNotInput()
+        //        }
+        //        print("NewChallengeTitle: \(String(describing: titleTextField.text))")
+        //        // 画面遷移の処理を実装する
+        //        performSegue(withIdentifier: "toNewChallengeView2", sender: nil)
+        UIView.animate(withDuration: 0.1, animations: {
+            self.nextButton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }) { [self] _ in
+            UIView.animate(withDuration: 0.1) {
+                self.nextButton.transform = CGAffineTransform.identity
+            }
+            
+            if titleTextField.text?.isEmpty ?? true {
+                //アラートを表示する
+                displayAlertWhenNotInput()
+            }
+            print("NewChallengeTitle: \(String(describing: titleTextField.text))")
+            // 画面遷移の処理を実装する
+            performSegue(withIdentifier: "toNewChallengeView2", sender: nil)
         }
-        print("NewChallengeTitle: \(String(describing: titleTextField.text))")
-        // 画面遷移の処理を実装する
-        performSegue(withIdentifier: "toNewChallengeView2", sender: nil)
+        
     }
+    
+    
     
     func setupExampleLabels() {
         
@@ -66,7 +84,16 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
     }
     
     @IBAction func shuffleButtonTapped() {
-        displayRandomExample()
+        //displayRandomExample()
+        UIView.animate(withDuration: 0.1, animations: {
+            self.shuffleButton.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }) { _ in
+            UIView.animate(withDuration: 0.1) {
+                self.shuffleButton.transform = CGAffineTransform.identity
+            }
+            
+            self.displayRandomExample()
+        }
     }
     //ランダムにリスト内のChallemgeを表示する
     func displayRandomExample() {
@@ -76,15 +103,15 @@ class NewChallengeViewController1: UIViewController, UIAdaptivePresentationContr
         
         let exampleLabels = [exampleLabel1, exampleLabel2, exampleLabel3, exampleLabel4]
         
-        UIView.animate(withDuration: 0.05, animations: {
+        UIView.animate(withDuration: 0.1, animations: {
             for (_, label) in exampleLabels.enumerated() {
-                label?.transform = CGAffineTransform(scaleX: 0.99, y: 0.99)
+                label?.transform = CGAffineTransform(scaleX: 0.98, y: 0.98)
             }
         }) { _ in
             //UILabelにシャッフルした配列を順に入れる
             for (index, label) in exampleLabels.enumerated() {
                 label?.text = shuffledList[index]
-                UIView.animate(withDuration: 0.05, animations: {
+                UIView.animate(withDuration: 0.1, animations: {
                     label?.transform = CGAffineTransform.identity
                 })
             }
