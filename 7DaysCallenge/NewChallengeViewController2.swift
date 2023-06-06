@@ -35,12 +35,6 @@ class NewChallengeViewController2: UIViewController, UITextFieldDelegate {
         titleLabel.text = "「\(ChallengeTitle)」"
         //TabBarを非表示
         self.tabBarController?.tabBar.isHidden = true
-        //NavigationBarの＜Backを非表示にする　参考：https://spinners.work/posts/ios14_blank_back_button/
-        if #available(iOS 14.0, *) {
-            navigationItem.backButtonDisplayMode = .minimal
-        } else {
-            navigationItem.backButtonTitle = " "
-        }
         
         // 他の場所をタップしたときにキーボードを閉じるためのタップジェスチャーレコグナイザを設定する
         tapGestureRecognizer.addTarget(self, action: #selector(handleTap))
