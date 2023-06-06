@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,8 +18,8 @@
         <array key="GenJyuuGothic-Regular.ttf">
             <string>GenJyuuGothic-Regular</string>
         </array>
-        <array key="SF-Pro-Rounded-Regular.otf">
-            <string>SFProRounded-Regular</string>
+        <array key="SF-Pro-Rounded-Bold.otf">
+            <string>SFProRounded-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -33,7 +34,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="次に毎日取り組む内容を決めよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzQ-ZR-Do0">
                                 <rect key="frame" x="55" y="228" width="272" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -70,19 +71,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0k8-Mg-28D">
-                                <rect key="frame" x="42" y="404" width="309" height="52"/>
+                                <rect key="frame" x="38" y="520" width="309" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="応援通知を受け取る" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOa-FB-xlH">
-                                        <rect key="frame" x="30" y="16" width="144" height="23"/>
+                                        <rect key="frame" x="30" y="16" width="135" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="16"/>
-                                        <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
+                                        <color key="textColor" name="TitleColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GHo-MP-Luw">
                                         <rect key="frame" x="220" y="11" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="BackColor"/>
                                         <connections>
                                             <action selector="checkNotification" destination="Oar-2c-61g" eventType="valueChanged" id="rCb-Kw-07I"/>
                                         </connections>
@@ -96,7 +98,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9u-lK-hPv">
-                                <rect key="frame" x="42" y="487" width="309" height="52"/>
+                                <rect key="frame" x="36" y="588" width="309" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x0-pA-xfs">
@@ -109,7 +111,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulk-IF-dt6">
                                         <rect key="frame" x="31" y="13" width="40" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
                                         <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -122,15 +124,32 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="応援通知設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdh-Mb-fxU">
-                                <rect key="frame" x="134" y="361" width="114" height="27"/>
+                                <rect key="frame" x="136" y="477" width="102" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="応援のテイストを選ぼう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZU-08-Xmi">
+                                <rect key="frame" x="94" y="344" width="204" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
+                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nlO-2Z-GxQ">
+                                <rect key="frame" x="36" y="392" width="313" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="標準"/>
+                                    <segment title="熱血"/>
+                                    <segment title="勇者"/>
+                                    <segment title="癒し"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tU1-81-ng0"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" name="BackColor"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="q6F-QJ-PPo" appends="YES" id="lei-Ed-BsC"/>
@@ -138,6 +157,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="新しいチャレンジの追加" id="hmy-hF-urD"/>
                     <connections>
+                        <outlet property="MessageSegmentedControl" destination="nlO-2Z-GxQ" id="9Wf-Cj-Ng4"/>
                         <outlet property="addChallengeButton" destination="qCR-Sn-RKf" id="nZu-np-OrW"/>
                         <outlet property="notificarionDatePicker" destination="1x0-pA-xfs" id="MgG-p6-CFr"/>
                         <outlet property="notificationLabel" destination="zOa-FB-xlH" id="lVZ-pl-dJO"/>
@@ -160,17 +180,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日からの1週間にタイトルをつけてみよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDO-RG-0ac">
-                                <rect key="frame" x="21" y="154" width="350" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日からの1週間にタイトルをつけよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDO-RG-0ac">
+                                <rect key="frame" x="38" y="154" width="317" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
                                 <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1週間異国料理生活、など" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ve7-NM-b0J">
                                 <rect key="frame" x="21" y="194" width="350" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-m6-4VF">
@@ -190,7 +211,7 @@
                                 <rect key="frame" x="21" y="412" width="350" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="16"/>
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -198,7 +219,7 @@
                                 <rect key="frame" x="21" y="473" width="350" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="16"/>
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -206,7 +227,7 @@
                                 <rect key="frame" x="21" y="531" width="350" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="16"/>
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -214,14 +235,14 @@
                                 <rect key="frame" x="21" y="593" width="350" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="16"/>
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="例えば..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFb-eN-LTR">
                                 <rect key="frame" x="152" y="367" width="87" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="18"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -269,7 +290,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4VL-Ye-PBI">
                                 <rect key="frame" x="-1" y="59" width="393" height="735"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" name="BackColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tJT-54-SdX">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -311,7 +332,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KS2-bH-S97">
-                                <rect key="frame" x="164" y="729" width="55" height="50"/>
+                                <rect key="frame" x="163" y="729" width="55" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="＋"/>
@@ -320,7 +341,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日本食以外の料理を食べる！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMY-I1-sx1">
-                                <rect key="frame" x="53" y="683" width="288" height="22"/>
+                                <rect key="frame" x="52" y="683" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="14"/>
                                 <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -329,7 +350,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d9s-7I-CrD">
                                 <rect key="frame" x="0.0" y="103" width="393" height="536"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" name="BackColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S13-ak-wnq">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -348,15 +369,15 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="開始日：　2023/05/23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHe-gT-T5b">
-                                <rect key="frame" x="53" y="655" width="153" height="20"/>
+                                <rect key="frame" x="52" y="654" width="240" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="14"/>
                                 <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1i-xl-ezG"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" name="BackColor"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="チャレンジタイトル" id="l0x-2O-nb7"/>
@@ -382,6 +403,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zh-eJ-CBl">
                                 <rect key="frame" x="-9" y="0.0" width="382" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="BackColor"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="18"/>
                                     <color key="textColor" name="TitleColor"/>
@@ -391,11 +413,11 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nl7-y1-wem">
-                                <rect key="frame" x="26" y="100" width="338" height="393"/>
+                                <rect key="frame" x="26" y="100" width="337" height="393"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Fp-leC">
-                                        <rect key="frame" x="121" y="320" width="88" height="41"/>
+                                        <rect key="frame" x="119" y="320" width="89" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="tintColor" red="0.90984059340000001" green="0.70160096090000001" blue="0.73584182779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
@@ -412,28 +434,28 @@
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aPJ-Dv-MmM">
-                                        <rect key="frame" x="108" y="21" width="108" height="42"/>
+                                        <rect key="frame" x="107" y="21" width="108" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <color key="tintColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <locale key="locale" localeIdentifier="ja_JP"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ys-6v-qqy">
-                                        <rect key="frame" x="242" y="320" width="50" height="41"/>
+                                        <rect key="frame" x="240" y="320" width="51" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <gestureRecognizers/>
                                         <color key="tintColor" red="0.81960785390000002" green="0.87450981139999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="photo.artframe" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="photo.on.rectangle" catalog="system"/>
                                         <connections>
                                             <action selector="onTappedAlbumButton" destination="4v3-AR-2yp" eventType="touchUpInside" id="wg1-f4-jqS"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nj4-Bm-JRz">
-                                        <rect key="frame" x="25" y="72" width="285" height="69"/>
+                                        <rect key="frame" x="24" y="72" width="285" height="69"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="backgroundColor" name="BackColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -443,7 +465,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1QT-jq-NUv">
-                                        <rect key="frame" x="39" y="162" width="254" height="143"/>
+                                        <rect key="frame" x="38" y="162" width="253" height="143"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <gestureRecognizers/>
                                         <userDefinedRuntimeAttributes>
@@ -462,7 +484,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8ao-48-jYU"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" name="BackColor"/>
                     </view>
                     <connections>
                         <outlet property="AlbumButton" destination="6ys-6v-qqy" id="gqj-Ob-wp8"/>
@@ -484,17 +506,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1週間◯◯チャレンジ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVn-6Y-lH1">
-                                <rect key="frame" x="67" y="137" width="277" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="22"/>
-                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RCd-PD-R9Q">
-                                <rect key="frame" x="0.0" y="216" width="393" height="250"/>
+                                <rect key="frame" x="0.0" y="213" width="393" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" name="BackColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7HO-8M-OaU">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -512,12 +527,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="おや？まだチャレンジを設定していないようですね" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzw-CF-gex">
+                                <rect key="frame" x="37" y="493" width="319" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="BackColor"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" name="BackColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Uo3-T8-6pO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cOP-SO-9Xh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="cOP-SO-9Xh">
+                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                             <connections>
                                 <segue destination="JSL-gh-Ddl" kind="show" identifier="toNewChallengeView1" id="pw5-Tc-XWc"/>
                             </connections>
@@ -525,6 +549,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="RCd-PD-R9Q" id="xqj-aW-lfq"/>
+                        <outlet property="messageTextView" destination="lzw-CF-gex" id="k2y-5e-hOq"/>
                         <segue destination="Hgq-xh-rpO" kind="show" identifier="toArticleView" id="6uE-8d-UZG"/>
                     </connections>
                 </viewController>
@@ -536,7 +561,7 @@
         <scene sceneID="3sx-5q-rer">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vKD-Ef-BHT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="チャレンジ" image="trophy" catalog="system" id="x4S-Qp-yb5"/>
+                    <tabBarItem key="tabBarItem" title="チャレンジ" image="flag.checkered.2.crossed" catalog="system" id="x4S-Qp-yb5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hLb-DT-gh5">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -606,8 +631,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="books.vertical" catalog="system" width="128" height="107"/>
-        <image name="photo.artframe" catalog="system" width="128" height="93"/>
-        <image name="trophy" catalog="system" width="128" height="128"/>
+        <image name="flag.checkered.2.crossed" catalog="system" width="128" height="72"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="98"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor01">
             <color red="0.80392156862745101" green="0.87450980392156863" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

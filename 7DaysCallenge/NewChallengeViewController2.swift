@@ -14,8 +14,8 @@ class NewChallengeViewController2: UIViewController, UITextFieldDelegate {
     let realm = try! Realm()
     
     @IBOutlet var toDoTextField: UITextField!
-    //IBOutlet var titleTextField: UITextField!
     @IBOutlet var titleLabel:UILabel!
+    @IBOutlet var MessageSegmentedControl: UISegmentedControl!
     @IBOutlet var notificationLabel: UILabel!
     @IBOutlet var notificationSwich: UISwitch!
     @IBOutlet var notificarionDatePicker: UIDatePicker!
@@ -56,6 +56,8 @@ class NewChallengeViewController2: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    
+    
     @IBAction func checkNotification() {
         if notificationSwich.isOn {
             notificationLabel.text = "応援通知を受け取る"
@@ -74,7 +76,8 @@ class NewChallengeViewController2: UIViewController, UITextFieldDelegate {
         newChallenge.doNotification = notificationSwich.isOn
         newChallenge.notificationTime = notificarionDatePicker.date
         newChallenge.startDate = inputedDate
-        
+        newChallenge.streak = 0
+        selectMessageStyle(challege: newChallenge)
         
         // SwitchがONの時は通知の設定
         if newChallenge.doNotification == true {
@@ -106,16 +109,47 @@ class NewChallengeViewController2: UIViewController, UITextFieldDelegate {
         
         
     }
+    // UISegmentedControlの選択に応じてmessageStyleを設定する
+    func selectMessageStyle(challege: Challenge) {
+        switch MessageSegmentedControl.selectedSegmentIndex {
+        case 0:
+            challege.messageStyle = "標準"
+        case 1:
+            challege.messageStyle = "熱血"
+        case 2:
+            challege.messageStyle = "勇者"
+        case 3:
+            challege.messageStyle = "癒し"
+        default:
+            challege.messageStyle = "標準"
+        }
+    }
+    
     
     func scheduleNotification(for challenge: Challenge) {
         let notificationContent = UNMutableNotificationContent()
         
         // 通知をグループ化するためにをthreadIdentifierに設定する
-        notificationContent.threadIdentifier = challenge.title        
+        notificationContent.threadIdentifier = challenge.title
         notificationContent.title = "\(challenge.title)"
         
-        // ストリークの数に応じてメッセージを変更するこの場合は0
-        let streakMessage = ChallengeMessage.message(for: 0, challenge: challenge)
+        
+        //メッセージテイストに合わせて通知を設定するstreakは0に指定
+        let streakMessage: String
+        switch challenge.messageStyle {
+        case "標準":
+            streakMessage = ChallengeMessage.normal(for: 0, challenge: challenge)
+            print("Swith分は正常に動作：　\(ChallengeMessage.normal(for: 0, challenge: challenge))\n一方でstreakMessage：\(streakMessage)")
+        case "熱血":
+            streakMessage = ChallengeMessage.passion(for: 0, challenge: challenge)
+        case "勇者":
+            streakMessage = ChallengeMessage.hero(for: 0, challenge: challenge)
+        case "癒し":
+            streakMessage = ChallengeMessage.cheer(for: 0, challenge: challenge)
+        default:
+            streakMessage = ChallengeMessage.normal(for: 0, challenge: challenge)
+        }
+        
         //通知の内容
         notificationContent.body = "\(streakMessage)"
         notificationContent.sound = UNNotificationSound.default
@@ -137,6 +171,7 @@ class NewChallengeViewController2: UIViewController, UITextFieldDelegate {
                 print("通知のスケジュール設定に失敗しました: \(error.localizedDescription)")
             } else {
                 print("通知がスケジュールされました")
+                print("NewChallengeでのstreakiMessage :\(streakMessage)")
             }
         }
     }

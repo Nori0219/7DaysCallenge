@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Override point for customization after application launch.
         
         let config = Realm.Configuration(
-            schemaVersion: 2
+            schemaVersion: 3
             //            ,migrationBlock: nil,
             //            deleteRealmIfMigrationNeeded: true
         )

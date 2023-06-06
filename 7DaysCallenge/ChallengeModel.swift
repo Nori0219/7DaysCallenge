@@ -19,6 +19,7 @@ class Challenge: Object {
     @Persisted var doNotification: Bool = false // 通知の有無
     @Persisted var notificationTime: Date? // 通知時間
     @Persisted var streak: Int = 0// 連続日数
+    @Persisted var messageStyle: String = "標準"
     
     // Relationship: ChallengeとArticleの関連付け
     let articles = List<Article>()

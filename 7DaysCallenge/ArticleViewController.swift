@@ -32,7 +32,7 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
         //TopChallegneが存在しない場合に備える
         if let topChallenge = topChallenge {
             navigationItem.title = topChallenge.title
-            startDateLabel.text = "開始日：　\(formatDate2(topChallenge.startDate))"
+            startDateLabel.text = "開始日：\(formatDate(topChallenge.startDate))"
             toDoLabel.text = topChallenge.toDo
         }
         collectionView.delegate = self
@@ -104,13 +104,13 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
         return formatter.string(from: date)
     }
     
-    func formatDate2(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        //formatter.dateFormat = "yyyy/MM/dd"
-        formatter.locale = Locale(identifier: "ja_JP")
-        formatter.dateFormat = "yyyy/MM/dd"
-        return formatter.string(from: date)
-    }
+//    func formatDate2(_ date: Date) -> String {
+//        let formatter = DateFormatter()
+//        //formatter.dateFormat = "yyyy/MM/dd"
+//        formatter.locale = Locale(identifier: "ja_JP")
+//        formatter.dateFormat = "yyyy/MM/dd"
+//        return formatter.string(from: date)
+//    }
     
     //画面遷移でtopChallengeの値を渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

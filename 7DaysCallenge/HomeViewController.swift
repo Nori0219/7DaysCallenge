@@ -14,7 +14,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let realm = try! Realm()
     
     var topChallenge: Challenge?
-    
+
+    @IBOutlet var messageTextView: UITextView!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
@@ -22,7 +23,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        topChallenge = realm.objects(Challenge.self).last//データベースから取得した最新のChallenge
+        //topChallenge = realm.objects(Challenge.self).last//データベースから取得した最新のChallenge
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -64,6 +65,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         topChallenge = realm.objects(Challenge.self).last
         collectionView.reloadData()
         scheduleNotification(for: topChallenge)
+        if let challenge = topChallenge {
+            print("topChallenge: \(String(describing: topChallenge!))")
+            messageTextView.text = setMessage(challenge: challenge)
+            collectionView.isHidden = false
+            print("Labelにメッセージを代入したよん")
+        } else {
+            collectionView.isHidden = true
+            messageTextView.text = "おや？\nまだチャレンジを設定していないようですね\n右上のアイコンから1週間チャレンジを始めましょう！"
+        }
     }
     
     //セクションの中のセルの数を返す
@@ -123,8 +133,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             notificationContent.threadIdentifier = challenge.title
             notificationContent.title = "\(challenge.title)"
             
-            // ストリークの数に応じてメッセージを変更する
-            let streakMessage = ChallengeMessage.message(for: challenge.streak, challenge: challenge)
+            //メッセージテイストに合わせて通知を設定する
+            let streakMessage: String
+            streakMessage = setMessage(challenge: challenge)
             
             //通知の内容
             notificationContent.body = streakMessage
@@ -147,12 +158,32 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     print("通知のスケジュール設定に失敗しました: \(error.localizedDescription)")
                 } else {
                     print("通知がスケジュールされました")
+                    print("streakMessage: \(streakMessage)")
                 }
             }
             
         } else {
             print("通知メッセージ！")
         }
+    }
+    
+    func setMessage(challenge: Challenge) -> String {
+        let Message: String
+        switch challenge.messageStyle {
+        case "標準":
+            Message = ChallengeMessage.normal(for: challenge.streak, challenge: challenge)
+        case "熱血":
+            Message = ChallengeMessage.passion(for: challenge.streak, challenge: challenge)
+        case "勇者":
+            Message = ChallengeMessage.hero(for: challenge.streak, challenge: challenge)
+        case "癒し":
+            Message = ChallengeMessage.cheer(for: challenge.streak, challenge: challenge)
+        default:
+            Message = ChallengeMessage.normal(for: challenge.streak, challenge: challenge)
+        }
+        print("Message:\(Message)")
+        
+        return Message
     }
     
     //画面遷移でtopChallengeの値を渡す
