@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="p02-0Q-9xz">
-                                <rect key="frame" x="0.0" y="135" width="393" height="462"/>
+                                <rect key="frame" x="0.0" y="135" width="393" height="490"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gvC-ap-e2O">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="55.666666666666664"/>
@@ -72,7 +72,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-Q2-Lvu">
-                                        <rect key="frame" x="0.0" y="99.666666666666657" width="393" height="66"/>
+                                        <rect key="frame" x="0.0" y="109.33333333333334" width="393" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="具体的に取り組むことを決めよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzQ-ZR-Do0">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="24"/>
@@ -81,7 +81,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日本食以外の料理を食べる！、など" textAlignment="center" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8cn-Ae-R9B">
-                                                <rect key="frame" x="32" y="32.000000000000028" width="329" height="34"/>
+                                                <rect key="frame" x="32" y="31.999999999999972" width="329" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
@@ -94,7 +94,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9mT-Ph-s7L">
-                                        <rect key="frame" x="0.0" y="210" width="393" height="63"/>
+                                        <rect key="frame" x="0.0" y="229.33333333333331" width="393" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="応援のテイストを選ぼう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZU-08-Xmi">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="24"/>
@@ -120,25 +120,28 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GdI-ra-fAK">
-                                        <rect key="frame" x="0.0" y="317" width="393" height="145"/>
+                                        <rect key="frame" x="0.0" y="346" width="393" height="144"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="応援通知設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdh-Mb-fxU">
-                                                <rect key="frame" x="145.66666666666666" y="0.0" width="102" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="24"/>
                                                 <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
                                                 <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0k8-Mg-28D">
-                                                <rect key="frame" x="32" y="31.999999999999996" width="329" height="52.666666666666657"/>
+                                                <rect key="frame" x="32" y="32" width="329" height="52"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="応援通知を受け取る" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOa-FB-xlH">
-                                                        <rect key="frame" x="24" y="16" width="135" height="21"/>
+                                                        <rect key="frame" x="19" y="10.666666666666629" width="135" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="kIr-2i-Pnu"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
                                                         <color key="textColor" name="TitleColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GHo-MP-Luw">
-                                                        <rect key="frame" x="256" y="11" width="51" height="31"/>
+                                                        <rect key="frame" x="256" y="10.666666666666629" width="51" height="31"/>
                                                         <color key="backgroundColor" name="BackColor"/>
                                                         <color key="onTintColor" name="AccentColor"/>
                                                         <connections>
@@ -148,10 +151,12 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="GHo-MP-Luw" firstAttribute="centerY" secondItem="0k8-Mg-28D" secondAttribute="centerY" id="I2n-eT-sQO"/>
-                                                    <constraint firstItem="zOa-FB-xlH" firstAttribute="centerY" secondItem="0k8-Mg-28D" secondAttribute="centerY" id="Ucr-oP-MPQ"/>
-                                                    <constraint firstItem="zOa-FB-xlH" firstAttribute="leading" secondItem="0k8-Mg-28D" secondAttribute="leading" constant="24" id="eo1-vj-6sf"/>
-                                                    <constraint firstAttribute="trailing" secondItem="GHo-MP-Luw" secondAttribute="trailing" constant="24" id="nnB-TO-l8M"/>
+                                                    <constraint firstItem="zOa-FB-xlH" firstAttribute="centerY" secondItem="0k8-Mg-28D" secondAttribute="centerY" id="7nb-tY-YsE"/>
+                                                    <constraint firstAttribute="height" constant="52" id="MDM-xR-1C9"/>
+                                                    <constraint firstItem="GHo-MP-Luw" firstAttribute="centerY" secondItem="0k8-Mg-28D" secondAttribute="centerY" id="Nl6-ow-yTn"/>
+                                                    <constraint firstItem="zOa-FB-xlH" firstAttribute="leading" secondItem="0k8-Mg-28D" secondAttribute="leading" constant="19" id="ZzG-TK-eWK"/>
+                                                    <constraint firstItem="GHo-MP-Luw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zOa-FB-xlH" secondAttribute="trailing" constant="8" symbolic="YES" id="gmW-Ve-fGg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GHo-MP-Luw" secondAttribute="trailing" constant="24" id="ngv-Xw-AUl"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -160,10 +165,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9u-lK-hPv">
-                                                <rect key="frame" x="32" y="92.666666666666629" width="329" height="52.333333333333343"/>
+                                                <rect key="frame" x="32" y="92" width="329" height="52"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulk-IF-dt6">
-                                                        <rect key="frame" x="24" y="15.666666666666742" width="30" height="21"/>
+                                                        <rect key="frame" x="24" y="15.666666666666629" width="30" height="21"/>
                                                         <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
                                                         <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -180,8 +185,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="1x0-pA-xfs" secondAttribute="trailing" constant="24" id="9Nw-gb-Jyf"/>
                                                     <constraint firstItem="1x0-pA-xfs" firstAttribute="centerY" secondItem="a9u-lK-hPv" secondAttribute="centerY" id="ATn-9X-nKK"/>
+                                                    <constraint firstItem="1x0-pA-xfs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ulk-IF-dt6" secondAttribute="trailing" constant="8" symbolic="YES" id="HxB-9l-Xxl"/>
+                                                    <constraint firstAttribute="height" constant="52" id="OCq-1O-zE0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1x0-pA-xfs" secondAttribute="trailing" constant="24" id="lmr-ZW-1K5"/>
                                                     <constraint firstItem="ulk-IF-dt6" firstAttribute="leading" secondItem="a9u-lK-hPv" secondAttribute="leading" constant="24" id="m7o-TK-ncs"/>
                                                     <constraint firstItem="ulk-IF-dt6" firstAttribute="centerY" secondItem="a9u-lK-hPv" secondAttribute="centerY" id="n0F-gK-ELj"/>
                                                 </constraints>
@@ -192,12 +199,16 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="a9u-lK-hPv" secondAttribute="trailing" constant="32" id="2Wy-0E-1WB"/>
+                                            <constraint firstAttribute="trailing" secondItem="0k8-Mg-28D" secondAttribute="trailing" constant="32" id="FQ1-f1-3OA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gdh-Mb-fxU" secondAttribute="trailing" id="Yzf-LY-xQf"/>
+                                            <constraint firstItem="Gdh-Mb-fxU" firstAttribute="leading" secondItem="GdI-ra-fAK" secondAttribute="leading" id="nVP-1q-hiX"/>
+                                            <constraint firstItem="0k8-Mg-28D" firstAttribute="leading" secondItem="GdI-ra-fAK" secondAttribute="leading" constant="32" id="s9j-KZ-uiF"/>
+                                            <constraint firstItem="a9u-lK-hPv" firstAttribute="leading" secondItem="GdI-ra-fAK" secondAttribute="leading" constant="32" id="tHC-VK-ZYm"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="GdI-ra-fAK" firstAttribute="leading" secondItem="p02-0Q-9xz" secondAttribute="leading" id="D59-9b-I8Z"/>
-                                    <constraint firstAttribute="trailing" secondItem="GdI-ra-fAK" secondAttribute="trailing" id="IjL-ud-tFS"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tU1-81-ng0"/>
@@ -207,7 +218,7 @@
                             <constraint firstItem="qCR-Sn-RKf" firstAttribute="centerX" secondItem="KZL-BY-Qqk" secondAttribute="centerX" id="8GA-si-3dX"/>
                             <constraint firstItem="tU1-81-ng0" firstAttribute="trailing" secondItem="p02-0Q-9xz" secondAttribute="trailing" id="EQK-Ep-CB8"/>
                             <constraint firstItem="p02-0Q-9xz" firstAttribute="top" secondItem="tU1-81-ng0" secondAttribute="top" constant="32" id="Or4-DT-dMe"/>
-                            <constraint firstItem="qCR-Sn-RKf" firstAttribute="top" relation="lessThanOrEqual" secondItem="p02-0Q-9xz" secondAttribute="bottom" constant="100" id="hpl-sb-Dwo"/>
+                            <constraint firstItem="qCR-Sn-RKf" firstAttribute="top" relation="lessThanOrEqual" secondItem="p02-0Q-9xz" secondAttribute="bottom" constant="72" id="hpl-sb-Dwo"/>
                             <constraint firstItem="tU1-81-ng0" firstAttribute="bottom" secondItem="qCR-Sn-RKf" secondAttribute="bottom" constant="24" id="l7K-T1-nRL"/>
                             <constraint firstItem="p02-0Q-9xz" firstAttribute="leading" secondItem="tU1-81-ng0" secondAttribute="leading" id="y9E-T0-C33"/>
                         </constraints>
@@ -230,7 +241,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAb-yJ-X0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="q6F-QJ-PPo"/>
             </objects>
-            <point key="canvasLocation" x="4550.7246376811599" y="-21.195652173913047"/>
+            <point key="canvasLocation" x="4549.6000000000004" y="-21.428571428571431"/>
         </scene>
         <!--新しいチャレンジの追加-->
         <scene sceneID="12y-G0-1OR">
@@ -445,7 +456,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日本食以外の料理を食べる！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMY-I1-sx1">
-                                <rect key="frame" x="49" y="681" width="287" height="21"/>
+                                <rect key="frame" x="48" y="679" width="287" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="14"/>
                                 <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -473,14 +484,14 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="開始日：　2023/05/23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHe-gT-T5b">
-                                <rect key="frame" x="49" y="651" width="239" height="22"/>
+                                <rect key="frame" x="48" y="650" width="239" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="14"/>
                                 <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU3-lm-yeL">
-                                <rect key="frame" x="164" y="726" width="60" height="61"/>
+                                <rect key="frame" x="163" y="725" width="60" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" name="BackColor"/>
@@ -525,13 +536,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackImage" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-hA-ojV">
-                                <rect key="frame" x="-4" y="0.0" width="397" height="783"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackImage" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-hA-ojV">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zh-eJ-CBl">
-                                <rect key="frame" x="-10" y="0.0" width="381" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Zh-eJ-CBl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
                                 <color key="backgroundColor" name="BackColor"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="18"/>
@@ -541,79 +550,124 @@
                                     <navigationItem title="チャレンジの記録" id="9jT-c8-nrp"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nl7-y1-wem">
-                                <rect key="frame" x="28" y="90" width="338" height="393"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="umJ-oD-COq">
+                                <rect key="frame" x="32" y="171" width="329" height="360"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Fp-leC">
-                                        <rect key="frame" x="115" y="319" width="89" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <color key="tintColor" red="0.90984059340000001" green="0.70160096090000001" blue="0.73584182779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="記録する">
-                                            <fontDescription key="titleFontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="14"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="saveButtonTapped:" destination="4v3-AR-2yp" eventType="touchUpInside" id="aqs-CV-0rV"/>
-                                        </connections>
-                                    </button>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aPJ-Dv-MmM">
-                                        <rect key="frame" x="105" y="21" width="106" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aPJ-Dv-MmM">
+                                        <rect key="frame" x="45" y="0.0" width="239" height="50"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <color key="tintColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <locale key="locale" localeIdentifier="ja_JP"/>
                                     </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ys-6v-qqy">
-                                        <rect key="frame" x="238" y="319" width="52" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                        <gestureRecognizers/>
-                                        <color key="tintColor" red="0.81960785390000002" green="0.87450981139999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="photo.on.rectangle" catalog="system"/>
-                                        <connections>
-                                            <action selector="onTappedAlbumButton" destination="4v3-AR-2yp" eventType="touchUpInside" id="wg1-f4-jqS"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nj4-Bm-JRz">
-                                        <rect key="frame" x="21" y="70" width="285" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" name="BackColor"/>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1QT-jq-NUv">
-                                        <rect key="frame" x="35" y="160" width="255" height="142"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <gestureRecognizers/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Gj0-oI-wd9">
+                                        <rect key="frame" x="16" y="58" width="297" height="254"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="毎日の振り返り" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcs-hL-I0a">
+                                                <rect key="frame" x="96" y="0.0" width="105" height="21"/>
+                                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="記録を入力" translatesAutoresizingMaskIntoConstraints="NO" id="nj4-Bm-JRz">
+                                                <rect key="frame" x="36.666666666666686" y="37" width="224" height="64"/>
+                                                <color key="backgroundColor" name="BackColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="LbI-YC-3Ly"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="265" id="PUI-eD-euv"/>
+                                                </constraints>
+                                                <color key="textColor" name="TextColor"/>
+                                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1QT-jq-NUv">
+                                                <rect key="frame" x="36.666666666666686" y="117" width="224" height="137"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="137" id="9kX-kk-KxR"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="238" id="Dw3-dp-WjP"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="238" id="rEp-31-UM7"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Dw3-dp-WjP"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="AccentColor01"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Ebc-UX-2Z3">
+                                        <rect key="frame" x="84.666666666666686" y="320" width="160" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Fp-leC">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="pRV-HO-1jv"/>
+                                                    <constraint firstAttribute="height" constant="40" id="tes-Ut-z0o"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.90984059340000001" green="0.70160096090000001" blue="0.73584182779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="記録する">
+                                                    <fontDescription key="titleFontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="14"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="4v3-AR-2yp" eventType="touchUpInside" id="aqs-CV-0rV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ys-6v-qqy">
+                                                <rect key="frame" x="104" y="0.0" width="56" height="40"/>
+                                                <gestureRecognizers/>
+                                                <color key="tintColor" name="AccentColor03"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="photo.on.rectangle" catalog="system"/>
+                                                <connections>
+                                                    <action selector="onTappedAlbumButton" destination="4v3-AR-2yp" eventType="touchUpInside" id="wg1-f4-jqS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="AccentColor01"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gj0-oI-wd9" secondAttribute="trailing" constant="16" id="KxA-iB-8Mn"/>
+                                    <constraint firstItem="Gj0-oI-wd9" firstAttribute="leading" secondItem="umJ-oD-COq" secondAttribute="leading" constant="16" id="dh5-Rk-B5r"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8ao-48-jYU"/>
                         <color key="backgroundColor" name="BackColor"/>
+                        <constraints>
+                            <constraint firstItem="umJ-oD-COq" firstAttribute="top" secondItem="9Zh-eJ-CBl" secondAttribute="bottom" constant="56" id="19i-up-ZcA"/>
+                            <constraint firstItem="9Zh-eJ-CBl" firstAttribute="top" secondItem="8ao-48-jYU" secondAttribute="top" id="79a-X3-0QK"/>
+                            <constraint firstItem="8ao-48-jYU" firstAttribute="trailing" secondItem="umJ-oD-COq" secondAttribute="trailing" constant="32" id="9cE-GO-jhZ"/>
+                            <constraint firstItem="umJ-oD-COq" firstAttribute="leading" secondItem="8ao-48-jYU" secondAttribute="leading" constant="32" id="IEb-Kl-6L2"/>
+                            <constraint firstItem="9Zh-eJ-CBl" firstAttribute="leading" secondItem="8ao-48-jYU" secondAttribute="leading" id="PPT-0P-cQb"/>
+                            <constraint firstItem="9Zh-eJ-CBl" firstAttribute="trailing" secondItem="8ao-48-jYU" secondAttribute="trailing" id="ZwV-gv-Seh"/>
+                            <constraint firstItem="WHN-hA-ojV" firstAttribute="top" secondItem="29E-5U-C4U" secondAttribute="top" id="dwb-8p-ipc"/>
+                            <constraint firstItem="WHN-hA-ojV" firstAttribute="leading" secondItem="29E-5U-C4U" secondAttribute="leading" id="eZ5-2T-hbe"/>
+                            <constraint firstAttribute="bottom" secondItem="WHN-hA-ojV" secondAttribute="bottom" id="hcm-0y-itt"/>
+                            <constraint firstAttribute="trailing" secondItem="WHN-hA-ojV" secondAttribute="trailing" id="oko-Ju-mLy"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="AlbumButton" destination="6ys-6v-qqy" id="gqj-Ob-wp8"/>
@@ -625,7 +679,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yD0-Aq-3TF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3677.0992366412211" y="741.54929577464793"/>
+            <point key="canvasLocation" x="3675.5725190839694" y="740.14084507042253"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -642,13 +696,13 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="601"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" image="TitleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Fm5-4r-TmZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="174"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="191"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="d9d-1h-PKc"/>
                                         </constraints>
                                     </imageView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RCd-PD-R9Q">
-                                        <rect key="frame" x="0.0" y="174" width="393" height="180"/>
+                                        <rect key="frame" x="0.0" y="191" width="393" height="180"/>
                                         <color key="backgroundColor" name="BackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="eNe-MO-gLH"/>
@@ -671,7 +725,7 @@
                                         </cells>
                                     </collectionView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="壮絶じゃ！連続２日間の偉業を達成した勇者よ。お前の勇気と闘志に、世界中の人々が感動せざるを得ん！さらなる勇躍を目指し、進み続けよう！🌟⚔️" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzw-CF-gex">
-                                        <rect key="frame" x="16" y="354" width="361" height="247"/>
+                                        <rect key="frame" x="16" y="371" width="361" height="230"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="124" id="xg0-Z2-gbQ"/>
                                         </constraints>
@@ -827,6 +881,9 @@
         <namedColor name="AccentColor02">
             <color red="0.96078431372549022" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="AccentColor03">
+            <color red="0.76470588235294112" green="0.71372549019607845" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="BackColor">
             <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -836,9 +893,6 @@
         <namedColor name="TitleColor">
             <color red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
