@@ -31,29 +31,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="次に毎日取り組む内容を決めよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzQ-ZR-Do0">
-                                <rect key="frame" x="55" y="228" width="272" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="を作成しました！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oL-GN-QT5">
-                                <rect key="frame" x="65" y="165" width="262" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="15"/>
-                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日本食以外の料理を食べる！、など" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8cn-Ae-R9B">
-                                <rect key="frame" x="38" y="274" width="316" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-Sn-RKf">
-                                <rect key="frame" x="57" y="676" width="269" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-Sn-RKf">
+                                <rect key="frame" x="104.66666666666669" y="697" width="184" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Hui-5T-YHF"/>
+                                </constraints>
                                 <color key="tintColor" name="AccentColor02"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="チャレンジを始める！">
@@ -63,94 +45,172 @@
                                     <action selector="addButtonTapped" destination="Oar-2c-61g" eventType="touchUpInside" id="il4-Ca-83p"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「1週間異国料理生活」" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2e-5c-JdC">
-                                <rect key="frame" x="0.0" y="129" width="393" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="19"/>
-                                <color key="textColor" name="TitleColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0k8-Mg-28D">
-                                <rect key="frame" x="38" y="520" width="309" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="p02-0Q-9xz">
+                                <rect key="frame" x="0.0" y="135" width="393" height="462"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="応援通知を受け取る" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOa-FB-xlH">
-                                        <rect key="frame" x="30" y="16" width="135" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
-                                        <color key="textColor" name="TitleColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GHo-MP-Luw">
-                                        <rect key="frame" x="220" y="11" width="49" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" name="BackColor"/>
-                                        <connections>
-                                            <action selector="checkNotification" destination="Oar-2c-61g" eventType="valueChanged" id="rCb-Kw-07I"/>
-                                        </connections>
-                                    </switch>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gvC-ap-e2O">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="55.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「1週間異国料理生活」" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2e-5c-JdC">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="26.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="19"/>
+                                                <color key="textColor" name="TitleColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="を作成しました！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oL-GN-QT5">
+                                                <rect key="frame" x="0.0" y="34.666666666666657" width="393" height="21"/>
+                                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="15"/>
+                                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="6oL-GN-QT5" secondAttribute="trailing" id="P4U-8t-hDw"/>
+                                            <constraint firstAttribute="trailing" secondItem="p2e-5c-JdC" secondAttribute="trailing" id="aZG-QW-raF"/>
+                                            <constraint firstItem="p2e-5c-JdC" firstAttribute="leading" secondItem="gvC-ap-e2O" secondAttribute="leading" id="dG0-2T-hiC"/>
+                                            <constraint firstItem="6oL-GN-QT5" firstAttribute="leading" secondItem="gvC-ap-e2O" secondAttribute="leading" id="jwN-bu-8Oq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-Q2-Lvu">
+                                        <rect key="frame" x="0.0" y="99.666666666666657" width="393" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="具体的に取り組むことを決めよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzQ-ZR-Do0">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="24"/>
+                                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
+                                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日本食以外の料理を食べる！、など" textAlignment="center" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8cn-Ae-R9B">
+                                                <rect key="frame" x="32" y="32.000000000000028" width="329" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8cn-Ae-R9B" secondAttribute="trailing" constant="32" id="5hk-sQ-ydN"/>
+                                            <constraint firstItem="bzQ-ZR-Do0" firstAttribute="leading" secondItem="Fye-Q2-Lvu" secondAttribute="leading" id="5ub-8l-tja"/>
+                                            <constraint firstItem="8cn-Ae-R9B" firstAttribute="leading" secondItem="Fye-Q2-Lvu" secondAttribute="leading" constant="32" id="no0-QU-l1u"/>
+                                            <constraint firstAttribute="trailing" secondItem="bzQ-ZR-Do0" secondAttribute="trailing" id="qfL-wR-4Cq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9mT-Ph-s7L">
+                                        <rect key="frame" x="0.0" y="210" width="393" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="応援のテイストを選ぼう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZU-08-Xmi">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="24"/>
+                                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
+                                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nlO-2Z-GxQ">
+                                                <rect key="frame" x="35" y="32" width="323" height="32"/>
+                                                <segments>
+                                                    <segment title="標準"/>
+                                                    <segment title="熱血"/>
+                                                    <segment title="勇者"/>
+                                                    <segment title="癒し"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5ZU-08-Xmi" secondAttribute="trailing" id="43L-kY-UPZ"/>
+                                            <constraint firstItem="nlO-2Z-GxQ" firstAttribute="leading" secondItem="9mT-Ph-s7L" secondAttribute="leading" constant="35" id="Cd2-92-odp"/>
+                                            <constraint firstAttribute="trailing" secondItem="nlO-2Z-GxQ" secondAttribute="trailing" constant="35" id="K12-UX-xh1"/>
+                                            <constraint firstItem="5ZU-08-Xmi" firstAttribute="leading" secondItem="9mT-Ph-s7L" secondAttribute="leading" id="gON-Wu-J2b"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GdI-ra-fAK">
+                                        <rect key="frame" x="0.0" y="317" width="393" height="145"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="応援通知設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdh-Mb-fxU">
+                                                <rect key="frame" x="145.66666666666666" y="0.0" width="102" height="24"/>
+                                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
+                                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0k8-Mg-28D">
+                                                <rect key="frame" x="32" y="31.999999999999996" width="329" height="52.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="応援通知を受け取る" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOa-FB-xlH">
+                                                        <rect key="frame" x="24" y="16" width="135" height="21"/>
+                                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
+                                                        <color key="textColor" name="TitleColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GHo-MP-Luw">
+                                                        <rect key="frame" x="256" y="11" width="51" height="31"/>
+                                                        <color key="backgroundColor" name="BackColor"/>
+                                                        <color key="onTintColor" name="AccentColor"/>
+                                                        <connections>
+                                                            <action selector="checkNotification" destination="Oar-2c-61g" eventType="valueChanged" id="rCb-Kw-07I"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="GHo-MP-Luw" firstAttribute="centerY" secondItem="0k8-Mg-28D" secondAttribute="centerY" id="I2n-eT-sQO"/>
+                                                    <constraint firstItem="zOa-FB-xlH" firstAttribute="centerY" secondItem="0k8-Mg-28D" secondAttribute="centerY" id="Ucr-oP-MPQ"/>
+                                                    <constraint firstItem="zOa-FB-xlH" firstAttribute="leading" secondItem="0k8-Mg-28D" secondAttribute="leading" constant="24" id="eo1-vj-6sf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GHo-MP-Luw" secondAttribute="trailing" constant="24" id="nnB-TO-l8M"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9u-lK-hPv">
+                                                <rect key="frame" x="32" y="92.666666666666629" width="329" height="52.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulk-IF-dt6">
+                                                        <rect key="frame" x="24" y="15.666666666666742" width="30" height="21"/>
+                                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
+                                                        <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x0-pA-xfs">
+                                                        <rect key="frame" x="206" y="9" width="99" height="34.333333333333336"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="99" id="uCv-mk-NV9"/>
+                                                        </constraints>
+                                                        <date key="date" timeIntervalSinceReferenceDate="707785200.34440804">
+                                                            <!--2023-06-06 23:00:00 +0000-->
+                                                        </date>
+                                                    </datePicker>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="1x0-pA-xfs" secondAttribute="trailing" constant="24" id="9Nw-gb-Jyf"/>
+                                                    <constraint firstItem="1x0-pA-xfs" firstAttribute="centerY" secondItem="a9u-lK-hPv" secondAttribute="centerY" id="ATn-9X-nKK"/>
+                                                    <constraint firstItem="ulk-IF-dt6" firstAttribute="leading" secondItem="a9u-lK-hPv" secondAttribute="leading" constant="24" id="m7o-TK-ncs"/>
+                                                    <constraint firstItem="ulk-IF-dt6" firstAttribute="centerY" secondItem="a9u-lK-hPv" secondAttribute="centerY" id="n0F-gK-ELj"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a9u-lK-hPv">
-                                <rect key="frame" x="36" y="588" width="309" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x0-pA-xfs">
-                                        <rect key="frame" x="186" y="0.0" width="109" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="706748400.34440804">
-                                            <!--2023-05-25 23:00:00 +0000-->
-                                        </date>
-                                    </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulk-IF-dt6">
-                                        <rect key="frame" x="31" y="13" width="40" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
-                                        <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="応援通知設定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdh-Mb-fxU">
-                                <rect key="frame" x="136" y="477" width="102" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="応援のテイストを選ぼう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZU-08-Xmi">
-                                <rect key="frame" x="94" y="344" width="204" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nlO-2Z-GxQ">
-                                <rect key="frame" x="36" y="392" width="313" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="標準"/>
-                                    <segment title="熱血"/>
-                                    <segment title="勇者"/>
-                                    <segment title="癒し"/>
-                                </segments>
-                            </segmentedControl>
+                                <constraints>
+                                    <constraint firstItem="GdI-ra-fAK" firstAttribute="leading" secondItem="p02-0Q-9xz" secondAttribute="leading" id="D59-9b-I8Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="GdI-ra-fAK" secondAttribute="trailing" id="IjL-ud-tFS"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tU1-81-ng0"/>
                         <color key="backgroundColor" name="BackColor"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="qCR-Sn-RKf" firstAttribute="centerX" secondItem="KZL-BY-Qqk" secondAttribute="centerX" id="8GA-si-3dX"/>
+                            <constraint firstItem="tU1-81-ng0" firstAttribute="trailing" secondItem="p02-0Q-9xz" secondAttribute="trailing" id="EQK-Ep-CB8"/>
+                            <constraint firstItem="p02-0Q-9xz" firstAttribute="top" secondItem="tU1-81-ng0" secondAttribute="top" constant="32" id="Or4-DT-dMe"/>
+                            <constraint firstItem="qCR-Sn-RKf" firstAttribute="top" relation="lessThanOrEqual" secondItem="p02-0Q-9xz" secondAttribute="bottom" constant="100" id="hpl-sb-Dwo"/>
+                            <constraint firstItem="tU1-81-ng0" firstAttribute="bottom" secondItem="qCR-Sn-RKf" secondAttribute="bottom" constant="24" id="l7K-T1-nRL"/>
+                            <constraint firstItem="p02-0Q-9xz" firstAttribute="leading" secondItem="tU1-81-ng0" secondAttribute="leading" id="y9E-T0-C33"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="q6F-QJ-PPo" appends="YES" id="lei-Ed-BsC"/>
                         </connections>
@@ -170,7 +230,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAb-yJ-X0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="q6F-QJ-PPo"/>
             </objects>
-            <point key="canvasLocation" x="4551.9083969465646" y="-20.422535211267608"/>
+            <point key="canvasLocation" x="4550.7246376811599" y="-21.195652173913047"/>
         </scene>
         <!--新しいチャレンジの追加-->
         <scene sceneID="12y-G0-1OR">
@@ -192,8 +252,8 @@
                                         <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1週間異国料理生活、など" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ve7-NM-b0J">
-                                        <rect key="frame" x="35" y="32" width="323" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1週間異国料理生活、など" textAlignment="center" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ve7-NM-b0J">
+                                        <rect key="frame" x="32" y="32" width="329" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="jpG-05-PB7"/>
                                         </constraints>
@@ -205,8 +265,8 @@
                                 <constraints>
                                     <constraint firstItem="dDO-RG-0ac" firstAttribute="leading" secondItem="Zvp-qM-olu" secondAttribute="leading" id="Hfo-yR-ep7"/>
                                     <constraint firstAttribute="trailing" secondItem="dDO-RG-0ac" secondAttribute="trailing" id="QC3-3x-zTQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="ve7-NM-b0J" secondAttribute="trailing" constant="35" id="RqW-h0-pS5"/>
-                                    <constraint firstItem="ve7-NM-b0J" firstAttribute="leading" secondItem="Zvp-qM-olu" secondAttribute="leading" constant="35" id="iqM-ig-HDq"/>
+                                    <constraint firstAttribute="trailing" secondItem="ve7-NM-b0J" secondAttribute="trailing" constant="32" id="RqW-h0-pS5"/>
+                                    <constraint firstItem="ve7-NM-b0J" firstAttribute="leading" secondItem="Zvp-qM-olu" secondAttribute="leading" constant="32" id="iqM-ig-HDq"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-m6-4VF">
@@ -385,7 +445,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日本食以外の料理を食べる！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMY-I1-sx1">
-                                <rect key="frame" x="50" y="682" width="288" height="21"/>
+                                <rect key="frame" x="49" y="681" width="287" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="14"/>
                                 <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -413,14 +473,14 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="開始日：　2023/05/23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHe-gT-T5b">
-                                <rect key="frame" x="50" y="652" width="239" height="21"/>
+                                <rect key="frame" x="49" y="651" width="239" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="14"/>
                                 <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU3-lm-yeL">
-                                <rect key="frame" x="165" y="727" width="60" height="61"/>
+                                <rect key="frame" x="164" y="726" width="60" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" name="BackColor"/>
@@ -482,11 +542,11 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nl7-y1-wem">
-                                <rect key="frame" x="28" y="91" width="338" height="393"/>
+                                <rect key="frame" x="28" y="90" width="338" height="393"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Fp-leC">
-                                        <rect key="frame" x="117" y="320" width="89" height="40"/>
+                                        <rect key="frame" x="115" y="319" width="89" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="tintColor" red="0.90984059340000001" green="0.70160096090000001" blue="0.73584182779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
@@ -503,14 +563,14 @@
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aPJ-Dv-MmM">
-                                        <rect key="frame" x="106" y="21" width="107" height="42"/>
+                                        <rect key="frame" x="105" y="21" width="106" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <color key="tintColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <locale key="locale" localeIdentifier="ja_JP"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ys-6v-qqy">
-                                        <rect key="frame" x="240" y="320" width="51" height="40"/>
+                                        <rect key="frame" x="238" y="319" width="52" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <gestureRecognizers/>
                                         <color key="tintColor" red="0.81960785390000002" green="0.87450981139999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -520,7 +580,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nj4-Bm-JRz">
-                                        <rect key="frame" x="23" y="70" width="285" height="70"/>
+                                        <rect key="frame" x="21" y="70" width="285" height="70"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="BackColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -534,7 +594,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1QT-jq-NUv">
-                                        <rect key="frame" x="37" y="161" width="254" height="142"/>
+                                        <rect key="frame" x="35" y="160" width="255" height="142"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <gestureRecognizers/>
                                         <userDefinedRuntimeAttributes>
@@ -578,15 +638,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackImage" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-Jx-RQE">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eRn-Jy-2mR">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eRn-Jy-2mR">
                                 <rect key="frame" x="0.0" y="103" width="393" height="601"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Fm5-4r-TmZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="200.33333333333334"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" image="TitleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Fm5-4r-TmZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="174"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="d9d-1h-PKc"/>
+                                        </constraints>
                                     </imageView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RCd-PD-R9Q">
-                                        <rect key="frame" x="0.0" y="200.33333333333331" width="393" height="200.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="174" width="393" height="180"/>
                                         <color key="backgroundColor" name="BackColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="eNe-MO-gLH"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7HO-8M-OaU">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -604,8 +670,11 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="下のボタンからチャレンジを設定しよう！" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzw-CF-gex">
-                                        <rect key="frame" x="16" y="400.66666666666669" width="361" height="200.33333333333331"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="壮絶じゃ！連続２日間の偉業を達成した勇者よ。お前の勇気と闘志に、世界中の人々が感動せざるを得ん！さらなる勇躍を目指し、進み続けよう！🌟⚔️" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzw-CF-gex">
+                                        <rect key="frame" x="16" y="354" width="361" height="247"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="124" id="xg0-Z2-gbQ"/>
+                                        </constraints>
                                         <color key="textColor" name="TitleColor"/>
                                         <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -620,7 +689,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGT-na-N0y">
-                                <rect key="frame" x="167" y="704" width="60" height="60"/>
+                                <rect key="frame" x="166.66666666666666" y="704" width="60" height="60"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Zkc-kI-OiS"/>
@@ -667,7 +736,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2902.5" y="-21.12676056338028"/>
+            <point key="canvasLocation" x="2901.5384615384614" y="-21.327014218009477"/>
         </scene>
         <!--チャレンジ-->
         <scene sceneID="3sx-5q-rer">
