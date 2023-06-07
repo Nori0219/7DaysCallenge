@@ -550,8 +550,8 @@
                                     <navigationItem title="チャレンジの記録" id="9jT-c8-nrp"/>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="umJ-oD-COq">
-                                <rect key="frame" x="32" y="171" width="329" height="360"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="umJ-oD-COq">
+                                <rect key="frame" x="32" y="171" width="329" height="376"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="aPJ-Dv-MmM">
                                         <rect key="frame" x="45" y="0.0" width="239" height="50"/>
@@ -560,7 +560,7 @@
                                         <locale key="locale" localeIdentifier="ja_JP"/>
                                     </datePicker>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Gj0-oI-wd9">
-                                        <rect key="frame" x="16" y="58" width="297" height="254"/>
+                                        <rect key="frame" x="16" y="66" width="297" height="254"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="毎日の振り返り" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcs-hL-I0a">
                                                 <rect key="frame" x="96" y="0.0" width="105" height="21"/>
@@ -568,12 +568,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="記録を入力" translatesAutoresizingMaskIntoConstraints="NO" id="nj4-Bm-JRz">
-                                                <rect key="frame" x="36.666666666666686" y="37" width="224" height="64"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nj4-Bm-JRz">
+                                                <rect key="frame" x="16" y="37" width="265" height="64"/>
                                                 <color key="backgroundColor" name="BackColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="LbI-YC-3Ly"/>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="265" id="PUI-eD-euv"/>
+                                                    <constraint firstAttribute="width" constant="265" id="PUI-eD-euv"/>
                                                 </constraints>
                                                 <color key="textColor" name="TextColor"/>
                                                 <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="14"/>
@@ -586,12 +586,12 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1QT-jq-NUv">
-                                                <rect key="frame" x="36.666666666666686" y="117" width="224" height="137"/>
+                                                <rect key="frame" x="29.666666666666686" y="117" width="238" height="137"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="137" id="9kX-kk-KxR"/>
+                                                    <constraint firstAttribute="height" constant="137" id="9kX-kk-KxR"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="238" id="Dw3-dp-WjP"/>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="238" id="rEp-31-UM7"/>
+                                                    <constraint firstAttribute="width" constant="238" id="rEp-31-UM7"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -608,7 +608,7 @@
                                         <color key="backgroundColor" name="AccentColor01"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Ebc-UX-2Z3">
-                                        <rect key="frame" x="84.666666666666686" y="320" width="160" height="40"/>
+                                        <rect key="frame" x="84.666666666666686" y="336" width="160" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-Fp-leC">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>

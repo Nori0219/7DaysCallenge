@@ -29,6 +29,7 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         // UIDatePickerの設定
         datePicker.datePickerMode = .date
         contextTextView.delegate = self
+        articleImageView.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -62,6 +63,8 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         self.dismiss(animated: true, completion: nil)
         //画像を出力
         articleImageView.image = info[.originalImage] as? UIImage
+        //画像を表示できるように変更
+        articleImageView.isHidden = false
     }
     
     
