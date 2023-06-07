@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -21,33 +21,37 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticleCell" id="gTV-IL-0wX" customClass="ArticleCollectionViewCell" customModule="_DaysCallenge" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="340" height="240"/>
+            <rect key="frame" x="0.0" y="0.0" width="340" height="230"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="340" height="240"/>
+                <rect key="frame" x="0.0" y="0.0" width="340" height="230"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb7-Lp-yvP">
-                        <rect key="frame" x="0.0" y="0.0" width="340" height="240"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb7-Lp-yvP">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="230"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="初日は大学近くでナンを食べた！" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSE-K3-Awo">
-                                <rect key="frame" x="65" y="25" width="254" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RTQ-Og-oGo">
+                                <rect key="frame" x="64" y="56" width="238" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="14"/>
-                                <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="１" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljM-0D-WUK">
-                                <rect key="frame" x="18" y="18" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="１" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljM-0D-WUK">
+                                <rect key="frame" x="16" y="16" width="32" height="32"/>
                                 <color key="backgroundColor" name="AccentColor02"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="lE6-HJ-psD"/>
+                                    <constraint firstAttribute="height" constant="32" id="tNH-4m-WCf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -58,25 +62,24 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RTQ-Og-oGo">
-                                <rect key="frame" x="65" y="59" width="254" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2023/05/17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLn-GH-fvg">
-                                <rect key="frame" x="65" y="210" width="185" height="22"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023年05月17日（水）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLn-GH-fvg">
+                                <rect key="frame" x="64" y="204" width="200" height="14"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="th7-CI-3Sk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="12"/>
+                                <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="初日は大学近くでナンを食べた！" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSE-K3-Awo">
+                                <rect key="frame" x="64" y="16" width="244" height="24"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Regular" family="Gen Jyuu Gothic" pointSize="14"/>
                                 <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,15 +88,33 @@
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" notEnabled="YES"/>
                         </accessibility>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vSE-K3-Awo" secondAttribute="trailing" constant="32" id="4TK-Kr-Rpv"/>
+                            <constraint firstItem="ljM-0D-WUK" firstAttribute="top" secondItem="Vb7-Lp-yvP" secondAttribute="top" constant="16" id="5ZC-hV-9PD"/>
+                            <constraint firstAttribute="bottom" secondItem="jLn-GH-fvg" secondAttribute="bottom" constant="12" id="7f4-BW-G3e"/>
+                            <constraint firstItem="ljM-0D-WUK" firstAttribute="leading" secondItem="Vb7-Lp-yvP" secondAttribute="leading" constant="16" id="G4n-7u-etv"/>
+                            <constraint firstItem="RTQ-Og-oGo" firstAttribute="leading" secondItem="vSE-K3-Awo" secondAttribute="leading" id="Ghx-UA-s8U"/>
+                            <constraint firstItem="vSE-K3-Awo" firstAttribute="top" secondItem="Vb7-Lp-yvP" secondAttribute="top" constant="16" id="R5J-6R-Seh"/>
+                            <constraint firstItem="jLn-GH-fvg" firstAttribute="top" secondItem="RTQ-Og-oGo" secondAttribute="bottom" constant="8" id="fLw-wX-TSG"/>
+                            <constraint firstItem="RTQ-Og-oGo" firstAttribute="top" secondItem="vSE-K3-Awo" secondAttribute="bottom" constant="16" id="lK4-Og-cje"/>
+                            <constraint firstItem="jLn-GH-fvg" firstAttribute="leading" secondItem="vSE-K3-Awo" secondAttribute="leading" id="pn7-dM-Lem"/>
+                            <constraint firstItem="vSE-K3-Awo" firstAttribute="leading" secondItem="ljM-0D-WUK" secondAttribute="trailing" constant="16" id="tra-BD-2kF"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="10"/>
+                                <integer key="value" value="8"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="J6C-db-qTq"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vb7-Lp-yvP" secondAttribute="trailing" id="4xN-in-BPC"/>
+                <constraint firstAttribute="bottom" secondItem="Vb7-Lp-yvP" secondAttribute="bottom" id="8iE-SV-1Ao"/>
+                <constraint firstItem="Vb7-Lp-yvP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="c8R-K0-cGL"/>
+                <constraint firstItem="Vb7-Lp-yvP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hB6-Bc-jCq"/>
+            </constraints>
             <size key="customSize" width="382" height="187"/>
             <connections>
                 <outlet property="articleImageView" destination="RTQ-Og-oGo" id="DZh-Nc-Db9"/>
@@ -101,7 +122,7 @@
                 <outlet property="dateLabal" destination="jLn-GH-fvg" id="kIm-XN-UcC"/>
                 <outlet property="indexLabel" destination="ljM-0D-WUK" id="iEx-6w-MlJ"/>
             </connections>
-            <point key="canvasLocation" x="-27.480916030534349" y="26.760563380281692"/>
+            <point key="canvasLocation" x="-28.800000000000001" y="26.086956521739133"/>
         </collectionViewCell>
     </objects>
     <resources>

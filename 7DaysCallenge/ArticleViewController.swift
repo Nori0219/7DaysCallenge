@@ -42,7 +42,7 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
+        
     }
     
     //ChallegeのUIDに対応したArticleの配列を読み込む
@@ -94,7 +94,7 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // セルが選択された時の処理を記述する
     }
-
+    
     // 日付のフォーマットを適用するメソッド
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
@@ -104,13 +104,6 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
         return formatter.string(from: date)
     }
     
-//    func formatDate2(_ date: Date) -> String {
-//        let formatter = DateFormatter()
-//        //formatter.dateFormat = "yyyy/MM/dd"
-//        formatter.locale = Locale(identifier: "ja_JP")
-//        formatter.dateFormat = "yyyy/MM/dd"
-//        return formatter.string(from: date)
-//    }
     
     //画面遷移でtopChallengeの値を渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -130,13 +123,15 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
         return UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     }
     
-    // Cellのサイズ
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 340, height: 240)
-    }
+     //Cellのサイズ
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 340, height: 240)
+        }
+
+    
     // 行の最小余白
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 16
     }
     // 列の最小余白
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

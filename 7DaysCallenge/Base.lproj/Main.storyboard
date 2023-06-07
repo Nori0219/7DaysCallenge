@@ -411,9 +411,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4VL-Ye-PBI">
-                                <rect key="frame" x="-1" y="59" width="393" height="735"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4VL-Ye-PBI">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <color key="backgroundColor" name="BackColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tJT-54-SdX">
                                     <size key="itemSize" width="128" height="128"/>
@@ -435,6 +434,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6rU-KL-H38"/>
                         <color key="backgroundColor" name="BackColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4VL-Ye-PBI" secondAttribute="bottom" id="CZt-0H-0fc"/>
+                            <constraint firstItem="4VL-Ye-PBI" firstAttribute="leading" secondItem="Ugi-gN-ZXk" secondAttribute="leading" id="I4R-EU-WPB"/>
+                            <constraint firstItem="4VL-Ye-PBI" firstAttribute="top" secondItem="6rU-KL-H38" secondAttribute="top" constant="16" id="QtY-Sr-RYL"/>
+                            <constraint firstAttribute="trailing" secondItem="4VL-Ye-PBI" secondAttribute="trailing" id="cVg-VE-hQm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VMz-AD-5ju"/>
                     <connections>
@@ -488,8 +493,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU3-lm-yeL">
-                                <rect key="frame" x="158" y="543" width="60" height="60"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <rect key="frame" x="157.5" y="543" width="60" height="60"/>
+                                <color key="backgroundColor" name="AccentColor03"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="3fP-Sg-mWH"/>
                                     <constraint firstAttribute="height" constant="60" id="9dd-ZZ-q76"/>
@@ -498,7 +503,6 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="plus" catalog="system">
                                     <color key="titleColor" name="BackColor"/>
-                                    <color key="titleShadowColor" name="TitleColor"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -882,7 +886,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6uE-8d-UZG"/>
+        <segue reference="Sqi-p8-j2U"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackImage" width="1242" height="2688"/>
