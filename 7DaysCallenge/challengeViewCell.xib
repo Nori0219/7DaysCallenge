@@ -27,22 +27,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="340" height="165"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FDD-kU-B1B">
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FDD-kU-B1B">
                         <rect key="frame" x="0.0" y="0.0" width="340" height="165"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1週間異国料理生活" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEo-zO-vln">
-                                <rect key="frame" x="80" y="18" width="255" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.81960785390000002" green="0.87450981139999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
-                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3c-XX-vNJ">
-                                <rect key="frame" x="28" y="13" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3c-XX-vNJ">
+                                <rect key="frame" x="16" y="16" width="32" height="32"/>
                                 <color key="backgroundColor" name="AccentColor02"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="QIc-VD-7RL"/>
+                                    <constraint firstAttribute="width" constant="32" id="rXe-6o-HPj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,44 +47,70 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIQ-Ne-YD8">
-                                <rect key="frame" x="28" y="124" width="27" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="BackColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iy2-xB-EdT">
-                                <rect key="frame" x="70" y="124" width="27" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="BackColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSI-XV-b7I">
-                                <rect key="frame" x="112" y="124" width="27" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="BackColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2k-MD-5uB">
-                                <rect key="frame" x="155" y="124" width="27" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="BackColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2S-4I-HBx">
-                                <rect key="frame" x="198" y="124" width="27" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="BackColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTy-fI-9hc">
-                                <rect key="frame" x="241" y="124" width="27" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="BackColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iip-bE-1f7">
-                                <rect key="frame" x="283" y="124" width="27" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="BackColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJH-Ly-Tvv">
-                                <rect key="frame" x="241" y="74" width="69" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SeG-HU-Ja0">
+                                <rect key="frame" x="16" y="122" width="279" height="27"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIQ-Ne-YD8">
+                                        <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27" id="fSL-M1-kxa"/>
+                                            <constraint firstAttribute="height" constant="27" id="t5q-or-FWt"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iy2-xB-EdT">
+                                        <rect key="frame" x="42" y="0.0" width="27" height="27"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSI-XV-b7I">
+                                        <rect key="frame" x="84" y="0.0" width="27" height="27"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2k-MD-5uB">
+                                        <rect key="frame" x="126" y="0.0" width="27" height="27"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2S-4I-HBx">
+                                        <rect key="frame" x="168" y="0.0" width="27" height="27"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTy-fI-9hc">
+                                        <rect key="frame" x="210" y="0.0" width="27" height="27"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iip-bE-1f7">
+                                        <rect key="frame" x="252" y="0.0" width="27" height="27"/>
+                                        <color key="backgroundColor" name="BackColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="開始：　2023/05/23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wir-sl-Iat">
+                                <rect key="frame" x="16" y="97" width="161" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本料理以外を食べる" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxy-S4-I7s">
+                                <rect key="frame" x="16" y="64" width="300" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="IpN-Tq-Tnw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1週間異国料理生活" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEo-zO-vln">
+                                <rect key="frame" x="56" y="21.666666666666671" width="270" height="21"/>
+                                <color key="tintColor" red="0.81960785390000002" green="0.87450981139999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="obz-x7-c2b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="15"/>
+                                <color key="textColor" red="0.25490197539999998" green="0.25490197539999998" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJH-Ly-Tvv">
+                                <rect key="frame" x="247" y="82" width="69" height="32"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
@@ -104,22 +124,23 @@
                                     <action selector="tappedButton" destination="gTV-IL-0wX" eventType="touchUpInside" id="5di-ad-Ra6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="開始：　2023/05/23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wir-sl-Iat">
-                                <rect key="frame" x="28" y="89" width="173" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日本料理以外を食べる" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxy-S4-I7s">
-                                <rect key="frame" x="28" y="59" width="282" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.44313728810000003" green="0.42352938649999999" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wir-sl-Iat" firstAttribute="leading" secondItem="y3c-XX-vNJ" secondAttribute="leading" id="Er6-cW-e6E"/>
+                            <constraint firstItem="PJH-Ly-Tvv" firstAttribute="leading" secondItem="wir-sl-Iat" secondAttribute="trailing" constant="82" id="Gae-BS-HGK"/>
+                            <constraint firstItem="SeG-HU-Ja0" firstAttribute="top" secondItem="wir-sl-Iat" secondAttribute="bottom" constant="8" id="KHJ-hO-UKP"/>
+                            <constraint firstItem="wir-sl-Iat" firstAttribute="top" secondItem="Zxy-S4-I7s" secondAttribute="bottom" constant="16" id="KQf-xu-DBC"/>
+                            <constraint firstItem="y3c-XX-vNJ" firstAttribute="top" secondItem="FDD-kU-B1B" secondAttribute="top" constant="16" id="LOh-Sl-Hci"/>
+                            <constraint firstItem="SeG-HU-Ja0" firstAttribute="leading" secondItem="y3c-XX-vNJ" secondAttribute="leading" id="LzM-LX-Pwl"/>
+                            <constraint firstAttribute="trailing" secondItem="SeG-HU-Ja0" secondAttribute="trailing" constant="16" id="N8z-Mh-i9o"/>
+                            <constraint firstItem="y3c-XX-vNJ" firstAttribute="leading" secondItem="FDD-kU-B1B" secondAttribute="leading" constant="16" id="OL2-uJ-Dq7"/>
+                            <constraint firstItem="lEo-zO-vln" firstAttribute="leading" secondItem="y3c-XX-vNJ" secondAttribute="trailing" constant="8" id="cYM-uK-MrC"/>
+                            <constraint firstAttribute="bottom" secondItem="SeG-HU-Ja0" secondAttribute="bottom" constant="16" id="g0o-7G-xYh"/>
+                            <constraint firstItem="wir-sl-Iat" firstAttribute="bottom" secondItem="PJH-Ly-Tvv" secondAttribute="bottom" id="gq9-Pr-Czi"/>
+                            <constraint firstItem="lEo-zO-vln" firstAttribute="centerY" secondItem="y3c-XX-vNJ" secondAttribute="centerY" id="oII-3z-eH6"/>
+                            <constraint firstItem="Zxy-S4-I7s" firstAttribute="leading" secondItem="y3c-XX-vNJ" secondAttribute="leading" id="zlK-Qi-Xax"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="8"/>
@@ -129,6 +150,11 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="FDD-kU-B1B" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1Kn-FH-7P4"/>
+                <constraint firstItem="FDD-kU-B1B" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="5qP-6F-pTA"/>
+                <constraint firstItem="FDD-kU-B1B" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="b76-2T-kOE"/>
+            </constraints>
             <size key="customSize" width="409" height="219"/>
             <connections>
                 <outlet property="articleButton" destination="PJH-Ly-Tvv" id="bF4-9u-AaD"/>
