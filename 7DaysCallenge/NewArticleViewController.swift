@@ -86,7 +86,7 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             newArticle.imageData = compressedImage
         }
         
-        if contextTextView.text.isEmpty {
+        if contextTextView.text.isEmpty || ((newArticle.imageData?.isEmpty) != nil) {
             displayAlertWhenNotInput()
         } else {
             print("newArticleをRealmへ保存可能です")
@@ -171,8 +171,8 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
     func displayAlertWhenNotInput() {
         //alertを作成
         let alert = UIAlertController(
-            title: "未入力の項目があります",
-            message: "記録を入力してください",
+            title: "未入力の項目があります！",
+            message: "記録と写真を追加して1日を振り返ろう",
             preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(
