@@ -547,7 +547,13 @@
                                     <color key="textColor" name="TitleColor"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="チャレンジの記録" id="9jT-c8-nrp"/>
+                                    <navigationItem title="チャレンジの記録" id="9jT-c8-nrp">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="clear" catalog="system" style="plain" id="XzV-4r-6PG">
+                                            <connections>
+                                                <action selector="backPage" destination="4v3-AR-2yp" id="XdO-8b-M8D"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="umJ-oD-COq">
@@ -835,11 +841,11 @@
             </objects>
             <point key="canvasLocation" x="1049.6183206106871" y="-20.422535211267608"/>
         </scene>
-        <!--ヒストリー-->
+        <!--アーカイブ-->
         <scene sceneID="s0W-Fh-OqJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vfe-bE-fef" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ヒストリー" image="books.vertical" catalog="system" id="AJo-Gx-JEX"/>
+                    <tabBarItem key="tabBarItem" title="アーカイブ" image="books.vertical" catalog="system" id="AJo-Gx-JEX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DTd-KG-4oa">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -868,6 +874,7 @@
         <image name="BackImage" width="1242" height="2688"/>
         <image name="TitleLogo" width="1048" height="401"/>
         <image name="books.vertical" catalog="system" width="128" height="107"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <image name="flag.checkered.2.crossed" catalog="system" width="128" height="72"/>
         <image name="photo.on.rectangle" catalog="system" width="128" height="98"/>
         <image name="plus" catalog="system" width="128" height="113"/>

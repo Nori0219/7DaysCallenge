@@ -182,4 +182,9 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         ))
         present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func backPage() {
+        //前の画面に戻る
+        self.dismiss(animated: true)
+    }
 }
