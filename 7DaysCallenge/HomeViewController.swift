@@ -72,7 +72,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             print("Labelにメッセージを代入したよん")
         } else {
             collectionView.isHidden = true
-            messageTextView.text = "おや？\nまだチャレンジを設定していないようですね\n右上のアイコンから1週間チャレンジを始めましょう！"
+            messageTextView.text = "おや？\nまだチャレンジを設定していないようですね\n下のボタンから1週間チャレンジを始めましょう！"
         }
     }
     

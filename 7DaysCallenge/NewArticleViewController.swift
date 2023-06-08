@@ -86,7 +86,9 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
             newArticle.imageData = compressedImage
         }
         
-        if contextTextView.text.isEmpty || ((newArticle.imageData?.isEmpty) != nil) {
+        if contextTextView.text.isEmpty
+            || newArticle.imageData == nil
+        {
             displayAlertWhenNotInput()
         } else {
             print("newArticleをRealmへ保存可能です")
