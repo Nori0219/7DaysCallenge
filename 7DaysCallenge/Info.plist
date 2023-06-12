@@ -10,6 +10,8 @@
 	<string>ca-app-pub-2758102039369928~8589957685</string>
 	<key>GADIsAdManagerApp</key>
 	<string>Yes</string>
+	<key>Localization native development region</key>
+	<string>Japan</string>
 	<key>SKAdNetworkIdentifier</key>
 	<string>cstr6suwn9.skadnetwork</string>
 	<key>UIApplicationSceneManifest</key>
