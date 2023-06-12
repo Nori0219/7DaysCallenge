@@ -8,6 +8,8 @@
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-3940256099942544/5662855259</string>
+	<key>GADIsAdManagerApp</key>
+	<string>Yes</string>
 	<key>SKAdNetworkIdentifier</key>
 	<string>cstr6suwn9.skadnetwork</string>
 	<key>UIApplicationSceneManifest</key>
