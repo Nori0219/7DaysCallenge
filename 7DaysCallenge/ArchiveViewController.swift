@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 class ArchiveViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -17,6 +18,12 @@ class ArchiveViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var bannerView: GADBannerView!
+    
+    //テスト用のバナー広告ID
+    let adBannerID = "ca-app-pub-3940256099942544/2934735716"
+    //本番用のバナー広告ID
+    //let adBannerID = "ca-app-pub-2758102039369928/1406452290"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +44,13 @@ class ArchiveViewController: UIViewController, UICollectionViewDelegate, UIColle
         } else {
             navigationItem.backButtonTitle = " "
         }
+        
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = adBannerID
+        bannerView.rootViewController = self
+        
+        // 広告読み込み
+        bannerView.load(GADRequest())
     }
     
     override func viewWillAppear(_ animated: Bool) {

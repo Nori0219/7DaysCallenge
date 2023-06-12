@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -14,10 +15,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let realm = try! Realm()
     
     var topChallenge: Challenge?
-
+    
     @IBOutlet var messageTextView: UITextView!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var bannerView: GADBannerView!
+    
+    //テスト用のバナー広告ID
+    let adBannerID = "ca-app-pub-3940256099942544/2934735716"
+    //本番用のバナー広告ID
+    //let adBannerID = "ca-app-pub-2758102039369928/1406452290"
     
     
     override func viewDidLoad() {
@@ -47,6 +54,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 print("有効な通知リクエストはありません")
             }
         }
+        
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = adBannerID
+        bannerView.rootViewController = self
+        
+        // 広告読み込み
+        bannerView.load(GADRequest())
         
     }
     

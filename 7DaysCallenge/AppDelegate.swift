@@ -8,6 +8,7 @@
 import UIKit
 import RealmSwift
 import UserNotifications
+import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate{
@@ -37,6 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
             UNUserNotificationCenter.current().delegate = self
         }
+        //Mobile Ads SDK を初期化する
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        //Rerease用の広告ID
+        //ca-app-pub-2758102039369928~8589957685
+        //テスト用広告ID
+        //ca-app-pub-3940256099942544/5662855259
+        //バナーテスト用
+        //ca-app-pub-3940256099942544/2934735716
+        
         
         return true
     }
