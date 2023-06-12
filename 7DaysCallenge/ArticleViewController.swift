@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 //class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 class ArticleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIAdaptivePresentationControllerDelegate {
@@ -20,6 +21,12 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var startDateLabel: UILabel!
     @IBOutlet var toDoLabel: UILabel!
+    @IBOutlet weak var bannerView: GADBannerView!
+    
+    //テスト用のバナー広告ID
+    let adBannerID = "ca-app-pub-3940256099942544/2934735716"
+    //本番用のバナー広告ID
+    //let adBannerID = "ca-app-pub-2758102039369928/1406452290"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +46,13 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.dataSource = self
         //カスタムセルの設定
         collectionView.register(UINib(nibName: "ArticleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArticleCell")
+        
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = adBannerID
+        bannerView.rootViewController = self
+        
+        // 広告読み込み
+        bannerView.load(GADRequest())
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -123,11 +137,11 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
         return UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     }
     
-     //Cellのサイズ
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 340, height: 240)
-        }
-
+    //Cellのサイズ
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 340, height: 240)
+    }
+    
     
     // 行の最小余白
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

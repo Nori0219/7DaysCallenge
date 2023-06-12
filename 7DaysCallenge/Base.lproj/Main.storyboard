@@ -412,7 +412,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4VL-Ye-PBI">
-                                <rect key="frame" x="0.0" y="119" width="393" height="733"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="600"/>
                                 <color key="backgroundColor" name="BackColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tJT-54-SdX">
                                     <size key="itemSize" width="128" height="128"/>
@@ -431,18 +431,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhJ-88-3b2" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="719" width="393" height="50"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TXX-I2-Fyf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ldc-Tq-N7X"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6rU-KL-H38"/>
                         <color key="backgroundColor" name="BackColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="4VL-Ye-PBI" secondAttribute="bottom" id="CZt-0H-0fc"/>
                             <constraint firstItem="4VL-Ye-PBI" firstAttribute="leading" secondItem="Ugi-gN-ZXk" secondAttribute="leading" id="I4R-EU-WPB"/>
                             <constraint firstItem="4VL-Ye-PBI" firstAttribute="top" secondItem="6rU-KL-H38" secondAttribute="top" constant="16" id="QtY-Sr-RYL"/>
+                            <constraint firstItem="LhJ-88-3b2" firstAttribute="top" secondItem="4VL-Ye-PBI" secondAttribute="bottom" id="Tx2-gL-mof"/>
+                            <constraint firstItem="6rU-KL-H38" firstAttribute="bottom" secondItem="LhJ-88-3b2" secondAttribute="bottom" id="WpR-eo-bfv"/>
+                            <constraint firstItem="LhJ-88-3b2" firstAttribute="leading" secondItem="6rU-KL-H38" secondAttribute="leading" id="bZ9-cD-jie"/>
                             <constraint firstAttribute="trailing" secondItem="4VL-Ye-PBI" secondAttribute="trailing" id="cVg-VE-hQm"/>
+                            <constraint firstAttribute="trailing" secondItem="LhJ-88-3b2" secondAttribute="trailing" id="u6N-lz-Jdb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VMz-AD-5ju"/>
                     <connections>
+                        <outlet property="bannerView" destination="LhJ-88-3b2" id="0Ga-So-Z2f"/>
                         <outlet property="collectionView" destination="4VL-Ye-PBI" id="trX-zm-e5O"/>
                         <outlet property="collectionViewFlowLayout" destination="4VL-Ye-PBI" id="jza-Vq-xpw"/>
                         <segue destination="Hgq-xh-rpO" kind="show" identifier="toArticleView" id="Sqi-p8-j2U"/>
@@ -450,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZQ-6x-k9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976" y="742"/>
+            <point key="canvasLocation" x="1974.8091603053435" y="741.54929577464793"/>
         </scene>
         <!--チャレンジタイトル-->
         <scene sceneID="Owx-sp-XXk">
@@ -467,7 +479,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d9s-7I-CrD">
-                                <rect key="frame" x="0.0" y="103" width="393" height="548"/>
+                                <rect key="frame" x="0.0" y="153" width="393" height="498"/>
                                 <color key="backgroundColor" name="BackColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S13-ak-wnq">
                                     <size key="itemSize" width="128" height="128"/>
@@ -515,28 +527,40 @@
                                     <segue destination="4v3-AR-2yp" kind="presentation" identifier="toNewArticleView" id="M2N-Ae-Fcs"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vh4-2m-ZKY" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="103" width="393" height="50"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="JhO-G7-jC4"/>
+                                    <constraint firstAttribute="height" constant="50" id="KDI-SM-GuM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1i-xl-ezG"/>
                         <color key="backgroundColor" name="BackColor"/>
                         <constraints>
+                            <constraint firstItem="vh4-2m-ZKY" firstAttribute="leading" secondItem="u1i-xl-ezG" secondAttribute="leading" id="0RE-E9-mNj"/>
+                            <constraint firstItem="vh4-2m-ZKY" firstAttribute="trailing" secondItem="u1i-xl-ezG" secondAttribute="trailing" id="151-Gd-Ena"/>
                             <constraint firstItem="u1i-xl-ezG" firstAttribute="trailing" secondItem="qHe-gT-T5b" secondAttribute="trailing" id="6B9-mT-wAS"/>
                             <constraint firstItem="eU3-lm-yeL" firstAttribute="centerX" secondItem="iGp-hM-wpv" secondAttribute="centerX" id="Cfc-j8-BKM"/>
                             <constraint firstItem="d9s-7I-CrD" firstAttribute="leading" secondItem="u1i-xl-ezG" secondAttribute="leading" id="GSv-d2-4Ea"/>
                             <constraint firstItem="u1i-xl-ezG" firstAttribute="trailing" secondItem="rMY-I1-sx1" secondAttribute="trailing" id="HRW-Z2-8Bv"/>
                             <constraint firstItem="qHe-gT-T5b" firstAttribute="top" secondItem="d9s-7I-CrD" secondAttribute="bottom" constant="8" id="Xdx-Ie-SPD"/>
+                            <constraint firstItem="vh4-2m-ZKY" firstAttribute="top" secondItem="u1i-xl-ezG" secondAttribute="top" id="dsT-Wm-dZm"/>
                             <constraint firstItem="qHe-gT-T5b" firstAttribute="leading" secondItem="u1i-xl-ezG" secondAttribute="leading" constant="48" id="f6m-X0-pFF"/>
                             <constraint firstItem="u1i-xl-ezG" firstAttribute="bottom" secondItem="rMY-I1-sx1" secondAttribute="bottom" constant="16" id="fZE-mF-h36"/>
                             <constraint firstItem="rMY-I1-sx1" firstAttribute="leading" secondItem="u1i-xl-ezG" secondAttribute="leading" constant="48" id="g84-Wu-eIE"/>
                             <constraint firstItem="d9s-7I-CrD" firstAttribute="trailing" secondItem="u1i-xl-ezG" secondAttribute="trailing" id="jeu-qB-rTi"/>
                             <constraint firstAttribute="bottom" secondItem="eU3-lm-yeL" secondAttribute="bottom" constant="64" id="kgQ-Go-gvf"/>
                             <constraint firstItem="rMY-I1-sx1" firstAttribute="top" secondItem="qHe-gT-T5b" secondAttribute="bottom" constant="8" id="meZ-5p-O6W"/>
-                            <constraint firstItem="d9s-7I-CrD" firstAttribute="top" secondItem="u1i-xl-ezG" secondAttribute="top" id="o5r-eY-ZKZ"/>
+                            <constraint firstItem="d9s-7I-CrD" firstAttribute="top" secondItem="vh4-2m-ZKY" secondAttribute="bottom" id="o5r-eY-ZKZ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="チャレンジタイトル" id="l0x-2O-nb7"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="bannerView" destination="vh4-2m-ZKY" id="6gK-JO-Nbv"/>
                         <outlet property="collectionView" destination="d9s-7I-CrD" id="l7D-Tu-scj"/>
                         <outlet property="startDateLabel" destination="qHe-gT-T5b" id="6RH-Cw-KHb"/>
                         <outlet property="toDoLabel" destination="rMY-I1-sx1" id="RLf-c8-6A7"/>
@@ -898,7 +922,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6uE-8d-UZG"/>
+        <segue reference="Sqi-p8-j2U"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackImage" width="1242" height="2688"/>
