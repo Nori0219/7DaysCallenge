@@ -24,9 +24,9 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var bannerView: GADBannerView!
     
     //テスト用のバナー広告ID
-    let adBannerID = "ca-app-pub-3940256099942544/2934735716"
+    //let adBannerID = "ca-app-pub-3940256099942544/2934735716"
     //本番用のバナー広告ID
-    //let adBannerID = "ca-app-pub-2758102039369928/1406452290"
+    let adBannerID = "ca-app-pub-2758102039369928/1406452290"
     
     override func viewDidLoad() {
         super.viewDidLoad()
