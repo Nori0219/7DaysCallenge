@@ -432,11 +432,11 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhJ-88-3b2" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="719" width="393" height="50"/>
+                                <rect key="frame" x="36.666666666666657" y="719" width="320" height="50"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TXX-I2-Fyf"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ldc-Tq-N7X"/>
+                                    <constraint firstAttribute="width" constant="320" id="fUH-SA-LJW"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -444,12 +444,11 @@
                         <color key="backgroundColor" name="BackColor"/>
                         <constraints>
                             <constraint firstItem="4VL-Ye-PBI" firstAttribute="leading" secondItem="Ugi-gN-ZXk" secondAttribute="leading" id="I4R-EU-WPB"/>
+                            <constraint firstItem="LhJ-88-3b2" firstAttribute="centerX" secondItem="Ugi-gN-ZXk" secondAttribute="centerX" id="OnT-bV-YXF"/>
                             <constraint firstItem="4VL-Ye-PBI" firstAttribute="top" secondItem="6rU-KL-H38" secondAttribute="top" constant="16" id="QtY-Sr-RYL"/>
                             <constraint firstItem="LhJ-88-3b2" firstAttribute="top" secondItem="4VL-Ye-PBI" secondAttribute="bottom" id="Tx2-gL-mof"/>
-                            <constraint firstItem="6rU-KL-H38" firstAttribute="bottom" secondItem="LhJ-88-3b2" secondAttribute="bottom" id="WpR-eo-bfv"/>
-                            <constraint firstItem="LhJ-88-3b2" firstAttribute="leading" secondItem="6rU-KL-H38" secondAttribute="leading" id="bZ9-cD-jie"/>
+                            <constraint firstItem="LhJ-88-3b2" firstAttribute="bottom" secondItem="6rU-KL-H38" secondAttribute="bottom" id="aqv-cr-YhB"/>
                             <constraint firstAttribute="trailing" secondItem="4VL-Ye-PBI" secondAttribute="trailing" id="cVg-VE-hQm"/>
-                            <constraint firstAttribute="trailing" secondItem="LhJ-88-3b2" secondAttribute="trailing" id="u6N-lz-Jdb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VMz-AD-5ju"/>
@@ -528,21 +527,20 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vh4-2m-ZKY" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="103" width="393" height="50"/>
+                                <rect key="frame" x="36.666666666666657" y="103" width="320" height="50"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="JhO-G7-jC4"/>
                                     <constraint firstAttribute="height" constant="50" id="KDI-SM-GuM"/>
+                                    <constraint firstAttribute="width" constant="320" id="adV-dV-1XY"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1i-xl-ezG"/>
                         <color key="backgroundColor" name="BackColor"/>
                         <constraints>
-                            <constraint firstItem="vh4-2m-ZKY" firstAttribute="leading" secondItem="u1i-xl-ezG" secondAttribute="leading" id="0RE-E9-mNj"/>
-                            <constraint firstItem="vh4-2m-ZKY" firstAttribute="trailing" secondItem="u1i-xl-ezG" secondAttribute="trailing" id="151-Gd-Ena"/>
                             <constraint firstItem="u1i-xl-ezG" firstAttribute="trailing" secondItem="qHe-gT-T5b" secondAttribute="trailing" id="6B9-mT-wAS"/>
                             <constraint firstItem="eU3-lm-yeL" firstAttribute="centerX" secondItem="iGp-hM-wpv" secondAttribute="centerX" id="Cfc-j8-BKM"/>
+                            <constraint firstAttribute="centerX" secondItem="d9s-7I-CrD" secondAttribute="centerX" id="EXH-LG-Qra"/>
                             <constraint firstItem="d9s-7I-CrD" firstAttribute="leading" secondItem="u1i-xl-ezG" secondAttribute="leading" id="GSv-d2-4Ea"/>
                             <constraint firstItem="u1i-xl-ezG" firstAttribute="trailing" secondItem="rMY-I1-sx1" secondAttribute="trailing" id="HRW-Z2-8Bv"/>
                             <constraint firstItem="qHe-gT-T5b" firstAttribute="top" secondItem="d9s-7I-CrD" secondAttribute="bottom" constant="8" id="Xdx-Ie-SPD"/>
@@ -553,6 +551,7 @@
                             <constraint firstItem="d9s-7I-CrD" firstAttribute="trailing" secondItem="u1i-xl-ezG" secondAttribute="trailing" id="jeu-qB-rTi"/>
                             <constraint firstAttribute="bottom" secondItem="eU3-lm-yeL" secondAttribute="bottom" constant="64" id="kgQ-Go-gvf"/>
                             <constraint firstItem="rMY-I1-sx1" firstAttribute="top" secondItem="qHe-gT-T5b" secondAttribute="bottom" constant="8" id="meZ-5p-O6W"/>
+                            <constraint firstItem="vh4-2m-ZKY" firstAttribute="centerX" secondItem="iGp-hM-wpv" secondAttribute="centerX" id="nmf-o1-WbE"/>
                             <constraint firstItem="d9s-7I-CrD" firstAttribute="top" secondItem="vh4-2m-ZKY" secondAttribute="bottom" id="o5r-eY-ZKZ"/>
                         </constraints>
                     </view>
@@ -767,9 +766,10 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="601"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8N-mX-7Zt" customClass="GADBannerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                        <rect key="frame" x="36.666666666666657" y="0.0" width="320" height="50"/>
                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="UNn-Dd-WLD"/>
                                             <constraint firstAttribute="height" constant="50" id="dJW-Cp-1Da"/>
                                         </constraints>
                                     </view>
@@ -813,10 +813,9 @@
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="i8N-mX-7Zt" secondAttribute="trailing" id="WvS-81-eFL"/>
+                                    <constraint firstItem="i8N-mX-7Zt" firstAttribute="centerX" secondItem="eRn-Jy-2mR" secondAttribute="centerX" id="EUI-6G-wWS"/>
                                     <constraint firstAttribute="trailing" secondItem="lzw-CF-gex" secondAttribute="trailing" constant="16" id="gLt-af-L43"/>
                                     <constraint firstItem="RCd-PD-R9Q" firstAttribute="leading" secondItem="eRn-Jy-2mR" secondAttribute="leading" id="pT8-Gy-0gk"/>
-                                    <constraint firstItem="i8N-mX-7Zt" firstAttribute="leading" secondItem="eRn-Jy-2mR" secondAttribute="leading" id="txq-vy-4Z0"/>
                                     <constraint firstItem="lzw-CF-gex" firstAttribute="leading" secondItem="eRn-Jy-2mR" secondAttribute="leading" constant="16" id="vrS-Rm-aNr"/>
                                 </constraints>
                             </stackView>
