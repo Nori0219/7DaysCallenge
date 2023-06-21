@@ -119,6 +119,8 @@
 		F011CFCA2A2D71BE00A5F629 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				F0C819E02A19F53300942B9F /* Info.plist */,
+				F0C819DB2A19F53300942B9F /* Assets.xcassets */,
 				F011CFCB2A2D71BE00A5F629 /* 7DaysChallengeFonts */,
 			);
 			path = resource;
@@ -197,30 +199,68 @@
 			isa = PBXGroup;
 			children = (
 				F0B7C3612A23A92300F24399 /* 7DaysCallengeRelease.entitlements */,
-				F0C819D22A19F53100942B9F /* AppDelegate.swift */,
-				F0C819D42A19F53100942B9F /* SceneDelegate.swift */,
-				F04062CF2A1C76B7004E5A1F /* HomeViewController.swift */,
-				F0C819D82A19F53100942B9F /* Main.storyboard */,
-				F0C819DB2A19F53300942B9F /* Assets.xcassets */,
+				F0DDA1942A42C18C004D8ACD /* src */,
 				F011CFCA2A2D71BE00A5F629 /* resource */,
-				F0C819DD2A19F53300942B9F /* LaunchScreen.storyboard */,
-				F0C819E02A19F53300942B9F /* Info.plist */,
-				F0CE69F12A1DD30800D5A889 /* ChallengeModel.swift */,
+			);
+			path = 7DaysCallenge;
+			sourceTree = "<group>";
+		};
+		F0DDA1902A42C08D004D8ACD /* ViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				F04062CF2A1C76B7004E5A1F /* HomeViewController.swift */,
 				F0EB61C62A2EFE46003B30D5 /* NewChallengeViewController1.swift */,
 				F0C819E62A1A131800942B9F /* NewChallengeViewController2.swift */,
 				F04062D12A1C792E004E5A1F /* ArticleViewController.swift */,
-				F0E7205A2A1C8B770022AA3B /* ArticleTableViewCell.swift */,
-				F0E7205B2A1C8B770022AA3B /* ArticleTableViewCell.xib */,
 				F0CE69EF2A1D343500D5A889 /* NewArticleViewController.swift */,
 				F0D3700C2A274D8A0089CD4C /* ArchiveViewController.swift */,
-				F0D3700E2A274EF10089CD4C /* ChallengeViewCell.swift */,
-				F0D3700F2A274EF10089CD4C /* challengeViewCell.xib */,
-				F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */,
-				F04A947B2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib */,
-				F04A947E2A2C89C200B95E96 /* Message.swift */,
-				F0EB61C82A2F10CA003B30D5 /* ExampleChallengeList.swift */,
 			);
-			path = 7DaysCallenge;
+			path = ViewContoller;
+			sourceTree = "<group>";
+		};
+		F0DDA1912A42C0CC004D8ACD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE69F12A1DD30800D5A889 /* ChallengeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0DDA1922A42C0DF004D8ACD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0C819D82A19F53100942B9F /* Main.storyboard */,
+				F0C819DD2A19F53300942B9F /* LaunchScreen.storyboard */,
+				F0E7205B2A1C8B770022AA3B /* ArticleTableViewCell.xib */,
+				F0E7205A2A1C8B770022AA3B /* ArticleTableViewCell.swift */,
+				F0D3700F2A274EF10089CD4C /* challengeViewCell.xib */,
+				F0D3700E2A274EF10089CD4C /* ChallengeViewCell.swift */,
+				F04A947B2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib */,
+				F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0DDA1932A42C17B004D8ACD /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F0EB61C82A2F10CA003B30D5 /* ExampleChallengeList.swift */,
+				F04A947E2A2C89C200B95E96 /* Message.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		F0DDA1942A42C18C004D8ACD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F0C819D22A19F53100942B9F /* AppDelegate.swift */,
+				F0C819D42A19F53100942B9F /* SceneDelegate.swift */,
+				F0DDA1902A42C08D004D8ACD /* ViewContoller */,
+				F0DDA1912A42C0CC004D8ACD /* Model */,
+				F0DDA1932A42C17B004D8ACD /* List */,
+				F0DDA1922A42C0DF004D8ACD /* View */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
