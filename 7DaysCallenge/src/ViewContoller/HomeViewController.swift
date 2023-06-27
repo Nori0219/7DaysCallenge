@@ -22,9 +22,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var bannerView: GADBannerView!
     
     //テスト用のバナー広告ID
-    //let adBannerID = "ca-app-pub-3940256099942544/2934735716"
+    let adBannerID = "ca-app-pub-3940256099942544/2934735716"
     //本番用のバナー広告ID
-    let adBannerID = "ca-app-pub-2758102039369928/1406452290"
+    // let adBannerID = "ca-app-pub-2758102039369928/1406452290"
     
     
     override func viewDidLoad() {
@@ -55,6 +55,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
         }
         
+        
         // GADBannerViewのプロパティを設定
         bannerView.adUnitID = adBannerID
         bannerView.rootViewController = self
@@ -68,10 +69,20 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewWillAppear(animated)
         // 最新のChallengeオブジェクトを取得
         updateTopChallenge()
+        //アプリレビュー依頼ダイアログの表示
+        appReviewAlert()
         print("現在のtopChallenge: \(String(describing: topChallenge?.title))")
         print("現在のtopChallenge.streak: \(String(describing: topChallenge?.streak))")
         //TabBarを表示
         self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    //streakがトリガーとなりレビューダイアログを開く
+    func appReviewAlert() {
+        if topChallenge?.streak == 2 {
+            ReviewHelper.showReviewDialog(from: self)
+        }
+        print("appReviewAlert()の呼び出し")
     }
     
     // チャレンジを更新するメソッド

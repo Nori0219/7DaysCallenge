@@ -48,6 +48,7 @@
 		F0D3700D2A274D8A0089CD4C /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3700C2A274D8A0089CD4C /* ArchiveViewController.swift */; };
 		F0D370102A274EF10089CD4C /* ChallengeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3700E2A274EF10089CD4C /* ChallengeViewCell.swift */; };
 		F0D370112A274EF10089CD4C /* challengeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D3700F2A274EF10089CD4C /* challengeViewCell.xib */; };
+		F0D480252A4AD07E008E9DFC /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D480242A4AD07E008E9DFC /* Review.swift */; };
 		F0E7205C2A1C8B770022AA3B /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E7205A2A1C8B770022AA3B /* ArticleTableViewCell.swift */; };
 		F0E7205D2A1C8B770022AA3B /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E7205B2A1C8B770022AA3B /* ArticleTableViewCell.xib */; };
 		F0EB61C72A2EFE46003B30D5 /* NewChallengeViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EB61C62A2EFE46003B30D5 /* NewChallengeViewController1.swift */; };
@@ -96,6 +97,7 @@
 		F0D3700C2A274D8A0089CD4C /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		F0D3700E2A274EF10089CD4C /* ChallengeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewCell.swift; sourceTree = "<group>"; };
 		F0D3700F2A274EF10089CD4C /* challengeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = challengeViewCell.xib; sourceTree = "<group>"; };
+		F0D480242A4AD07E008E9DFC /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		F0E7205A2A1C8B770022AA3B /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		F0E7205B2A1C8B770022AA3B /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		F0EB61C62A2EFE46003B30D5 /* NewChallengeViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChallengeViewController1.swift; sourceTree = "<group>"; };
@@ -205,6 +207,14 @@
 			path = 7DaysCallenge;
 			sourceTree = "<group>";
 		};
+		F0D480232A4AD04B008E9DFC /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				F0D480242A4AD07E008E9DFC /* Review.swift */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
 		F0DDA1902A42C08D004D8ACD /* ViewContoller */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +266,7 @@
 				F0C819D22A19F53100942B9F /* AppDelegate.swift */,
 				F0C819D42A19F53100942B9F /* SceneDelegate.swift */,
 				F0DDA1902A42C08D004D8ACD /* ViewContoller */,
+				F0D480232A4AD04B008E9DFC /* Function */,
 				F0DDA1912A42C0CC004D8ACD /* Model */,
 				F0DDA1932A42C17B004D8ACD /* List */,
 				F0DDA1922A42C0DF004D8ACD /* View */,
@@ -373,6 +384,7 @@
 				F0C819D32A19F53100942B9F /* AppDelegate.swift in Sources */,
 				F0D370102A274EF10089CD4C /* ChallengeViewCell.swift in Sources */,
 				F0C819E72A1A131800942B9F /* NewChallengeViewController2.swift in Sources */,
+				F0D480252A4AD07E008E9DFC /* Review.swift in Sources */,
 				F04062D22A1C792E004E5A1F /* ArticleViewController.swift in Sources */,
 				F0EB61C72A2EFE46003B30D5 /* NewChallengeViewController1.swift in Sources */,
 				F0C819D52A19F53100942B9F /* SceneDelegate.swift in Sources */,
