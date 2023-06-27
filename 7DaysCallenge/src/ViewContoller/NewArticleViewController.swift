@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 class NewArticleViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate{
     
@@ -17,6 +18,12 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet var saveButon: UIButton!
     @IBOutlet var AlbumButton: UIButton!
     @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet weak var bannerView: GADBannerView!
+    
+    //テスト用のバナー広告ID
+    //let adBannerID = "ca-app-pub-3940256099942544/2934735716"
+    //本番用のバナー広告ID
+    let adBannerID = "ca-app-pub-2758102039369928/1406452290"
     
     // 選択された日付を保持する変数
     var selectedDate: Date = Date()
@@ -30,6 +37,13 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         datePicker.datePickerMode = .date
         contextTextView.delegate = self
         articleImageView.isHidden = true
+        
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = adBannerID
+        bannerView.rootViewController = self
+        
+        // 広告読み込み
+        bannerView.load(GADRequest())
     }
     
     override func viewWillDisappear(_ animated: Bool) {

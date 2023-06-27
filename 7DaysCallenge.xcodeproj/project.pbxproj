@@ -530,7 +530,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3827K2JQS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = 7DaysCallenge/Info.plist;
+				INFOPLIST_FILE = 7DaysCallenge/resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "週チャレ";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アプリ内で表示する画像をフォトライブラリから呼び出します";
@@ -568,7 +568,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3827K2JQS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = 7DaysCallenge/Info.plist;
+				INFOPLIST_FILE = 7DaysCallenge/resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "週チャレ";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アプリ内で表示する画像をフォトライブラリから呼び出します";

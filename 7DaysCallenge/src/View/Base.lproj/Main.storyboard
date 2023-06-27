@@ -700,6 +700,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7u-Uo-ZXa" customClass="GADBannerView">
+                                <rect key="frame" x="36.666666666666657" y="713" width="320" height="50"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZUR-DQ-P5w"/>
+                                    <constraint firstAttribute="width" constant="320" id="zMI-Q7-O9a"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8ao-48-jYU"/>
                         <color key="backgroundColor" name="BackColor"/>
@@ -708,7 +716,9 @@
                             <constraint firstItem="9Zh-eJ-CBl" firstAttribute="top" secondItem="8ao-48-jYU" secondAttribute="top" id="79a-X3-0QK"/>
                             <constraint firstItem="8ao-48-jYU" firstAttribute="trailing" secondItem="umJ-oD-COq" secondAttribute="trailing" constant="32" id="9cE-GO-jhZ"/>
                             <constraint firstItem="umJ-oD-COq" firstAttribute="leading" secondItem="8ao-48-jYU" secondAttribute="leading" constant="32" id="IEb-Kl-6L2"/>
+                            <constraint firstItem="8ao-48-jYU" firstAttribute="bottom" secondItem="h7u-Uo-ZXa" secondAttribute="bottom" constant="20" id="Lvt-lp-dJm"/>
                             <constraint firstItem="9Zh-eJ-CBl" firstAttribute="leading" secondItem="8ao-48-jYU" secondAttribute="leading" id="PPT-0P-cQb"/>
+                            <constraint firstItem="h7u-Uo-ZXa" firstAttribute="centerX" secondItem="29E-5U-C4U" secondAttribute="centerX" id="RPN-uY-ISs"/>
                             <constraint firstItem="9Zh-eJ-CBl" firstAttribute="trailing" secondItem="8ao-48-jYU" secondAttribute="trailing" id="ZwV-gv-Seh"/>
                             <constraint firstItem="WHN-hA-ojV" firstAttribute="top" secondItem="29E-5U-C4U" secondAttribute="top" id="dwb-8p-ipc"/>
                             <constraint firstItem="WHN-hA-ojV" firstAttribute="leading" secondItem="29E-5U-C4U" secondAttribute="leading" id="eZ5-2T-hbe"/>
@@ -719,6 +729,7 @@
                     <connections>
                         <outlet property="AlbumButton" destination="6ys-6v-qqy" id="gqj-Ob-wp8"/>
                         <outlet property="articleImageView" destination="1QT-jq-NUv" id="iw7-0n-OMR"/>
+                        <outlet property="bannerView" destination="h7u-Uo-ZXa" id="DNM-Uf-Uot"/>
                         <outlet property="contextTextView" destination="nj4-Bm-JRz" id="iv5-uK-gBx"/>
                         <outlet property="datePicker" destination="aPJ-Dv-MmM" id="1W0-0p-1hU"/>
                         <outlet property="saveButon" destination="IiF-Fp-leC" id="cKg-Tl-aYQ"/>
