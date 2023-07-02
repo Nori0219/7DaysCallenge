@@ -23,12 +23,12 @@ class ReviewHelper {
             return
         }
         
-        let alert = UIAlertController(title: "週チャレをご利用いただきありがとうございます！", message: "アプリを気に入っていただけましたか？レビューでの応援が何よりの励みになります！", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "応援する", style: .default, handler: { action in
+        let alert = UIAlertController(title: "ご利用ありがとうございます！", message: "週チャレを気に入っていただけましたか？", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "はい", style: .default, handler: { action in
             self.requestAppReview(from: viewController)
             print("レビューの表示")
         }))
-        alert.addAction(UIAlertAction(title: "応援しない", style: .destructive, handler: nil))
+        alert.addAction(UIAlertAction(title: "いいえ", style: .destructive, handler: nil))
         viewController.present(alert, animated: true, completion: nil)
         
         incrementReviewRequestCount()
