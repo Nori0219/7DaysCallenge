@@ -1,0 +1,111 @@
+
+/* Class = "UILabel"; text = "応援のテイストを選ぼう！"; ObjectID = "5ZU-08-Xmi"; */
+"5ZU-08-Xmi.text" = "応援のテイストを選ぼう！";
+
+/* Class = "UILabel"; text = "を作成しました！"; ObjectID = "6oL-GN-QT5"; */
+"6oL-GN-QT5.text" = "を作成しました！";
+
+/* Class = "UITextField"; placeholder = "日本食以外の料理を食べる！、など"; ObjectID = "8cn-Ae-R9B"; */
+"8cn-Ae-R9B.placeholder" = "日本食以外の料理を食べる！、など";
+
+/* Class = "UINavigationItem"; title = "チャレンジの記録"; ObjectID = "9jT-c8-nrp"; */
+"9jT-c8-nrp.title" = "チャレンジの記録";
+
+/* Class = "UITabBarItem"; title = "アーカイブ"; ObjectID = "AJo-Gx-JEX"; */
+"AJo-Gx-JEX.title" = "アーカイブ";
+
+/* Class = "UILabel"; text = "🎥ジブリ作品鑑賞Week"; ObjectID = "CxE-r9-sCy"; */
+"CxE-r9-sCy.text" = "🎥ジブリ作品鑑賞Week";
+
+/* Class = "UILabel"; text = "🐙1週間関西人生活！"; ObjectID = "ECz-Va-Fwa"; */
+"ECz-Va-Fwa.text" = "🐙1週間関西人生活！";
+
+/* Class = "UILabel"; text = "応援通知設定"; ObjectID = "Gdh-Mb-fxU"; */
+"Gdh-Mb-fxU.text" = "応援通知設定";
+
+/* Class = "UIButton"; configuration.title = "記録する"; ObjectID = "IiF-Fp-leC"; */
+"IiF-Fp-leC.configuration.title" = "記録する";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IiF-Fp-leC"; */
+"IiF-Fp-leC.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "新しいチャレンジの追加"; ObjectID = "JIl-lw-3BS"; */
+"JIl-lw-3BS.title" = "新しいチャレンジの追加";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "XzV-4r-6PG"; */
+"XzV-4r-6PG.title" = "Item";
+
+/* Class = "UILabel"; text = "具体的に取り組むことを決めよう！"; ObjectID = "bzQ-ZR-Do0"; */
+"bzQ-ZR-Do0.text" = "具体的に取り組むことを決めよう！";
+
+/* Class = "UIButton"; configuration.title = "次へ"; ObjectID = "c0Z-m6-4VF"; */
+"c0Z-m6-4VF.configuration.title" = "次へ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "c0Z-m6-4VF"; */
+"c0Z-m6-4VF.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "今日からの1週間にタイトルをつけよう！"; ObjectID = "dDO-RG-0ac"; */
+"dDO-RG-0ac.text" = "今日からの1週間にタイトルをつけよう！";
+
+/* Class = "UINavigationItem"; title = "新しいチャレンジの追加"; ObjectID = "hmy-hF-urD"; */
+"hmy-hF-urD.title" = "新しいチャレンジの追加";
+
+/* Class = "UILabel"; text = "毎日の振り返り"; ObjectID = "kcs-hL-I0a"; */
+"kcs-hL-I0a.text" = "毎日の振り返り";
+
+/* Class = "UINavigationItem"; title = "チャレンジタイトル"; ObjectID = "l0x-2O-nb7"; */
+"l0x-2O-nb7.title" = "チャレンジタイトル";
+
+/* Class = "UITextView"; text = "壮絶じゃ！連続２日間の偉業を達成した勇者よ。お前の勇気と闘志に、世界中の人々が感動せざるを得ん！さらなる勇躍を目指し、進み続けよう！🌟⚔️"; ObjectID = "lzw-CF-gex"; */
+"lzw-CF-gex.text" = "壮絶じゃ！連続２日間の偉業を達成した勇者よ。お前の勇気と闘志に、世界中の人々が感動せざるを得ん！さらなる勇躍を目指し、進み続けよう！🌟⚔️";
+
+/* Class = "UISegmentedControl"; nlO-2Z-GxQ.segmentTitles[0] = "標準"; ObjectID = "nlO-2Z-GxQ"; */
+"nlO-2Z-GxQ.segmentTitles[0]" = "標準";
+
+/* Class = "UISegmentedControl"; nlO-2Z-GxQ.segmentTitles[1] = "熱血"; ObjectID = "nlO-2Z-GxQ"; */
+"nlO-2Z-GxQ.segmentTitles[1]" = "熱血";
+
+/* Class = "UISegmentedControl"; nlO-2Z-GxQ.segmentTitles[2] = "勇者"; ObjectID = "nlO-2Z-GxQ"; */
+"nlO-2Z-GxQ.segmentTitles[2]" = "勇者";
+
+/* Class = "UISegmentedControl"; nlO-2Z-GxQ.segmentTitles[3] = "癒し"; ObjectID = "nlO-2Z-GxQ"; */
+"nlO-2Z-GxQ.segmentTitles[3]" = "癒し";
+
+/* Class = "UILabel"; text = "📙毎日朝活生活"; ObjectID = "p1L-QN-CXz"; */
+"p1L-QN-CXz.text" = "📙毎日朝活生活";
+
+/* Class = "UILabel"; text = "「1週間異国料理生活」"; ObjectID = "p2e-5c-JdC"; */
+"p2e-5c-JdC.text" = "「1週間異国料理生活」";
+
+/* Class = "UIButton"; configuration.title = "チャレンジを始める！"; ObjectID = "qCR-Sn-RKf"; */
+"qCR-Sn-RKf.configuration.title" = "チャレンジを始める！";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qCR-Sn-RKf"; */
+"qCR-Sn-RKf.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "開始日：　2023/05/23"; ObjectID = "qHe-gT-T5b"; */
+"qHe-gT-T5b.text" = "開始日：　2023/05/23";
+
+/* Class = "UILabel"; text = "日本食以外の料理を食べる！"; ObjectID = "rMY-I1-sx1"; */
+"rMY-I1-sx1.text" = "日本食以外の料理を食べる！";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ulL-tj-uM0"; */
+"ulL-tj-uM0.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "時間"; ObjectID = "ulk-IF-dt6"; */
+"ulk-IF-dt6.text" = "時間";
+
+/* Class = "UITextField"; placeholder = "1週間異国料理生活、など"; ObjectID = "ve7-NM-b0J"; */
+"ve7-NM-b0J.placeholder" = "1週間異国料理生活、など";
+
+/* Class = "UITabBarItem"; title = "チャレンジ"; ObjectID = "x4S-Qp-yb5"; */
+"x4S-Qp-yb5.title" = "チャレンジ";
+
+/* Class = "UILabel"; text = "💴1週間2500円生活"; ObjectID = "xnv-CA-tk5"; */
+"xnv-CA-tk5.text" = "💴1週間2500円生活";
+
+/* Class = "UILabel"; text = "例えば..."; ObjectID = "yFb-eN-LTR"; */
+"yFb-eN-LTR.text" = "例えば...";
+
+/* Class = "UILabel"; text = "応援通知を受け取る"; ObjectID = "zOa-FB-xlH"; */
+"zOa-FB-xlH.text" = "応援通知を受け取る";
