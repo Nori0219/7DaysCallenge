@@ -85,6 +85,7 @@
 		F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		F04A947B2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCollectionViewCell.xib; sourceTree = "<group>"; };
 		F04A947E2A2C89C200B95E96 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F077E2922A701FED0070372D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		F0B7C3612A23A92300F24399 /* 7DaysCallengeRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 7DaysCallengeRelease.entitlements; sourceTree = "<group>"; };
 		F0C819CF2A19F53100942B9F /* 7DaysCallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 7DaysCallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C819D22A19F53100942B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -408,6 +409,7 @@
 			children = (
 				F0C819D92A19F53100942B9F /* Base */,
 				F03AEB102A51C38E0011E60B /* ja */,
+				F077E2922A701FED0070372D /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

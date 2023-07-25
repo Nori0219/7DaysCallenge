@@ -665,7 +665,7 @@
                                                 </constraints>
                                                 <color key="tintColor" red="0.90984059340000001" green="0.70160096090000001" blue="0.73584182779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="記録する">
+                                                <buttonConfiguration key="configuration" style="filled" title="記録">
                                                     <fontDescription key="titleFontDescription" name="GenJyuuGothic-Bold" family="Gen Jyuu Gothic" pointSize="14"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>

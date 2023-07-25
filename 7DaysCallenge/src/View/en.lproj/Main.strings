@@ -23,11 +23,11 @@
 /* Class = "UILabel"; text = "応援通知設定"; ObjectID = "Gdh-Mb-fxU"; */
 "Gdh-Mb-fxU.text" = "応援通知設定";
 
-/* Class = "UIButton"; configuration.title = "記録"; ObjectID = "IiF-Fp-leC"; */
-"IiF-Fp-leC.configuration.title" = "記録";
+/* Class = "UIButton"; configuration.title = "記録する"; ObjectID = "IiF-Fp-leC"; */
+"IiF-Fp-leC.configuration.title" = "記録する";
 
-/* Class = "UIButton"; normalTitle = "記録"; ObjectID = "IiF-Fp-leC"; */
-"IiF-Fp-leC.normalTitle" = "記録";
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IiF-Fp-leC"; */
+"IiF-Fp-leC.normalTitle" = "OK!";
 
 /* Class = "UINavigationItem"; title = "新しいチャレンジの追加"; ObjectID = "JIl-lw-3BS"; */
 "JIl-lw-3BS.title" = "新しいチャレンジの追加";
@@ -42,7 +42,7 @@
 "c0Z-m6-4VF.configuration.title" = "次へ";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "c0Z-m6-4VF"; */
-"c0Z-m6-4VF.normalTitle" = "次へ";
+"c0Z-m6-4VF.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "今日からの1週間にタイトルをつけよう！"; ObjectID = "dDO-RG-0ac"; */
 "dDO-RG-0ac.text" = "今日からの1週間にタイトルをつけよう！";
@@ -81,7 +81,7 @@
 "qCR-Sn-RKf.configuration.title" = "チャレンジを始める！";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qCR-Sn-RKf"; */
-"qCR-Sn-RKf.normalTitle" = "チャレンジを始める！";
+"qCR-Sn-RKf.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "開始日：　2023/05/23"; ObjectID = "qHe-gT-T5b"; */
 "qHe-gT-T5b.text" = "開始日：　2023/05/23";
