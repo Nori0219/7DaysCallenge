@@ -8,6 +8,7 @@
 import UIKit
 import RealmSwift
 import GoogleMobileAds
+import ImageViewer
 
 class NewArticleViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate{
     
@@ -38,6 +39,13 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         contextTextView.delegate = self
         articleImageView.isHidden = true
         
+        // ImageViewにジェスチャーを設定
+        let tapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(didTap(_:)))
+        articleImageView.addGestureRecognizer(tapGesture)
+        articleImageView.isUserInteractionEnabled = true
+        
         // GADBannerViewのプロパティを設定
         bannerView.adUnitID = adBannerID
         bannerView.rootViewController = self
@@ -47,8 +55,23 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-       
+        
     }
+    
+    // ImageViewタップ時に呼ばれる
+        @objc private func didTap(_ sender: UITapGestureRecognizer) {
+            print("articleImageViewがタップされました")
+            // 画像をギャラリー表示
+            let viewController = GalleryViewController(
+                startIndex: 0,
+                itemsDataSource: self,
+                displacedViewsDataSource: self,
+                configuration: [
+                    .deleteButtonMode(.none),
+                    .thumbnailsButtonMode(.none)
+                ])
+            presentImageGallery(viewController)
+        }
     
     //入力画面ないしkeyboardの外を押したら、キーボードを閉じる処理
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -203,4 +226,30 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
         //前の画面に戻る
         self.dismiss(animated: true)
     }
+    
+    
 }
+
+//ImageViewr実装に関する処理
+
+// GalleryItemsDataSource
+extension NewArticleViewController: GalleryItemsDataSource {
+    // 要素数
+    func itemCount() -> Int {
+        return 1
+    }
+
+    // ギャラリー要素
+    func provideGalleryItem(_ index: Int) -> GalleryItem {
+        return GalleryItem.image { $0(self.articleImageView.image!) }
+    }
+}
+
+// GalleryDisplacedViewsDataSource
+extension NewArticleViewController: GalleryDisplacedViewsDataSource {
+    // 移動可能要素
+    func provideDisplacementItem(atIndex index: Int) -> DisplaceableView? {
+        return articleImageView as? DisplaceableView
+    }
+}
+
