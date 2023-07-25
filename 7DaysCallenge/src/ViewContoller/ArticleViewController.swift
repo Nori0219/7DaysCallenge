@@ -10,7 +10,9 @@ import RealmSwift
 import GoogleMobileAds
 
 //class ArticleViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-class ArticleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIAdaptivePresentationControllerDelegate {
+class ArticleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIAdaptivePresentationControllerDelegate{
+   
+    
     
     let realm = try! Realm()
     // Articleオブジェクトのリストを格納するプロパティ
@@ -106,7 +108,14 @@ class ArticleViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     // セルが選択された時の処理
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // セルが選択された時の処理を記述する
+//        // セルのImageViewをタップしたかどうかを判定
+//                //let cell = collectionView.cellForItem(at: indexPath) as? ArticleCollectionViewCell
+//                if let tapGesture = cell?.imageViewTapGesture, tapGesture.state == .ended {
+//
+//                } else {
+//                    // セルのImageView以外をタップしていた場合の処理（必要ならここに記述）
+//                    print("セルのImageView以外をタップしていた場合")
+//                }
     }
     
     // 日付のフォーマットを適用するメソッド

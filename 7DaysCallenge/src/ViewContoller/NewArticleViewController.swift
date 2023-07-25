@@ -68,7 +68,17 @@ class NewArticleViewController: UIViewController, UINavigationControllerDelegate
                 displacedViewsDataSource: self,
                 configuration: [
                     .deleteButtonMode(.none),
-                    .thumbnailsButtonMode(.none)
+                    .thumbnailsButtonMode(.none),
+                    .presentationStyle(.displacement),
+                    .displacementDuration(0.3),
+                    .reverseDisplacementDuration(0.25),
+                    .displacementTransitionStyle(.springBounce(0.7)),
+                    .displacementTimingCurve(.linear),
+                    .overlayColor(UIColor(white: 0.035, alpha: 1)),
+                    .overlayBlurStyle(UIBlurEffect.Style.light),
+                    .blurPresentDuration(0.3),
+                    .overlayBlurOpacity(0.5),
+                    .overlayColorOpacity(0.85),
                 ])
             presentImageGallery(viewController)
         }
