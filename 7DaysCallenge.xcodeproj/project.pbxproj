@@ -34,6 +34,7 @@
 		F04A947C2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04A947A2A2A7FAF00B95E96 /* ArticleCollectionViewCell.swift */; };
 		F04A947D2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F04A947B2A2A7FAF00B95E96 /* ArticleCollectionViewCell.xib */; };
 		F04A947F2A2C89C200B95E96 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04A947E2A2C89C200B95E96 /* Message.swift */; };
+		F077E2952A7028F20070372D /* ImageViewer in Frameworks */ = {isa = PBXBuildFile; productRef = F077E2942A7028F20070372D /* ImageViewer */; };
 		F0C819D32A19F53100942B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819D22A19F53100942B9F /* AppDelegate.swift */; };
 		F0C819D52A19F53100942B9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819D42A19F53100942B9F /* SceneDelegate.swift */; };
 		F0C819DA2A19F53100942B9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C819D82A19F53100942B9F /* Main.storyboard */; };
@@ -112,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F077E2952A7028F20070372D /* ImageViewer in Frameworks */,
 				F0C9EC792A3709EB007C8BB2 /* GoogleMobileAds in Frameworks */,
 				F0CE69F72A1DD51700D5A889 /* RealmSwift in Frameworks */,
 				F0CE69F52A1DD51700D5A889 /* Realm in Frameworks */,
@@ -297,6 +299,7 @@
 				F0CE69F42A1DD51700D5A889 /* Realm */,
 				F0CE69F62A1DD51700D5A889 /* RealmSwift */,
 				F0C9EC782A3709EB007C8BB2 /* GoogleMobileAds */,
+				F077E2942A7028F20070372D /* ImageViewer */,
 			);
 			productName = 7DaysCallenge;
 			productReference = F0C819CF2A19F53100942B9F /* 7DaysCallenge.app */;
@@ -330,6 +333,7 @@
 			packageReferences = (
 				F0CE69F32A1DD51700D5A889 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				F0C9EC772A3709EB007C8BB2 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				F077E2932A7028F20070372D /* XCRemoteSwiftPackageReference "ImageViewer" */,
 			);
 			productRefGroup = F0C819D02A19F53100942B9F /* Products */;
 			projectDirPath = "";
@@ -641,6 +645,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F077E2932A7028F20070372D /* XCRemoteSwiftPackageReference "ImageViewer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Krisiacik/ImageViewer";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		F0C9EC772A3709EB007C8BB2 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
@@ -660,6 +672,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F077E2942A7028F20070372D /* ImageViewer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F077E2932A7028F20070372D /* XCRemoteSwiftPackageReference "ImageViewer" */;
+			productName = ImageViewer;
+		};
 		F0C9EC782A3709EB007C8BB2 /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F0C9EC772A3709EB007C8BB2 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
