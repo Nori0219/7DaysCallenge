@@ -5,6 +5,7 @@
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>ja</string>
+		<string>en</string>
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-2758102039369928~8589957685</string>
@@ -12,6 +13,15 @@
 	<string>Yes</string>
 	<key>Localization native development region</key>
 	<string>Japan</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsForMedia</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
 	<key>SKAdNetworkIdentifier</key>
 	<string>cstr6suwn9.skadnetwork</string>
 	<key>UIApplicationSceneManifest</key>

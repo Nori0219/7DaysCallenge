@@ -692,6 +692,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Gj0-oI-wd9" secondAttribute="trailing" constant="16" id="KxA-iB-8Mn"/>
                                     <constraint firstItem="Gj0-oI-wd9" firstAttribute="leading" secondItem="umJ-oD-COq" secondAttribute="leading" constant="16" id="dh5-Rk-B5r"/>
+                                    <constraint firstItem="aPJ-Dv-MmM" firstAttribute="top" secondItem="umJ-oD-COq" secondAttribute="top" constant="10" id="kpu-0f-dCw"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -784,13 +785,13 @@
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" image="TitleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Fm5-4r-TmZ">
-                                        <rect key="frame" x="0.0" y="58" width="393" height="137"/>
+                                        <rect key="frame" x="0.0" y="58" width="393" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="240" id="d9d-1h-PKc"/>
                                         </constraints>
                                     </imageView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RCd-PD-R9Q">
-                                        <rect key="frame" x="0.0" y="203" width="393" height="180"/>
+                                        <rect key="frame" x="0.0" y="66" width="393" height="180"/>
                                         <color key="backgroundColor" name="BackColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="eNe-MO-gLH"/>
@@ -813,7 +814,7 @@
                                         </cells>
                                     </collectionView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="壮絶じゃ！連続２日間の偉業を達成した勇者よ。お前の勇気と闘志に、世界中の人々が感動せざるを得ん！さらなる勇躍を目指し、進み続けよう！🌟⚔️" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzw-CF-gex">
-                                        <rect key="frame" x="16" y="391" width="361" height="210"/>
+                                        <rect key="frame" x="16" y="254" width="361" height="347"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="124" id="xg0-Z2-gbQ"/>
                                         </constraints>
