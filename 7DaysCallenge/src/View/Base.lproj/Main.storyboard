@@ -692,7 +692,6 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Gj0-oI-wd9" secondAttribute="trailing" constant="16" id="KxA-iB-8Mn"/>
                                     <constraint firstItem="Gj0-oI-wd9" firstAttribute="leading" secondItem="umJ-oD-COq" secondAttribute="leading" constant="16" id="dh5-Rk-B5r"/>
-                                    <constraint firstItem="aPJ-Dv-MmM" firstAttribute="top" secondItem="umJ-oD-COq" secondAttribute="top" constant="10" id="kpu-0f-dCw"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
