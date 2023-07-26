@@ -142,7 +142,6 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GHo-MP-Luw">
                                                         <rect key="frame" x="256" y="10.666666666666629" width="51" height="31"/>
-                                                        <color key="backgroundColor" name="BackColor"/>
                                                         <color key="onTintColor" name="AccentColor"/>
                                                         <connections>
                                                             <action selector="checkNotification" destination="Oar-2c-61g" eventType="valueChanged" id="rCb-Kw-07I"/>
